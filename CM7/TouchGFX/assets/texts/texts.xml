@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.26.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_JM0D" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_79OE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_S6VI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_DJ6F" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZB3M" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_YPC7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_9LQ8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_I5ER" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_AXUH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZTNL" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_DGOU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_3SYZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_69B5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_H5HM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_WPW0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_LYQ2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_UBTU" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EEDY" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5GX5" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CR4J" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_S57O" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_NE2U" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_4Q9V" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_B3FZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_66LO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_M4W3" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_LEPD" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_P55J" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_QDWQ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_A0I6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_482V" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_GE6Z" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_G716" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_QWJ7" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_36W8" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_STWH" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_URBY" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_1V5T" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_E48Y" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_7GGV" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_7NRK" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_G7NP" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_UZ3Z" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_DRKM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_LHZF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_U0AC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_DFXQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_NYQB" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZEJO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_3YAZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; W</Translation>
+      </Text>
+      <Text Id="__SingleUse_H21L" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; A</Translation>
+      </Text>
+      <Text Id="__SingleUse_B6CJ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_BV3R" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; W</Translation>
+      </Text>
+      <Text Id="__SingleUse_NRT2" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; A</Translation>
+      </Text>
+      <Text Id="__SingleUse_41IS" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_9NLW" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Random Data: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="flowRate" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FLOWRATE: &lt;value&gt; rpm</Translation>
+      </Text>
+      <Text Id="steeringStat" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">STEERING</Translation>
+      </Text>
+      <Text Id="ssp" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">SETPOINT: &lt;value&gt; rpm</Translation>
+      </Text>
+      <Text Id="MotoRPMId" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Acceleration: &lt;value&gt; rpm/msec</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Large" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" WildcardCharacterRanges="0-9" />
+    <Typography Id="Small" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="." WildcardCharacters="0123456789." WildcardCharacterRanges="0-9" />
+  </Typographies>
+</TextDatabase>

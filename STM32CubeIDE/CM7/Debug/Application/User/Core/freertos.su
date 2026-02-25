@@ -1,0 +1,4 @@
+C:/TouchGFXProjects/SwipeHMI_1/CM7/Core/Src/freertos.c:206:6:StartDefaultTask	8	static
+C:/TouchGFXProjects/SwipeHMI_1/CM7/Core/Src/freertos.c:124:6:vApplicationIdleHook	0	static
+C:/TouchGFXProjects/SwipeHMI_1/CM7/Core/Src/freertos.c:139:6:vApplicationStackOverflowHook	0	static
+C:/TouchGFXProjects/SwipeHMI_1/CM7/Core/Src/freertos.c:152:6:MX_FREERTOS_Init	8	static
