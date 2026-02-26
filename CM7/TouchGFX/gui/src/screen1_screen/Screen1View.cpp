@@ -32,7 +32,6 @@ void Screen1View :: handleTickEvent()
 }
 
 void Screen1View::showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t phlp) {
-
 	Unicode::snprintf(susFBuffer, SUSF_SIZE, "%d", phlp.Pres_Susp_Front);
 	susF.invalidate();
 
@@ -93,15 +92,6 @@ void Screen1View::showThermal1(Thermal_Management_Rx_1_t thermal1) {
 }
 
 void Screen1View::showThermal2(Thermal_Management_Rx_2_t thermal2) {
-	/* typedef struct {
-    int16_t Temp_Battery;
-    int16_t Temp_Auxilaries;
-    int16_t Temp_AIR;
-    int16_t Temp_Powertrain;
-    uint16_t Rad_Fan_Speed;
-    int16_t Temp_DCDC;
-    int16_t Temp_ClntPump;
-} Thermal_Management_Rx_2_t; */
 	Unicode::snprintf(thermalHvBuffer, THERMALEMFL_SIZE, "%d", thermal2.Temp_Battery);
 	thermalHv.invalidate();
 
@@ -121,4 +111,26 @@ void Screen1View::showThermal2(Thermal_Management_Rx_2_t thermal2) {
 	thermalInvRm.invalidate(); */
 
 	/* TODO: MAP THE REMAINIG SIGNALS*/
+}
+
+void Screen1View::showMtc1(Motor_And_Torque_Control_1_t mtc1) {
+	Unicode::snprintf(drvTrnStatTrqReqFlBuffer, DRVTRNSTATEMFL_SIZE, "%d", mtc1.Trq_Act_Wheel_FL);
+	drvTrnStatTrqReqFl.invalidate();
+
+	Unicode::snprintf(drvTrnStatTrqActFlBuffer, DRVTRNSTATEMRM_SIZE, "%d", mtc1.Trq_Req_Wheel_FL);
+	drvTrnStatTrqActFl.invalidate();
+
+	Unicode::snprintf(drvTrnStatTrqReqFrBuffer, DRVTRNSTATTRQREQFR_SIZE, "%d", mtc1.Trq_Req_Wheel_FR);
+	drvTrnStatTrqReqFr.invalidate();
+
+	Unicode::snprintf(drvTrnStatTrqActFrBuffer, DRVTRNSTATTRQACTFR_SIZE, "%d", mtc1.Trq_Act_Wheel_FR);
+	drvTrnStatTrqActFr.invalidate();
+}
+
+void Screen1View::showMtc2(Motor_And_Torque_Control_2_t mtc2) {
+	Unicode::snprintf(drvTrnStatTrqActRmBuffer, DRVTRNSTATTRQACTRM_SIZE, "%d", mtc2.Trq_Act_Wheel_RM);
+	drvTrnStatTrqActRm.invalidate();
+
+	Unicode::snprintf(drvTrnStatTrqReqRmBuffer, DRVTRNSTATTRQREQRM_SIZE, "%d", mtc1.Trq_Req_Wheel_RM);
+	drvTrnStatTrqReq.invalidate();
 }

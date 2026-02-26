@@ -28,7 +28,7 @@
         <Translation Language="GB">&lt;value&gt; °C</Translation>
       </Text>
       <Text Id="__SingleUse_I5ER" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; °C</Translation>
+        <Translation Language="GB">&lt;value&gt;  rpm</Translation>
       </Text>
       <Text Id="__SingleUse_AXUH" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; °C</Translation>

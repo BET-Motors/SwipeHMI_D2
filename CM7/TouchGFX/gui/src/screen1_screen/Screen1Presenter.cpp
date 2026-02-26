@@ -30,3 +30,11 @@ void Screen1Presenter::updateThermal1(Thermal_Management_Rx_1_t data) {
 void Screen1Presenter::updateThermal2(Thermal_Management_Rx_2_t data) {
 	view.showThermal2(data);
 }
+
+void Screen1Presenter::updateMtc1(Motor_And_Torque_Control_1_t data) {
+	view.showMtc1(data);
+}
+
+void Screen1Presenter::updateMtc2(Motor_And_Torque_Control_2_t data) {
+	view.showMtc2(data);
+}

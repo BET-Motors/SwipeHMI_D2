@@ -19,6 +19,14 @@ public:
     void showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t);
     void showThermal1(Thermal_Management_Rx_1_t);
     void showThermal2(Thermal_Management_Rx_2_t);
+	void showMtc1(Motor_And_Torque_Control_1_t);
+	void showMtc2(Motor_And_Torque_Control_2_t);
+	void showBms1_4(BMS_Values_5_t);
+	void showBms5_8(BMS_Values_6_t);
+	void showBms9_12(BMS_Values_7_t);
+	void showBms13_16(BMS_Values_8_t);
+	void showBms17_20(BMS_Values_9_t);
+	void showBms21_24(BMS_Values_10_t);
 protected:
 	/* uint8_t steeringToggleVal;
 	uint8_t airCompToggleVal;
