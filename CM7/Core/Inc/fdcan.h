@@ -46,6 +46,7 @@ extern FDCAN_HandleTypeDef hfdcan2;
 void MX_FDCAN1_Init(void);
 void MX_FDCAN2_Init(void);
 
+/* USER CODE BEGIN Prototypes */
 typedef struct {
     uint32_t id;       // The CAN Identifier (Standard or Extended)
     uint8_t  data[8];  // The 8 bytes of payload data
@@ -53,9 +54,11 @@ typedef struct {
 
 extern osMessageQueueId_t guiMQHandle;
 
-/* USER CODE BEGIN Prototypes */
 void CanRecvTask(void *argument);
 uint64_t UnpackSignal(const uint8_t* data, uint8_t startBit, uint8_t length);
+void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t length);
+void updateDriverInputs(DriverInputsTx_t data);
+void CanTxTask(void *arg);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

@@ -29,6 +29,7 @@ public:
     }
 
     void tick();
+    void updateDriverIn(DriverInputsTx_t data);
 protected:
     ModelListener* modelListener;
     // bool parseDriverInput1(CAN_Raw_Msg_t, DriverInputAndVehicleControl_t *);

@@ -1,5 +1,14 @@
 CM7/TouchGFX/gui/src/model/Model.cpp:5:1:Model::Model()	0	static
-CM7/TouchGFX/gui/src/model/Model.cpp:38:6:bool Model::parsePressHydLightPt(CAN_Raw_Msg_t, Press_Hydraulic_Light_PowerTrain_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:115:6:bool Model::parseThermal1(CAN_Raw_Msg_t, Thermal_Management_Rx_1_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:179:6:bool Model::parseThermal2(CAN_Raw_Msg_t, Thermal_Management_Rx_2_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:70:6:bool Model::parsePressHydLightPt(CAN_Raw_Msg_t, Press_Hydraulic_Light_PowerTrain_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:147:6:bool Model::parseThermal1(CAN_Raw_Msg_t, Thermal_Management_Rx_1_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:211:6:bool Model::parseThermal2(CAN_Raw_Msg_t, Thermal_Management_Rx_2_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:267:6:bool Model::parsemtc1(CAN_Raw_Msg_t, Motor_And_Torque_Control_1_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:303:6:bool Model::parsemtc2(CAN_Raw_Msg_t, Motor_And_Torque_Control_2_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:339:6:bool Model::parseBms1_4(CAN_Raw_Msg_t, BMS_Values_5_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:403:6:bool Model::parseBms5_8(CAN_Raw_Msg_t, BMS_Values_6_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:467:6:bool Model::parseBms9_12(CAN_Raw_Msg_t, BMS_Values_7_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:531:6:bool Model::parseBms13_16(CAN_Raw_Msg_t, BMS_Values_8_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:595:6:bool Model::parseBms17_20(CAN_Raw_Msg_t, BMS_Values_9_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:659:6:bool Model::parseBms21_24(CAN_Raw_Msg_t, BMS_Values_10_t*)	32	static
 CM7/TouchGFX/gui/src/model/Model.cpp:10:6:void Model::tick()	72	static
+CM7/TouchGFX/gui/src/model/Model.cpp:723:6:void Model::updateDriverIn(DriverInputsTx_t)	16	static

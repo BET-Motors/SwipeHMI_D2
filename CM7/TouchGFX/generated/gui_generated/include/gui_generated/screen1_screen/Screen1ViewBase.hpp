@@ -10,8 +10,12 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/RadioButton.hpp>
+#include <touchgfx/widgets/RadioButtonGroup.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -19,6 +23,54 @@ public:
     Screen1ViewBase();
     virtual ~Screen1ViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void overrRideReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void dcdcReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void toggleLowBeamCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void toggleIntLightsCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void posLightsToggleCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void toggleHighBeamCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void hvHeaterEnableCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void heatPumpReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void heatFoilReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void stopChargeReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void precondReqCallback()
+    {
+        // Override and implement this function in Screen1
+    }
 
 protected:
     FrontendApplication& application() {
@@ -31,7 +83,78 @@ protected:
     touchgfx::Box __background;
     touchgfx::SwipeContainer swipeContainer1;
     touchgfx::Container screen1;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatEmFl;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatEmFR;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatEmRm;
+    touchgfx::ToggleButton overrideReq;
+    touchgfx::ToggleButton dcdcReq;
+    touchgfx::ToggleButton lowBeamToggle;
+    touchgfx::ToggleButton intLightsToggle;
+    touchgfx::ToggleButton posLightsToggle;
+    touchgfx::ToggleButton highBeamToggle;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea1_1;
+    touchgfx::TextArea textArea1_1_1;
+    touchgfx::TextArea textArea1_1_1_1;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea2_1;
+    touchgfx::TextArea textArea3;
+    touchgfx::TextArea textArea3_1;
+    touchgfx::ToggleButton hvHeaterEn;
+    touchgfx::ToggleButton heatPumpReq;
+    touchgfx::ToggleButton heaterFoilReq;
+    touchgfx::ToggleButton stopChargeReq;
+    touchgfx::TextArea textArea4;
+    touchgfx::TextArea textArea4_1;
+    touchgfx::ToggleButton chargePrecondReq;
+    touchgfx::TextArea textArea5_2_1;
+    touchgfx::RadioButtonGroup<3> radioButtonGroup1;
+    touchgfx::RadioButton gearActG1;
+    touchgfx::RadioButton gearActG2;
+    touchgfx::RadioButton gearActNeutral;
+    touchgfx::RadioButtonGroup<3> radioButtonGroup2;
+    touchgfx::RadioButton driveModeEco;
+    touchgfx::RadioButton driveModeSnow;
+    touchgfx::RadioButton driveModeSport;
+    touchgfx::RadioButtonGroup<4> radioButtonGroup3;
+    touchgfx::RadioButton airSusNoReq;
+    touchgfx::RadioButton airSusL1;
+    touchgfx::RadioButton airSusL2;
+    touchgfx::RadioButton airSusL3;
+    touchgfx::TextArea textArea5;
+    touchgfx::TextArea textArea5_2;
+    touchgfx::TextArea airSusL1Text;
+    touchgfx::TextArea textArea5_1_1;
+    touchgfx::Container screen2;
     touchgfx::Image image1;
+    touchgfx::TextAreaWithOneWildcard battTempM6;
+    touchgfx::TextAreaWithOneWildcard battTempM8;
+    touchgfx::TextAreaWithOneWildcard battTempM10;
+    touchgfx::TextAreaWithOneWildcard battTempM12;
+    touchgfx::TextAreaWithOneWildcard battTempM1;
+    touchgfx::TextAreaWithOneWildcard battTempM2;
+    touchgfx::TextAreaWithOneWildcard battTempM5;
+    touchgfx::TextAreaWithOneWildcard battTempM9;
+    touchgfx::TextAreaWithOneWildcard battTempM11;
+    touchgfx::TextAreaWithOneWildcard battTempM7;
+    touchgfx::TextAreaWithOneWildcard battTempM4;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqFl;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActFl;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqFr;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActFr;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqRm;
+    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActRm;
+    touchgfx::TextAreaWithOneWildcard thermalHv;
+    touchgfx::TextAreaWithOneWildcard thermalClntPmp;
+    touchgfx::TextAreaWithOneWildcard thermalRadFan;
+    touchgfx::TextAreaWithOneWildcard thermaldcdc;
+    touchgfx::TextAreaWithOneWildcard thermalEmFl;
+    touchgfx::TextAreaWithOneWildcard thermalEmFr;
+    touchgfx::TextAreaWithOneWildcard thermalEmRm;
+    touchgfx::TextAreaWithOneWildcard thermalInvFl;
+    touchgfx::TextAreaWithOneWildcard thermalInvFr;
+    touchgfx::TextAreaWithOneWildcard battTempM3;
+    touchgfx::TextAreaWithOneWildcard randomData;
     touchgfx::TextAreaWithOneWildcard hvPower;
     touchgfx::TextAreaWithOneWildcard lvPower;
     touchgfx::TextAreaWithOneWildcard hvCurrent;
@@ -44,83 +167,22 @@ protected:
     touchgfx::TextAreaWithOneWildcard axelLoadR;
     touchgfx::TextAreaWithOneWildcard brkPresF;
     touchgfx::TextAreaWithOneWildcard brkPresR;
-    touchgfx::TextAreaWithOneWildcard battTempM6;
-    touchgfx::TextAreaWithOneWildcard battTempM8;
-    touchgfx::TextAreaWithOneWildcard battTempM10;
-    touchgfx::TextAreaWithOneWildcard battTempM12;
-    touchgfx::TextAreaWithOneWildcard battVoltM1;
-    touchgfx::TextAreaWithOneWildcard battTempM1;
-    touchgfx::TextAreaWithOneWildcard battVoltM2;
-    touchgfx::TextAreaWithOneWildcard battTempM2;
-    touchgfx::TextAreaWithOneWildcard battVoltM3;
-    touchgfx::TextAreaWithOneWildcard battTempM3;
-    touchgfx::TextAreaWithOneWildcard battTempM5;
-    touchgfx::TextAreaWithOneWildcard battTempM9;
-    touchgfx::TextAreaWithOneWildcard battTempM11;
-    touchgfx::TextAreaWithOneWildcard battTempM7;
-    touchgfx::TextAreaWithOneWildcard battVoltM4;
-    touchgfx::TextAreaWithOneWildcard battTempM4;
-    touchgfx::TextAreaWithOneWildcard battStatM6;
-    touchgfx::TextAreaWithOneWildcard battStatM8;
-    touchgfx::TextAreaWithOneWildcard battStatM10;
-    touchgfx::TextAreaWithOneWildcard battStatM12;
-    touchgfx::TextAreaWithOneWildcard battStatM5;
-    touchgfx::TextAreaWithOneWildcard battStatM7;
-    touchgfx::TextAreaWithOneWildcard battStatM9;
-    touchgfx::TextAreaWithOneWildcard battStatM11;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatEmFl;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatEmFR;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatEmRm;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqFl;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActFl;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqFr;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActFr;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqReqRm;
-    touchgfx::TextAreaWithOneWildcard drvTrnStatTrqActRm;
-    touchgfx::Image lowHighBeam;
-    touchgfx::Image posLight;
-    touchgfx::Image intLight;
-    touchgfx::TextAreaWithOneWildcard thermalHv;
-    touchgfx::TextAreaWithOneWildcard thermalClntPmp;
-    touchgfx::TextAreaWithOneWildcard thermalRadFan;
-    touchgfx::TextAreaWithOneWildcard thermaldcdc;
-    touchgfx::TextAreaWithOneWildcard thermalEmFl;
-    touchgfx::TextAreaWithOneWildcard thermalEmFr;
-    touchgfx::TextAreaWithOneWildcard thermalEmRm;
-    touchgfx::TextAreaWithOneWildcard thermalInvFl;
-    touchgfx::TextAreaWithOneWildcard thermalInvFr;
     touchgfx::TextAreaWithOneWildcard thermalInvRm;
-    touchgfx::Container screen2;
-    touchgfx::TextAreaWithOneWildcard randomData;
+    touchgfx::TextArea textArea4_1_1;
+    touchgfx::ToggleButton relayFuseBox1;
+    touchgfx::TextArea textArea4_1_1_1;
+    touchgfx::ToggleButton relayFuseBox2;
     touchgfx::Container screen3;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t HVPOWER_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar hvPowerBuffer[HVPOWER_SIZE];
-    static const uint16_t LVPOWER_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar lvPowerBuffer[LVPOWER_SIZE];
-    static const uint16_t HVCURRENT_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar hvCurrentBuffer[HVCURRENT_SIZE];
-    static const uint16_t LVCURRENT_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar lvCurrentBuffer[LVCURRENT_SIZE];
-    static const uint16_t HVVOLTAGE_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar hvVoltageBuffer[HVVOLTAGE_SIZE];
-    static const uint16_t LVVOLTAGE_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar lvVoltageBuffer[LVVOLTAGE_SIZE];
-    static const uint16_t SUSF_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar susFBuffer[SUSF_SIZE];
-    static const uint16_t AXELLOADF_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar axelLoadFBuffer[AXELLOADF_SIZE];
-    static const uint16_t SUSR_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar susRBuffer[SUSR_SIZE];
-    static const uint16_t AXELLOADR_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar axelLoadRBuffer[AXELLOADR_SIZE];
-    static const uint16_t BRKPRESF_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar brkPresFBuffer[BRKPRESF_SIZE];
-    static const uint16_t BRKPRESR_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar brkPresRBuffer[BRKPRESR_SIZE];
+    static const uint16_t DRVTRNSTATEMFL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar drvTrnStatEmFlBuffer[DRVTRNSTATEMFL_SIZE];
+    static const uint16_t DRVTRNSTATEMFR_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar drvTrnStatEmFRBuffer[DRVTRNSTATEMFR_SIZE];
+    static const uint16_t DRVTRNSTATEMRM_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar drvTrnStatEmRmBuffer[DRVTRNSTATEMRM_SIZE];
     static const uint16_t BATTTEMPM6_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM6Buffer[BATTTEMPM6_SIZE];
     static const uint16_t BATTTEMPM8_SIZE = 10;
@@ -129,18 +191,10 @@ protected:
     touchgfx::Unicode::UnicodeChar battTempM10Buffer[BATTTEMPM10_SIZE];
     static const uint16_t BATTTEMPM12_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM12Buffer[BATTTEMPM12_SIZE];
-    static const uint16_t BATTVOLTM1_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battVoltM1Buffer[BATTVOLTM1_SIZE];
     static const uint16_t BATTTEMPM1_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM1Buffer[BATTTEMPM1_SIZE];
-    static const uint16_t BATTVOLTM2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battVoltM2Buffer[BATTVOLTM2_SIZE];
     static const uint16_t BATTTEMPM2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM2Buffer[BATTTEMPM2_SIZE];
-    static const uint16_t BATTVOLTM3_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battVoltM3Buffer[BATTVOLTM3_SIZE];
-    static const uint16_t BATTTEMPM3_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battTempM3Buffer[BATTTEMPM3_SIZE];
     static const uint16_t BATTTEMPM5_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM5Buffer[BATTTEMPM5_SIZE];
     static const uint16_t BATTTEMPM9_SIZE = 10;
@@ -149,32 +203,8 @@ protected:
     touchgfx::Unicode::UnicodeChar battTempM11Buffer[BATTTEMPM11_SIZE];
     static const uint16_t BATTTEMPM7_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM7Buffer[BATTTEMPM7_SIZE];
-    static const uint16_t BATTVOLTM4_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battVoltM4Buffer[BATTVOLTM4_SIZE];
     static const uint16_t BATTTEMPM4_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM4Buffer[BATTTEMPM4_SIZE];
-    static const uint16_t BATTSTATM6_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM6Buffer[BATTSTATM6_SIZE];
-    static const uint16_t BATTSTATM8_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM8Buffer[BATTSTATM8_SIZE];
-    static const uint16_t BATTSTATM10_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM10Buffer[BATTSTATM10_SIZE];
-    static const uint16_t BATTSTATM12_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM12Buffer[BATTSTATM12_SIZE];
-    static const uint16_t BATTSTATM5_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM5Buffer[BATTSTATM5_SIZE];
-    static const uint16_t BATTSTATM7_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM7Buffer[BATTSTATM7_SIZE];
-    static const uint16_t BATTSTATM9_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM9Buffer[BATTSTATM9_SIZE];
-    static const uint16_t BATTSTATM11_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar battStatM11Buffer[BATTSTATM11_SIZE];
-    static const uint16_t DRVTRNSTATEMFL_SIZE = 3;
-    touchgfx::Unicode::UnicodeChar drvTrnStatEmFlBuffer[DRVTRNSTATEMFL_SIZE];
-    static const uint16_t DRVTRNSTATEMFR_SIZE = 3;
-    touchgfx::Unicode::UnicodeChar drvTrnStatEmFRBuffer[DRVTRNSTATEMFR_SIZE];
-    static const uint16_t DRVTRNSTATEMRM_SIZE = 3;
-    touchgfx::Unicode::UnicodeChar drvTrnStatEmRmBuffer[DRVTRNSTATEMRM_SIZE];
     static const uint16_t DRVTRNSTATTRQREQFL_SIZE = 10;
     touchgfx::Unicode::UnicodeChar drvTrnStatTrqReqFlBuffer[DRVTRNSTATTRQREQFL_SIZE];
     static const uint16_t DRVTRNSTATTRQACTFL_SIZE = 10;
@@ -205,12 +235,48 @@ protected:
     touchgfx::Unicode::UnicodeChar thermalInvFlBuffer[THERMALINVFL_SIZE];
     static const uint16_t THERMALINVFR_SIZE = 10;
     touchgfx::Unicode::UnicodeChar thermalInvFrBuffer[THERMALINVFR_SIZE];
-    static const uint16_t THERMALINVRM_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar thermalInvRmBuffer[THERMALINVRM_SIZE];
+    static const uint16_t BATTTEMPM3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar battTempM3Buffer[BATTTEMPM3_SIZE];
     static const uint16_t RANDOMDATA_SIZE = 3;
     touchgfx::Unicode::UnicodeChar randomDataBuffer[RANDOMDATA_SIZE];
+    static const uint16_t HVPOWER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar hvPowerBuffer[HVPOWER_SIZE];
+    static const uint16_t LVPOWER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar lvPowerBuffer[LVPOWER_SIZE];
+    static const uint16_t HVCURRENT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar hvCurrentBuffer[HVCURRENT_SIZE];
+    static const uint16_t LVCURRENT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar lvCurrentBuffer[LVCURRENT_SIZE];
+    static const uint16_t HVVOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar hvVoltageBuffer[HVVOLTAGE_SIZE];
+    static const uint16_t LVVOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar lvVoltageBuffer[LVVOLTAGE_SIZE];
+    static const uint16_t SUSF_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar susFBuffer[SUSF_SIZE];
+    static const uint16_t AXELLOADF_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar axelLoadFBuffer[AXELLOADF_SIZE];
+    static const uint16_t SUSR_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar susRBuffer[SUSR_SIZE];
+    static const uint16_t AXELLOADR_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar axelLoadRBuffer[AXELLOADR_SIZE];
+    static const uint16_t BRKPRESF_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar brkPresFBuffer[BRKPRESF_SIZE];
+    static const uint16_t BRKPRESR_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar brkPresRBuffer[BRKPRESR_SIZE];
+    static const uint16_t THERMALINVRM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar thermalInvRmBuffer[THERMALINVRM_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

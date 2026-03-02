@@ -75,6 +75,13 @@ const osThreadAttr_t CanRecv_attributes = {
   .stack_size = 4096 * 4,
   .priority = (osPriority_t) osPriorityNormal2,
 };
+/* Definitions for CanTx */
+osThreadId_t CanTxHandle;
+const osThreadAttr_t CanTx_attributes = {
+  .name = "CanTx",
+  .stack_size = 4096 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 /* Definitions for guiMQ */
 osMessageQueueId_t guiMQHandle;
 const osMessageQueueAttr_t guiMQ_attributes = {
@@ -90,6 +97,7 @@ void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
 extern void CanRecvTask(void *argument);
+extern void CanTxTask(void *argument);
 
 extern void MX_USB_HOST_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -164,6 +172,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of CanRecv */
   CanRecvHandle = osThreadNew(CanRecvTask, NULL, &CanRecv_attributes);
+
+  /* creation of CanTx */
+  CanTxHandle = osThreadNew(CanTxTask, NULL, &CanTx_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */

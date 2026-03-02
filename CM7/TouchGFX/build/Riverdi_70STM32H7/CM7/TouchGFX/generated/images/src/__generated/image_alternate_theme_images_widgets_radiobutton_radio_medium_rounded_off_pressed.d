@@ -1,0 +1,4 @@
+CM7/TouchGFX/build/Riverdi_70STM32H7/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off_pressed.o: \
+ CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off_pressed.cpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:

@@ -40,6 +40,8 @@ public:
     virtual void updateBms17_20(BMS_Values_9_t data);
     virtual void updateBms21_24(BMS_Values_10_t data);
 
+    void updateDriverIn_tx(DriverInputsTx_t data);
+
 private:
     Screen1Presenter();
 

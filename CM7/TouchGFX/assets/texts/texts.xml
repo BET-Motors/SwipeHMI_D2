@@ -6,6 +6,57 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_4CJ8" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">LEVEL 3</Translation>
+      </Text>
+      <Text Id="__SingleUse_M6DW" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">LEVEL 2</Translation>
+      </Text>
+      <Text Id="__SingleUse_PVED" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">LEVEL 1</Translation>
+      </Text>
+      <Text Id="__SingleUse_TLDD" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">NO REQUEST</Translation>
+      </Text>
+      <Text Id="__SingleUse_GV9H" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">GEAR ACTUATOR &#10;OVERRIDE</Translation>
+      </Text>
+      <Text Id="__SingleUse_DA8F" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">RELAY FB2</Translation>
+      </Text>
+      <Text Id="__SingleUse_SW40" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">RELAY FB1</Translation>
+      </Text>
+      <Text Id="__SingleUse_KNCT" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">PRECOND REQ</Translation>
+      </Text>
+      <Text Id="__SingleUse_JBWN" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">STOP CHARGE</Translation>
+      </Text>
+      <Text Id="__SingleUse_QRZZ" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">HEAT FOIL REQ.</Translation>
+      </Text>
+      <Text Id="__SingleUse_1IEA" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">HEAT PUMP</Translation>
+      </Text>
+      <Text Id="__SingleUse_V5KF" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">HV HEATER</Translation>
+      </Text>
+      <Text Id="__SingleUse_C3GG" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">AIR SUS CONTROL OVERRIDE</Translation>
+      </Text>
+      <Text Id="__SingleUse_MSO2" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">POS. LIGHTS</Translation>
+      </Text>
+      <Text Id="__SingleUse_G3JE" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">INT. LIGHTS</Translation>
+      </Text>
+      <Text Id="__SingleUse_HH03" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">LOW BEAM</Translation>
+      </Text>
+      <Text Id="__SingleUse_3Y33" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">HIGH BEAM</Translation>
+      </Text>
       <Text Id="__SingleUse_JM0D" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; °C</Translation>
       </Text>
@@ -98,42 +149,6 @@
       </Text>
       <Text Id="__SingleUse_482V" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; °C</Translation>
-      </Text>
-      <Text Id="__SingleUse_GE6Z" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_G716" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_QWJ7" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_36W8" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_STWH" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_URBY" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_1V5T" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_E48Y" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_7GGV" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_7NRK" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_G7NP" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
-      </Text>
-      <Text Id="__SingleUse_UZ3Z" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_DRKM" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; bar</Translation>

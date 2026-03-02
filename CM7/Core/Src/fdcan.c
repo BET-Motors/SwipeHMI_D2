@@ -25,6 +25,8 @@
 #include <string.h>
 #include "cmsis_os2.h"
 
+static DriverInputsTx_t internalLcpt;
+
 /* USER CODE END 0 */
 
 FDCAN_HandleTypeDef hfdcan1;
@@ -307,6 +309,12 @@ uint64_t UnpackSignal(const uint8_t* data, uint8_t start, uint8_t len) {
     return val & mask;
 }
 
+void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t length) {
+    uint64_t mask = (1ULL << length) - 1;
+    value &= mask; // Ensure value doesn't exceed its bit-length
+    *frame |= ((uint64_t)value << startBit);
+}
+
 void SafeQueuePut(CAN_Raw_Msg_t* msg) {
     // 1. Check if the queue is full
     // Replace 'osMessageQueueGetCount' with your specific driver call
@@ -337,8 +345,8 @@ void CanRecvTask(void *argument) {
 			if (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &header, rawMsg.data) != HAL_OK)
 				break;
             
-            rawMsg.id = header.Identifier;
-            osStatus_t status = osMessageQueuePut(guiMQHandle, &rawMsg, 0, 0);
+      rawMsg.id = header.Identifier;
+      osStatus_t status = osMessageQueuePut(guiMQHandle, &rawMsg, 0, 0);
 
 			if(status != osErrorResource) {
 				SafeQueuePut(&rawMsg);
@@ -350,5 +358,89 @@ void CanRecvTask(void *argument) {
 		    osDelay(1);   // give time back deterministically
 		}
 	}
+}
+
+void FDCAN_TxFrame(uint8_t *txd, uint32_t fid, bool extended, uint32_t dlc)
+{
+    FDCAN_TxHeaderTypeDef txh = {0};
+//    uint8_t txd[8] = {0};
+
+    txh.Identifier = fid;
+    txh.IdType = (extended == true ? FDCAN_EXTENDED_ID : FDCAN_STANDARD_ID);
+    txh.TxFrameType = FDCAN_DATA_FRAME;
+    txh.DataLength = dlc;
+    txh.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+    txh.BitRateSwitch = FDCAN_BRS_OFF;
+    txh.FDFormat = FDCAN_CLASSIC_CAN;
+    txh.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+    txh.MessageMarker = 0;
+
+    HAL_StatusTypeDef st = HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &txh, txd);
+
+    if (st == HAL_OK) {
+        HAL_GPIO_TogglePin(USR_LED_1_GPIO_Port, USR_LED_1_Pin); // queued OK
+    } else {
+        // queued failed (Tx FIFO full / not started / etc.)
+    	HAL_GPIO_TogglePin(USR_LED_1_GPIO_Port, USR_LED_1_Pin);
+    }
+}
+
+/**
+ * @brief Serializes the packed struct into a CAN frame.
+ * Bit mapping strictly follows driverRequests.csv.
+ */
+void serialize_DriverInputs(DriverInputsTx_t *s, uint8_t *buf) {
+  memset(buf, 0, 8);
+
+  // Byte 0
+  buf[0] |= (s->Override_Request & 0x01) << 0;       // Bit 0
+  buf[0] |= (s->Drive_Program_Sw & 0x07) << 1;       // Bits 1-3
+  buf[0] |= (s->Gear_Actuator_Override & 0x07) << 4; // Bits 4-6
+  buf[0] |= (s->DCDC_Request & 0x01) << 7;           // Bit 7
+
+  // Byte 1
+  buf[1] |= (s->Air_Sus_Level_Control_Override & 0x0F) << 0; // Bits 8-11
+  buf[1] |= (s->Low_Beam_Req & 0x01) << 4;                   // Bit 12
+  buf[1] |= (s->High_Beam_Req & 0x01) << 5;                  // Bit 13
+  buf[1] |= (s->Position_Light_Req & 0x01) << 6;             // Bit 14
+  buf[1] |= (s->Interior_Light_Req & 0x01) << 7;             // Bit 15
+
+  // Byte 2
+  buf[2] |= (s->HVHeater_Enable & 0x01) << 0;        // Bit 16
+  buf[2] |= (s->HeatPump_Req & 0x01) << 1;           // Bit 17
+  buf[2] |= (s->HeatFoil_Req & 0x01) << 2;           // Bit 18
+  buf[2] |= (s->LVvalve1_Req & 0x01) << 3;           // Bit 19
+  buf[2] |= (s->LVvalve2_Req & 0x01) << 4;           // Bit 20
+  buf[2] |= (s->LVvalve3_Req & 0x01) << 5;           // Bit 21
+  buf[2] |= (s->Chrg_STOP_Req & 0x01) << 6;          // Bit 22
+  buf[2] |= (s->Chrg_PreCond_Req & 0x01) << 7;       // Bit 23
+
+  // Byte 3
+  buf[3] |= (s->AirCompressor_Req & 0x01) << 0;      // Bit 24
+}
+
+void CanTxTask(void *arg)
+{
+	const uint32_t taskPeriod = 250;
+	uint32_t tick = osKernelGetTickCount();
+	uint32_t primask;
+  uint8_t txData[8];
+
+	while(1) {
+		tick += taskPeriod;
+		osDelayUntil(tick);
+		if (HAL_FDCAN_GetTxFifoFreeLevel(&hfdcan1) > 0)
+		{
+      serialize_DriverInputs(&internalLcpt, txData);
+			FDCAN_TxFrame(txData, ID_DRIVER_INPUTS_TX, true, FDCAN_DLC_BYTES_8);
+		}
+	}
+}
+
+void updateDriverInputs(DriverInputsTx_t data) {
+  uint32_t primask = __get_PRIMASK();
+	__disable_irq();
+  internalLcpt = data; // copy the data atomically
+  __set_PRIMASK(primask);
 }
 /* USER CODE END 1 */

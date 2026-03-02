@@ -737,6 +737,26 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_pressed.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.cpp</locationURI>
@@ -747,34 +767,119 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_HMIConcept.cpp</name>
+			<name>Application/User/generated/image_DCDC_OFF.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_HMIConcept.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_DCDC_OFF.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_auxOff.cpp</name>
+			<name>Application/User/generated/image_DCDC_On.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_auxOff.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_DCDC_On.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_auxOn.cpp</name>
+			<name>Application/User/generated/image_HVheaterOff.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_auxOn.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_HVheaterOff.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_center.cpp</name>
+			<name>Application/User/generated/image_HVheaterOn.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_center.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_HVheaterOn.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_down.cpp</name>
+			<name>Application/User/generated/image_airCompReqOff.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_down.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_airCompReqOff.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_downPressed.cpp</name>
+			<name>Application/User/generated/image_airCompReqOn.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_downPressed.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_airCompReqOn.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargePreCondReqOff.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargePreCondReqOff.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargePreCondReqOn.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargePreCondReqOn.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargeStopOff.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargeStopOff.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargeStopOn.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargeStopOn.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_d2HMI.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_d2HMI.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_ECO.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_ECO.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_ECO_OFF.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_ECO_OFF.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_SNOW.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_SNOW.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_SNOW_OFF.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_SNOW_OFF.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_SPORT.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_SPORT.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_driveProg_SPORT_OFF.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_driveProg_SPORT_OFF.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActG1NotSelected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActG1NotSelected.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActG1Selected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActG1Selected.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActG2NotSelected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActG2NotSelected.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActG2Selected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActG2Selected.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActNeutralNotSelected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActNeutralNotSelected.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gearActNeutralSelected.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gearActNeutralSelected.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_headlightsInactive.cpp</name>
@@ -782,19 +887,29 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_headlightsInactive.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_heatFoilOff.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_heatFoilOff.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_heatFoilOn.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_heatFoilOn.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_heatPumpOff.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_heatPumpOff.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_heatPumpOn.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_heatPumpOn.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_highBeam.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_highBeam.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_hysterisisOff.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_hysterisisOff.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_hysterisisOn.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_hysterisisOn.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_intLightActive.cpp</name>
@@ -812,6 +927,21 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_lowBeam.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_lowBeamOff.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_lowBeamOff.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_overrideReq_off.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_overrideReq_off.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_overrideReq_on.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_overrideReq_on.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_posLightsActive.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_posLightsActive.cpp</locationURI>
@@ -822,19 +952,14 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_posLightsInactive.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_screen2.cpp</name>
+			<name>Application/User/generated/image_relayFuseBoxOff.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_screen2.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_relayFuseBoxOff.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_upTransparent.cpp</name>
+			<name>Application/User/generated/image_relayFuseBoxOn.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_upTransparent.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_upTransparentPressed.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_upTransparentPressed.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_relayFuseBoxOn.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

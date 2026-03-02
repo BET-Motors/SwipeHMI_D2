@@ -144,6 +144,28 @@ typedef struct {
     uint8_t BMS_M24_Temp_min;
 } BMS_Values_10_t;
 
+#define ID_DRIVER_INPUTS_TX 0x1001
+typedef struct {
+    uint8_t Override_Request;               // bit 0 (1 bit)
+    uint8_t Drive_Program_Sw;               // bit 1 (3 bits)
+    uint8_t Gear_Actuator_Override;         // bit 4 (3 bits)
+    uint8_t DCDC_Request;                   // bit 7 (1 bit)
+    uint8_t Air_Sus_Level_Control_Override; // bit 8 (4 bits)
+    uint8_t Low_Beam_Req;                   // bit 12 (1 bit)
+    uint8_t High_Beam_Req;                  // bit 13 (1 bit)
+    uint8_t Position_Light_Req;             // bit 14 (1 bit)
+    uint8_t Interior_Light_Req;             // bit 15 (1 bit)
+    uint8_t HVHeater_Enable;                // bit 16 (1 bit)
+    uint8_t HeatPump_Req;                   // bit 17 (1 bit)
+    uint8_t HeatFoil_Req;                   // bit 18 (1 bit)
+    uint8_t LVvalve1_Req;                   // bit 19 (1 bit)
+    uint8_t LVvalve2_Req;                   // bit 20 (1 bit)
+    uint8_t LVvalve3_Req;                   // bit 21 (1 bit)
+    uint8_t Chrg_STOP_Req;                  // bit 22 (1 bit)
+    uint8_t Chrg_PreCond_Req;               // bit 23 (1 bit)
+    uint8_t AirCompressor_Req;              // bit 24 (1 bit)
+} DriverInputsTx_t;
+
 #ifdef __cplusplus
 }
 #endif

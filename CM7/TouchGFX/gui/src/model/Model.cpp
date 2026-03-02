@@ -34,30 +34,30 @@ void Model::tick()
 				break;
 			case ID_MOTOR_AND_TORQUE_CONTROL_2:
 				if(parsemtc2(rawMsg, &mtc2))
-					modelListener->updateMtc2(mtc1);
+					modelListener->updateMtc2(mtc2);
 				break;
 			case ID_BMS_VALUES_5:
 				if(parseBms1_4(rawMsg, &bms1_4))
 					modelListener->updateBms1_4(bms1_4);
 				break;
 			case ID_BMS_VALUES_6:
-				if(parseBms1_4(rawMsg, &bms5_8))
+				if(parseBms5_8(rawMsg, &bms5_8))
 					modelListener->updateBms5_8(bms5_8);
 				break;
 			case ID_BMS_VALUES_7:
-				if(parseBms1_4(rawMsg, &bms9_12))
+				if(parseBms9_12(rawMsg, &bms9_12))
 					modelListener->updateBms9_12(bms9_12);
 				break;
 			case ID_BMS_VALUES_8:
-				if(parseBms1_4(rawMsg, &bms13_16))
+				if(parseBms13_16(rawMsg, &bms13_16))
 					modelListener->updateBms13_16(bms13_16);
 				break;
 			case ID_BMS_VALUES_9:
-				if(parseBms1_4(rawMsg, &bms17_20))
+				if(parseBms17_20(rawMsg, &bms17_20))
 					modelListener->updateBms17_20(bms17_20);
 				break;
 			case ID_BMS_VALUES_10:
-				if(parseBms1_4(rawMsg, &bms21_24))
+				if(parseBms21_24(rawMsg, &bms21_24))
 					modelListener->updateBms21_24(bms21_24);
 				break;
 			default:
@@ -599,59 +599,127 @@ bool Model::parseBms17_20(CAN_Raw_Msg_t rawMsg, BMS_Values_9_t *_bms) {
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M13_Temp_max != rawVal) {
-		_bms->BMS_M13_Temp_max = rawVal;
+	if(_bms->BMS_M17_Temp_max != rawVal) {
+		_bms->BMS_M17_Temp_max = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 8, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M13_Temp_max != rawVal) {
-		_bms->BMS_M13_Temp_max = rawVal;
+	if(_bms->BMS_M17_Temp_max != rawVal) {
+		_bms->BMS_M17_Temp_max = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M14_Temp_max != rawVal) {
-		_bms->BMS_M14_Temp_max = rawVal;
+	if(_bms->BMS_M18_Temp_max != rawVal) {
+		_bms->BMS_M18_Temp_max = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 24, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M14_Temp_min != rawVal) {
-		_bms->BMS_M14_Temp_min = rawVal;
+	if(_bms->BMS_M18_Temp_min != rawVal) {
+		_bms->BMS_M18_Temp_min = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 32, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M15_Temp_max != rawVal) {
-		_bms->BMS_M15_Temp_max = rawVal;
+	if(_bms->BMS_M19_Temp_max != rawVal) {
+		_bms->BMS_M19_Temp_max = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 40, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M15_Temp_min != rawVal) {
-		_bms->BMS_M15_Temp_min = rawVal;
+	if(_bms->BMS_M19_Temp_min != rawVal) {
+		_bms->BMS_M19_Temp_min = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M16_Temp_max!= rawVal) {
-		_bms->BMS_M16_Temp_max= rawVal;
+	if(_bms->BMS_M20_Temp_max!= rawVal) {
+		_bms->BMS_M20_Temp_max= rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 56, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M16_Temp_min != rawVal) {
-		_bms->BMS_M16_Temp_min = rawVal;
+	if(_bms->BMS_M20_Temp_min != rawVal) {
+		_bms->BMS_M20_Temp_min = rawVal;
 		changed = true;
 	}
 
 	return changed;
+}
+
+bool Model::parseBms21_24(CAN_Raw_Msg_t rawMsg, BMS_Values_10_t *_bms) {
+	int64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M21_Temp_max != rawVal) {
+		_bms->BMS_M21_Temp_max = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 8, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M21_Temp_min != rawVal) {
+		_bms->BMS_M21_Temp_min = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M22_Temp_max != rawVal) {
+		_bms->BMS_M22_Temp_max = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 24, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M22_Temp_min != rawVal) {
+		_bms->BMS_M22_Temp_min = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 32, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M23_Temp_max != rawVal) {
+		_bms->BMS_M23_Temp_max = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 40, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M23_Temp_min != rawVal) {
+		_bms->BMS_M23_Temp_min = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 48, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M24_Temp_max!= rawVal) {
+		_bms->BMS_M24_Temp_max= rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 56, 8);
+	rawVal = rawVal - 50;
+	if(_bms->BMS_M24_Temp_min != rawVal) {
+		_bms->BMS_M24_Temp_min = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+void Model::updateDriverIn(DriverInputsTx_t data) {
+	updateDriverInputs(data);
 }
