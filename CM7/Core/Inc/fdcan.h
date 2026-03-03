@@ -58,6 +58,7 @@ void CanRecvTask(void *argument);
 uint64_t UnpackSignal(const uint8_t* data, uint8_t startBit, uint8_t length);
 void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t length);
 void updateDriverInputs(DriverInputsTx_t data);
+void updateFuseBoxRelayControl(FuseboxCtrlTx_t data);
 void CanTxTask(void *arg);
 /* USER CODE END Prototypes */
 

@@ -39,8 +39,14 @@ public:
     virtual void updateBms13_16(BMS_Values_8_t data);
     virtual void updateBms17_20(BMS_Values_9_t data);
     virtual void updateBms21_24(BMS_Values_10_t data);
+    virtual void updateEpea(ElecSys_Power_Energy_AirComp_t data);
+    virtual void updateFb1State(FuseBox1State_t);
+    virtual void updateFb2State(FuseBox2State_t);
+    virtual void updateFbR(FuseBoxRelay_t);
+    void udpateLcp(Ip_Ltng_Chg_Pnematic_Tx_t data);
 
     void updateDriverIn_tx(DriverInputsTx_t data);
+    void updateFuseBoxRelay(FuseboxCtrlTx_t data);
 
 private:
     Screen1Presenter();

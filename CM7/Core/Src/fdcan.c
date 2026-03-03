@@ -26,6 +26,7 @@
 #include "cmsis_os2.h"
 
 static DriverInputsTx_t internalLcpt;
+static FuseboxCtrlTx_t internalFBRState;
 
 /* USER CODE END 0 */
 
@@ -419,11 +420,26 @@ void serialize_DriverInputs(DriverInputsTx_t *s, uint8_t *buf) {
   buf[3] |= (s->AirCompressor_Req & 0x01) << 0;      // Bit 24
 }
 
+/* Implementation in fdcan.c */
+void serialize_FuseboxControl(FuseboxCtrlTx_t *s, uint8_t *buf) {
+    // Pack box1_req (Bytes 0-3) - Little Endian
+    buf[0] = (uint8_t)(s->box1_req & 0xFF);
+    buf[1] = (uint8_t)((s->box1_req >> 8) & 0xFF);
+    buf[2] = (uint8_t)((s->box1_req >> 16) & 0xFF);
+    buf[3] = (uint8_t)((s->box1_req >> 24) & 0xFF);
+
+    // Pack box2_req (Bytes 4-7) - Little Endian
+    buf[4] = (uint8_t)(s->box2_req & 0xFF);
+    buf[5] = (uint8_t)((s->box2_req >> 8) & 0xFF);
+    buf[6] = (uint8_t)((s->box2_req >> 16) & 0xFF);
+    buf[7] = (uint8_t)((s->box2_req >> 24) & 0xFF);
+}
+
 void CanTxTask(void *arg)
 {
 	const uint32_t taskPeriod = 250;
 	uint32_t tick = osKernelGetTickCount();
-	uint32_t primask;
+  uint8_t cycle = 0;
   uint8_t txData[8];
 
 	while(1) {
@@ -434,6 +450,12 @@ void CanTxTask(void *arg)
       serialize_DriverInputs(&internalLcpt, txData);
 			FDCAN_TxFrame(txData, ID_DRIVER_INPUTS_TX, true, FDCAN_DLC_BYTES_8);
 		}
+    if ((HAL_FDCAN_GetTxFifoFreeLevel(&hfdcan1) > 0) && (cycle % 2 == 0))
+		{
+      serialize_FuseboxControl(&internalFBRState, txData);
+			FDCAN_TxFrame(txData, ID_RELAY_FUSEBOX_CONTROL, true, FDCAN_DLC_BYTES_8);
+		}
+    cycle = (cycle + 1) % 2;
 	}
 }
 
@@ -441,6 +463,13 @@ void updateDriverInputs(DriverInputsTx_t data) {
   uint32_t primask = __get_PRIMASK();
 	__disable_irq();
   internalLcpt = data; // copy the data atomically
+  __set_PRIMASK(primask);
+}
+
+void updateFuseBoxRelayControl(FuseboxCtrlTx_t data) {
+  uint32_t primask = __get_PRIMASK();
+	__disable_irq();
+  internalFBRState = data; // copy the data atomically
   __set_PRIMASK(primask);
 }
 /* USER CODE END 1 */

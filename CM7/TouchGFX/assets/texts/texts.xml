@@ -6,6 +6,540 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_CZHO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">FUSE BOX 2 RELAY STATE TOGGLE</Translation>
+      </Text>
+      <Text Id="__SingleUse_MBAP" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">FUSE BOX 1 RELAY STATE TOGGLE</Translation>
+      </Text>
+      <Text Id="__SingleUse_AX7X" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">FUSE BOX 2&#10;RELAY STATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_3GPU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">14</Translation>
+      </Text>
+      <Text Id="__SingleUse_XSZQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">13</Translation>
+      </Text>
+      <Text Id="__SingleUse_0AD6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">12</Translation>
+      </Text>
+      <Text Id="__SingleUse_NWOF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">11</Translation>
+      </Text>
+      <Text Id="__SingleUse_OHV1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">10</Translation>
+      </Text>
+      <Text Id="__SingleUse_VIDR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_SU29" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_UXVR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_7WBU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_LH53" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_UDUJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_RI71" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_K49J" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WAA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_HHM7" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">FUSE BOX 1&#10;RELAY STATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_LBA6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">14</Translation>
+      </Text>
+      <Text Id="__SingleUse_XX4V" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">13</Translation>
+      </Text>
+      <Text Id="__SingleUse_QR1C" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">12</Translation>
+      </Text>
+      <Text Id="__SingleUse_9Y3X" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">11</Translation>
+      </Text>
+      <Text Id="__SingleUse_JRDJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">10</Translation>
+      </Text>
+      <Text Id="__SingleUse_0G4R" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_84RG" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_0GG4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_M8AS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_5YEW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_0VYR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_3F7H" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_EZG5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_JM1J" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q0TY" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">FUSE BOX 2&#10;FUSE STATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_85CE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">27</Translation>
+      </Text>
+      <Text Id="__SingleUse_SLO0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">26</Translation>
+      </Text>
+      <Text Id="__SingleUse_7ATF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">25</Translation>
+      </Text>
+      <Text Id="__SingleUse_D66L" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">24</Translation>
+      </Text>
+      <Text Id="__SingleUse_G9ZR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_6Z48" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">22</Translation>
+      </Text>
+      <Text Id="__SingleUse_II8P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="__SingleUse_BPM1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">20</Translation>
+      </Text>
+      <Text Id="__SingleUse_5FT6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">19</Translation>
+      </Text>
+      <Text Id="__SingleUse_DBU8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">18</Translation>
+      </Text>
+      <Text Id="__SingleUse_UA5I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">17</Translation>
+      </Text>
+      <Text Id="__SingleUse_TE9M" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">16</Translation>
+      </Text>
+      <Text Id="__SingleUse_45OB" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">15</Translation>
+      </Text>
+      <Text Id="__SingleUse_7F7F" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">14</Translation>
+      </Text>
+      <Text Id="__SingleUse_YTDM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">13</Translation>
+      </Text>
+      <Text Id="__SingleUse_OOCS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">12</Translation>
+      </Text>
+      <Text Id="__SingleUse_0KRI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">11</Translation>
+      </Text>
+      <Text Id="__SingleUse_T99E" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">10</Translation>
+      </Text>
+      <Text Id="__SingleUse_NPO6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_1F5I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_2JE9" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_5NPP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_K7MW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_XV9P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_8GF8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_5QDK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_OW3X" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_D7YI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">28</Translation>
+      </Text>
+      <Text Id="__SingleUse_U1QO" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">FUSE BOX 1&#10;FUSE STATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_2EXX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">27</Translation>
+      </Text>
+      <Text Id="__SingleUse_VTAU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">26</Translation>
+      </Text>
+      <Text Id="__SingleUse_UZI6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">25</Translation>
+      </Text>
+      <Text Id="__SingleUse_ULA5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">24</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q0QW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_9PZR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">22</Translation>
+      </Text>
+      <Text Id="__SingleUse_5F9X" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="__SingleUse_59II" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">20</Translation>
+      </Text>
+      <Text Id="__SingleUse_U34U" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">19</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z4VZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">18</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZHHK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">17</Translation>
+      </Text>
+      <Text Id="__SingleUse_WJO6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">16</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y9VN" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">15</Translation>
+      </Text>
+      <Text Id="__SingleUse_0O68" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">14</Translation>
+      </Text>
+      <Text Id="__SingleUse_O711" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">13</Translation>
+      </Text>
+      <Text Id="__SingleUse_DYPB" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">12</Translation>
+      </Text>
+      <Text Id="__SingleUse_PJFX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">11</Translation>
+      </Text>
+      <Text Id="__SingleUse_P4OZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">10</Translation>
+      </Text>
+      <Text Id="__SingleUse_5TYC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_NUMP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_460C" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_4S3Q" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_A4RO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_JRX9" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_39BM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_5UXE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_7NHM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_RJ4Z" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">28</Translation>
+      </Text>
+      <Text Id="__SingleUse_KIL2" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; W</Translation>
+      </Text>
+      <Text Id="__SingleUse_JZXH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; Nm</Translation>
+      </Text>
+      <Text Id="__SingleUse_MMGN" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_RQP0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; rpm</Translation>
+      </Text>
+      <Text Id="__SingleUse_IGJ0" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M13 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_K197" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M12 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_KPLT" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M12 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_2LEY" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M8 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_ESQM" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M8 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_UAJR" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M11 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_GKZI" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M11 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_TBTT" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M7 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_5YG8" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M7 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_H1WV" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M10 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_3MFQ" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M10 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_ERLB" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M6 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_AFO2" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M6 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_2QXK" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M9 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_VHTC" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M9 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_L2D9" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M5 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_3VJS" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M5 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_V0E4" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M4 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_64FO" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M4 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_V1UN" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M3 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q1ZC" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M3 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_RB0N" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M2 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_8YDA" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M2 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_N03D" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M13 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_LN3R" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_KWDS" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_LHQO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_JP44" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_B1M5" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q75E" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_S7RM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q2MK" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_IJ7P" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_OJPM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_7OWG" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB"> &lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_398M" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_OL2M" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_NOI4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_KKWZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_SMNV" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_IW6O" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_8DYT" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_L31M" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_LZBA" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_0VGI" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_2P9F" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_K0JW" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_RJSH" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_L7W6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_KSV3" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_OS2Q" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_62PR" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_PO5R" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_FMY4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_22VM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_PF8E" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_0OV8" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_OVP7" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZFI4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_RCD6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_FY86" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M12 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_B6Y5" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M11 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_4IJ7" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M10 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_WY66" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M9 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_UZ8R" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M8 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_VV9Y" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M7 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_HVC9" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M6 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_R9QE" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M5 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_PUPY" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M4 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_NY73" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M3 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_O43I" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M2 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_P15H" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M12 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_9UFW" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M8 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_QPR2" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M11 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_EQWR" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M7 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_1IMT" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M10 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_PZZW" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M6 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_B8MU" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M9 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_IQ70" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M5 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_6RKZ" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M4 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_J1NB" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M3 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_ROCU" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M2 Min</Translation>
+      </Text>
+      <Text Id="__SingleUse_5AXD" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M1 Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_BTMK" Alignment="Left" TypographyId="SmallLetters">
+        <Translation Language="GB">M1 Min</Translation>
+      </Text>
       <Text Id="__SingleUse_4CJ8" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">LEVEL 3</Translation>
       </Text>
@@ -20,12 +554,6 @@
       </Text>
       <Text Id="__SingleUse_GV9H" Alignment="Center" TypographyId="Large">
         <Translation Language="GB">GEAR ACTUATOR &#10;OVERRIDE</Translation>
-      </Text>
-      <Text Id="__SingleUse_DA8F" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">RELAY FB2</Translation>
-      </Text>
-      <Text Id="__SingleUse_SW40" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">RELAY FB1</Translation>
       </Text>
       <Text Id="__SingleUse_KNCT" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">PRECOND REQ</Translation>
@@ -79,7 +607,7 @@
         <Translation Language="GB">&lt;value&gt; °C</Translation>
       </Text>
       <Text Id="__SingleUse_I5ER" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt;  rpm</Translation>
+        <Translation Language="GB">&lt;value&gt; rpm</Translation>
       </Text>
       <Text Id="__SingleUse_AXUH" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; °C</Translation>
@@ -148,7 +676,7 @@
         <Translation Language="GB">&lt;value&gt; °C</Translation>
       </Text>
       <Text Id="__SingleUse_482V" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; °C</Translation>
+        <Translation Language="GB"> &lt;value&gt; °C</Translation>
       </Text>
       <Text Id="__SingleUse_DRKM" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; bar</Translation>
@@ -186,9 +714,6 @@
       <Text Id="__SingleUse_41IS" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
-      <Text Id="__SingleUse_9NLW" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Random Data: &lt;value&gt;</Translation>
-      </Text>
       <Text Id="flowRate" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">FLOWRATE: &lt;value&gt; rpm</Translation>
       </Text>
@@ -206,5 +731,6 @@
   <Typographies>
     <Typography Id="Large" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" WildcardCharacterRanges="0-9" />
     <Typography Id="Small" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="." WildcardCharacters="0123456789." WildcardCharacterRanges="0-9" />
+    <Typography Id="SmallLetters" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" WildcardCharacterRanges="A-Z,a-z" />
   </Typographies>
 </TextDatabase>

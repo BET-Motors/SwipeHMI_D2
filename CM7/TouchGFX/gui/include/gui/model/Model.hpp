@@ -20,6 +20,11 @@ private:
     BMS_Values_8_t bms13_16;
     BMS_Values_9_t bms17_20;
     BMS_Values_10_t bms21_24;
+    ElecSys_Power_Energy_AirComp_t epea;
+    FuseBox1State_t fuseBox1;
+    FuseBox2State_t fuseBox2;
+    FuseBoxRelay_t fbr;
+    Ip_Ltng_Chg_Pnematic_Tx_t lcp;
 public:
     Model();
 
@@ -30,6 +35,8 @@ public:
 
     void tick();
     void updateDriverIn(DriverInputsTx_t data);
+    void updateFuseBoxControl(FuseboxCtrlTx_t data);
+
 protected:
     ModelListener* modelListener;
     // bool parseDriverInput1(CAN_Raw_Msg_t, DriverInputAndVehicleControl_t *);
@@ -44,6 +51,11 @@ protected:
     bool parseBms13_16(CAN_Raw_Msg_t, BMS_Values_8_t *);
     bool parseBms17_20(CAN_Raw_Msg_t, BMS_Values_9_t *);
     bool parseBms21_24(CAN_Raw_Msg_t, BMS_Values_10_t *);
+    bool parseEpea(CAN_Raw_Msg_t, ElecSys_Power_Energy_AirComp_t *);
+    bool parseFb1(CAN_Raw_Msg_t, FuseBox1State_t *);
+    bool parseFb2(CAN_Raw_Msg_t, FuseBox2State_t *);
+    bool parseFbR(CAN_Raw_Msg_t, FuseBoxRelay_t *);
+    bool parseLcp(CAN_Raw_Msg_t, Ip_Ltng_Chg_Pnematic_Tx_t *);
 };
 
 #endif // MODEL_HPP

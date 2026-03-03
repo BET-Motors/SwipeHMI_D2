@@ -72,15 +72,6 @@ typedef struct {
 
 
 // CAN ID: 0x10000010 (268435472)
-#define ID_ELECSYS_POWER_ENERGY_AIRCOMP 0x10000010
-typedef struct {
-    float LV_Current_Act;
-    float LV_Power_Act;
-    uint32_t Airc_speed;
-    uint32_t Airc_traction_voltage;
-    float Airc_torque;
-    float Airc_power;
-} ElecSys_Power_Energy_AirComp_t;
 
 // CAN ID: 0x10000011 (268435473)
 #define ID_AUXILIARY_STATES_LV_SOC 0x10000011

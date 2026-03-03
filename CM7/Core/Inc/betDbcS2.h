@@ -26,6 +26,16 @@ typedef struct {
     uint32_t Pwr_Act_MotFR;
 } Press_Hydraulic_Light_PowerTrain_t;
 
+#define ID_ELECSYS_POWER_ENERGY_AIRCOMP 0x10000010
+typedef struct {
+    float LV_Current_Act;
+    float LV_Power_Act;
+    uint32_t Airc_speed;
+    uint32_t Airc_traction_voltage;
+    float Airc_torque;
+    float Airc_power;
+} ElecSys_Power_Energy_AirComp_t;
+
 #define ID_THERMAL_MANAGEMENT_RX_1 0x10000007
 typedef struct {
     int16_t BMS_Pack_Temp_max;
@@ -144,6 +154,121 @@ typedef struct {
     uint8_t BMS_M24_Temp_min;
 } BMS_Values_10_t;
 
+#define ID_FUSEBOXRELAY 0x10000043
+typedef struct {
+    uint8_t fbr1_1;
+    uint8_t fbr1_2;
+    uint8_t fbr1_3;
+    uint8_t fbr1_4;
+    uint8_t fbr1_5;
+    uint8_t fbr1_6;
+    uint8_t fbr1_7;
+    uint8_t fbr1_8;
+    uint8_t fbr1_9;
+    uint8_t fbr1_10;
+    uint8_t fbr1_11;
+    uint8_t fbr1_12;
+    uint8_t fbr1_13;
+    uint8_t fbr1_14;
+    uint8_t fbr2_1;
+    uint8_t fbr2_2;
+    uint8_t fbr2_3;
+    uint8_t fbr2_4;
+    uint8_t fbr2_5;
+    uint8_t fbr2_6;
+    uint8_t fbr2_7;
+    uint8_t fbr2_8;
+    uint8_t fbr2_9;
+    uint8_t fbr2_10;
+    uint8_t fbr2_11;
+    uint8_t fbr2_12;
+    uint8_t fbr2_13;
+    uint8_t fbr2_14;
+} FuseBoxRelay_t;
+
+#define ID_FUSEBOX1 0x10000044
+typedef struct {
+    uint8_t fuse1;
+    uint8_t fuse2;
+    uint8_t fuse3;
+    uint8_t fuse4;
+    uint8_t fuse5;
+    uint8_t fuse6;
+    uint8_t fuse7;
+    uint8_t fuse8;
+    uint8_t fuse9;
+    uint8_t fuse10;
+    uint8_t fuse11;
+    uint8_t fuse12;
+    uint8_t fuse13;
+    uint8_t fuse14;
+    uint8_t fuse15;
+    uint8_t fuse16;
+    uint8_t fuse17;
+    uint8_t fuse18;
+    uint8_t fuse19;
+    uint8_t fuse20;
+    uint8_t fuse21;
+    uint8_t fuse22;
+    uint8_t fuse23;
+    uint8_t fuse24;
+    uint8_t fuse25;
+    uint8_t fuse26;
+    uint8_t fuse27;
+    uint8_t fuse28;
+} FuseBox1State_t;
+
+#define ID_FUSEBOX2 0x10000045
+typedef struct {
+    uint8_t fuse1;
+    uint8_t fuse2;
+    uint8_t fuse3;
+    uint8_t fuse4;
+    uint8_t fuse5;
+    uint8_t fuse6;
+    uint8_t fuse7;
+    uint8_t fuse8;
+    uint8_t fuse9;
+    uint8_t fuse10;
+    uint8_t fuse11;
+    uint8_t fuse12;
+    uint8_t fuse13;
+    uint8_t fuse14;
+    uint8_t fuse15;
+    uint8_t fuse16;
+    uint8_t fuse17;
+    uint8_t fuse18;
+    uint8_t fuse19;
+    uint8_t fuse20;
+    uint8_t fuse21;
+    uint8_t fuse22;
+    uint8_t fuse23;
+    uint8_t fuse24;
+    uint8_t fuse25;
+    uint8_t fuse26;
+    uint8_t fuse27;
+    uint8_t fuse28;
+} FuseBox2State_t;
+
+#define ID_IP_LTNG_CHG_PNEMATIC_TX 0x10000024
+typedef struct {
+    uint32_t Drv_Program_Sw;
+    uint32_t Override_Req;
+    uint32_t Gear_Actuator_Override;
+    uint32_t Level_Control_Req;
+    uint32_t DCDC_Req;
+    uint32_t LowBeam_Req;
+    uint32_t HighBeam_Req;
+    uint32_t PosLight_Req;
+    uint32_t IntLight_Req;
+    uint32_t Chrg_STOP_Req;
+    uint32_t Chrg_PreCond_Req;
+    uint32_t AirCompressor_Req;
+    uint32_t MinPressureAir;
+    uint32_t MaxPressureAir;
+    uint32_t RefSpdSens_Speed;
+} Ip_Ltng_Chg_Pnematic_Tx_t;
+
 #define ID_DRIVER_INPUTS_TX 0x1001
 typedef struct {
     uint8_t Override_Request;               // bit 0 (1 bit)
@@ -165,6 +290,12 @@ typedef struct {
     uint8_t Chrg_PreCond_Req;               // bit 23 (1 bit)
     uint8_t AirCompressor_Req;              // bit 24 (1 bit)
 } DriverInputsTx_t;
+
+#define ID_RELAY_FUSEBOX_CONTROL 0x1003
+typedef struct {
+    uint32_t box1_req;
+    uint32_t box2_req;
+} FuseboxCtrlTx_t;
 
 #ifdef __cplusplus
 }

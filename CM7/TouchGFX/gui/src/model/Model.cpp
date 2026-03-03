@@ -60,11 +60,518 @@ void Model::tick()
 				if(parseBms21_24(rawMsg, &bms21_24))
 					modelListener->updateBms21_24(bms21_24);
 				break;
+			case ID_ELECSYS_POWER_ENERGY_AIRCOMP:
+				if(parseEpea(rawMsg, &epea))
+					modelListener->updateEpea(epea);
+				break;
+			case ID_FUSEBOX1:
+				if(parseFb1(rawMsg, &fuseBox1))
+					modelListener->updateFb1State(fuseBox1);
+				break;
+			case ID_FUSEBOX2:
+				if(parseFb2(rawMsg, &fuseBox2))
+					modelListener->updateFb2State(fuseBox2);
+				break;
+			case ID_FUSEBOXRELAY:
+				if(parseFbR(rawMsg, &fbr))
+					modelListener->updateFbR(fbr);
+				break;
 			default:
                 break;
 		}
 		processed--;
 	}
+}
+
+bool Model::parseFbR(CAN_Raw_Msg_t rawMsg, FuseBoxRelay_t *_fbr) {
+	uint64_t rawVal;
+    bool changed = false;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 2);
+	if(_fbr->fbr1_1 != rawVal) {
+		_fbr->fbr1_1 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 2, 2);
+	if(_fbr->fbr1_2 != rawVal) {
+		_fbr->fbr1_2 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 4, 2);
+	if(_fbr->fbr1_3 != rawVal) {
+		_fbr->fbr1_3 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 6, 2);
+	if(_fbr->fbr1_4 != rawVal) {
+		_fbr->fbr1_4 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 8, 2);
+	if(_fbr->fbr1_5 != rawVal) {
+		_fbr->fbr1_5 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 10, 2);
+	if(_fbr->fbr1_6 != rawVal) {
+		_fbr->fbr1_6 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 12, 2);
+	if(_fbr->fbr1_7 != rawVal) {
+		_fbr->fbr1_7 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 14, 2);
+	if(_fbr->fbr1_8 != rawVal) {
+		_fbr->fbr1_8 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 16, 2);
+	if(_fbr->fbr1_9 != rawVal) {
+		_fbr->fbr1_9 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 18, 2);
+	if(_fbr->fbr1_10 != rawVal) {
+		_fbr->fbr1_10 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 20, 2);
+	if(_fbr->fbr1_11 != rawVal) {
+		_fbr->fbr1_11 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 22, 2);
+	if(_fbr->fbr1_12 != rawVal) {
+		_fbr->fbr1_12 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 24, 2);
+	if(_fbr->fbr1_13 != rawVal) {
+		_fbr->fbr1_13 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 26, 2);
+	if(_fbr->fbr1_14 != rawVal) {
+		_fbr->fbr1_14 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 28, 2);
+	if(_fbr->fbr2_1 != rawVal) {
+		_fbr->fbr2_1 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 30, 2);
+	if(_fbr->fbr2_2 != rawVal) {
+		_fbr->fbr2_2 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 32, 2);
+	if(_fbr->fbr2_3 != rawVal) {
+		_fbr->fbr2_3 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 34, 2);
+	if(_fbr->fbr2_4 != rawVal) {
+		_fbr->fbr2_4 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 36, 2);
+	if(_fbr->fbr2_5 != rawVal) {
+		_fbr->fbr2_5 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 38, 2);
+	if(_fbr->fbr2_6 != rawVal) {
+		_fbr->fbr2_6 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 40, 2);
+	if(_fbr->fbr2_7 != rawVal) {
+		_fbr->fbr2_7 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 42, 2);
+	if(_fbr->fbr2_8 != rawVal) {
+		_fbr->fbr2_8 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 44, 2);
+	if(_fbr->fbr2_9 != rawVal) {
+		_fbr->fbr2_9 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 46, 2);
+	if(_fbr->fbr2_10 != rawVal) {
+		_fbr->fbr2_10 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 48, 2);
+	if(_fbr->fbr2_11 != rawVal) {
+		_fbr->fbr2_11 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 50, 2);
+	if(_fbr->fbr2_12 != rawVal) {
+		_fbr->fbr2_12 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 52, 2);
+	if(_fbr->fbr2_13 != rawVal) {
+		_fbr->fbr2_13 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 54, 2);
+	if(_fbr->fbr2_14 != rawVal) {
+		_fbr->fbr2_14 = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseFb1(CAN_Raw_Msg_t rawMsg, FuseBox1State_t *_fb1) {
+	uint64_t rawVal;
+    bool changed = false;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 2);
+	if(_fb1->fuse1 != rawVal) {
+		_fb1->fuse1 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 2, 2);
+	if(_fb1->fuse2 != rawVal) {
+		_fb1->fuse2 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 4, 2);
+	if(_fb1->fuse3 != rawVal) {
+		_fb1->fuse3 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 6, 2);
+	if(_fb1->fuse4 != rawVal) {
+		_fb1->fuse4 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 8, 2);
+	if(_fb1->fuse5 != rawVal) {
+		_fb1->fuse5 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 10, 2);
+	if(_fb1->fuse6 != rawVal) {
+		_fb1->fuse6 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 12, 2);
+	if(_fb1->fuse7 != rawVal) {
+		_fb1->fuse7 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 14, 2);
+	if(_fb1->fuse8 != rawVal) {
+		_fb1->fuse8 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 16, 2);
+	if(_fb1->fuse9 != rawVal) {
+		_fb1->fuse9 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 18, 2);
+	if(_fb1->fuse10 != rawVal) {
+		_fb1->fuse10 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 20, 2);
+	if(_fb1->fuse11 != rawVal) {
+		_fb1->fuse11 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 22, 2);
+	if(_fb1->fuse12 != rawVal) {
+		_fb1->fuse12 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 24, 2);
+	if(_fb1->fuse13 != rawVal) {
+		_fb1->fuse13 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 26, 2);
+	if(_fb1->fuse14 != rawVal) {
+		_fb1->fuse14 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 28, 2);
+	if(_fb1->fuse15 != rawVal) {
+		_fb1->fuse15 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 30, 2);
+	if(_fb1->fuse16 != rawVal) {
+		_fb1->fuse16 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 32, 2);
+	if(_fb1->fuse17 != rawVal) {
+		_fb1->fuse17 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 34, 2);
+	if(_fb1->fuse18 != rawVal) {
+		_fb1->fuse18 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 36, 2);
+	if(_fb1->fuse19 != rawVal) {
+		_fb1->fuse19 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 38, 2);
+	if(_fb1->fuse20 != rawVal) {
+		_fb1->fuse20 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 40, 2);
+	if(_fb1->fuse21 != rawVal) {
+		_fb1->fuse21 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 42, 2);
+	if(_fb1->fuse22 != rawVal) {
+		_fb1->fuse22 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 44, 2);
+	if(_fb1->fuse23 != rawVal) {
+		_fb1->fuse23 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 46, 2);
+	if(_fb1->fuse24 != rawVal) {
+		_fb1->fuse24 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 48, 2);
+	if(_fb1->fuse25 != rawVal) {
+		_fb1->fuse25 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 50, 2);
+	if(_fb1->fuse26 != rawVal) {
+		_fb1->fuse26 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 52, 2);
+	if(_fb1->fuse27 != rawVal) {
+		_fb1->fuse27 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 54, 2);
+	if(_fb1->fuse28 != rawVal) {
+		_fb1->fuse28 = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseFb2(CAN_Raw_Msg_t rawMsg, FuseBox2State_t *_fb2) {
+	uint64_t rawVal;
+    bool changed = false;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 2);
+	if(_fb2->fuse1 != rawVal) {
+		_fb2->fuse1 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 2, 2);
+	if(_fb2->fuse2 != rawVal) {
+		_fb2->fuse2 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 4, 2);
+	if(_fb2->fuse3 != rawVal) {
+		_fb2->fuse3 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 6, 2);
+	if(_fb2->fuse4 != rawVal) {
+		_fb2->fuse4 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 8, 2);
+	if(_fb2->fuse5 != rawVal) {
+		_fb2->fuse5 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 10, 2);
+	if(_fb2->fuse6 != rawVal) {
+		_fb2->fuse6 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 12, 2);
+	if(_fb2->fuse7 != rawVal) {
+		_fb2->fuse7 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 14, 2);
+	if(_fb2->fuse8 != rawVal) {
+		_fb2->fuse8 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 16, 2);
+	if(_fb2->fuse9 != rawVal) {
+		_fb2->fuse9 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 18, 2);
+	if(_fb2->fuse10 != rawVal) {
+		_fb2->fuse10 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 20, 2);
+	if(_fb2->fuse11 != rawVal) {
+		_fb2->fuse11 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 22, 2);
+	if(_fb2->fuse12 != rawVal) {
+		_fb2->fuse12 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 24, 2);
+	if(_fb2->fuse13 != rawVal) {
+		_fb2->fuse13 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 26, 2);
+	if(_fb2->fuse14 != rawVal) {
+		_fb2->fuse14 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 28, 2);
+	if(_fb2->fuse15 != rawVal) {
+		_fb2->fuse15 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 30, 2);
+	if(_fb2->fuse16 != rawVal) {
+		_fb2->fuse16 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 32, 2);
+	if(_fb2->fuse17 != rawVal) {
+		_fb2->fuse17 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 34, 2);
+	if(_fb2->fuse18 != rawVal) {
+		_fb2->fuse18 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 36, 2);
+	if(_fb2->fuse19 != rawVal) {
+		_fb2->fuse19 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 38, 2);
+	if(_fb2->fuse20 != rawVal) {
+		_fb2->fuse20 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 40, 2);
+	if(_fb2->fuse21 != rawVal) {
+		_fb2->fuse21 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 42, 2);
+	if(_fb2->fuse22 != rawVal) {
+		_fb2->fuse22 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 44, 2);
+	if(_fb2->fuse23 != rawVal) {
+		_fb2->fuse23 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 46, 2);
+	if(_fb2->fuse24 != rawVal) {
+		_fb2->fuse24 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 48, 2);
+	if(_fb2->fuse25 != rawVal) {
+		_fb2->fuse25 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 50, 2);
+	if(_fb2->fuse26 != rawVal) {
+		_fb2->fuse26 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 52, 2);
+	if(_fb2->fuse27 != rawVal) {
+		_fb2->fuse27 = rawVal;
+		changed = true;
+	}
+	rawVal = UnpackSignal(rawMsg.data, 54, 2);
+	if(_fb2->fuse28 != rawVal) {
+		_fb2->fuse28 = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseEpea(CAN_Raw_Msg_t rawMsg, ElecSys_Power_Energy_AirComp_t *_epea) {
+	uint64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 9);
+	rawVal = rawVal - 200;
+	if(_epea->LV_Current_Act != rawVal) {
+		_epea->LV_Current_Act = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 9, 9);
+	rawVal = rawVal - 200;
+	if(_epea->LV_Power_Act != rawVal) {
+		_epea->LV_Power_Act = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 18, 16);
+	if(_epea->Airc_speed != rawVal) {
+		_epea->Airc_speed = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 34, 10);
+	if(_epea->Airc_traction_voltage != rawVal) {
+		_epea->Airc_traction_voltage = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 44, 10);
+    rawFloat = ((float)rawVal * 0.1f);
+    if(fabs(_epea->Airc_torque - rawFloat) > 0.1f) {
+        _epea->Airc_torque = rawFloat;
+        changed = true;
+    }
+
+	rawVal = UnpackSignal(rawMsg.data, 54, 8);
+    rawFloat = ((float)rawVal * 0.1f);
+    if(fabs(_epea->Airc_power - rawFloat) > 0.1f) {
+        _epea->Airc_power = rawFloat;
+        changed = true;
+    }
+	return changed;
 }
 
 bool Model::parsePressHydLightPt(CAN_Raw_Msg_t rawMsg, Press_Hydraulic_Light_PowerTrain_t *_phlp) {
@@ -343,8 +850,8 @@ bool Model::parseBms1_4(CAN_Raw_Msg_t rawMsg, BMS_Values_5_t *_bms) {
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M1_Temp_max != rawVal) {
-		_bms->BMS_M1_Temp_max = rawVal;
+	if(_bms->BMS_M1_Temp_min != rawVal) {
+		_bms->BMS_M1_Temp_min = rawVal;
 		changed = true;
 	}
 
@@ -471,8 +978,8 @@ bool Model::parseBms9_12(CAN_Raw_Msg_t rawMsg, BMS_Values_7_t *_bms) {
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 8);
 	rawVal = rawVal - 50;
-	if(_bms->BMS_M9_Temp_max != rawVal) {
-		_bms->BMS_M9_Temp_max = rawVal;
+	if(_bms->BMS_M9_Temp_min != rawVal) {
+		_bms->BMS_M9_Temp_min = rawVal;
 		changed = true;
 	}
 
@@ -722,4 +1229,8 @@ bool Model::parseBms21_24(CAN_Raw_Msg_t rawMsg, BMS_Values_10_t *_bms) {
 
 void Model::updateDriverIn(DriverInputsTx_t data) {
 	updateDriverInputs(data);
+}
+
+void Model::updateFuseBoxControl(FuseboxCtrlTx_t data) {
+	updateFuseBoxRelayControl(data);
 }

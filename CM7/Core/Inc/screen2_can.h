@@ -122,6 +122,7 @@ typedef struct {
     uint32_t AirCompressor_Req;
     uint32_t MinPressureAir;
     uint32_t MaxPressureAir;
+    uint32_t RefSpdSens_Speed;
 } Ip_Ltng_Chg_Pnematic_Tx_t;
 
 // CAN ID: 0x10000025 (268435493)
