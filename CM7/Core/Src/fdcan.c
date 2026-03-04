@@ -352,8 +352,6 @@ void CanRecvTask(void *argument) {
 			if(status != osErrorResource) {
 				SafeQueuePut(&rawMsg);
 			}
-
-			// CAN_Dispatcher(header.Identifier, rawMsg.data);
 		}
 		if (HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0) > 0) {
 		    osDelay(1);   // give time back deterministically

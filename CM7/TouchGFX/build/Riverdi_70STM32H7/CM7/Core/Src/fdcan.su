@@ -6,9 +6,9 @@ CM7/Core/Src/fdcan.c:305:10:UnpackSignal	16	static
 CM7/Core/Src/fdcan.c:313:6:PackSignal	8	static
 CM7/Core/Src/fdcan.c:319:6:SafeQueuePut	32	static
 CM7/Core/Src/fdcan.c:333:6:CanRecvTask	72	static
-CM7/Core/Src/fdcan.c:364:6:FDCAN_TxFrame	64	static
-CM7/Core/Src/fdcan.c:393:6:serialize_DriverInputs	0	static
-CM7/Core/Src/fdcan.c:424:6:serialize_FuseboxControl	0	static
-CM7/Core/Src/fdcan.c:438:6:CanTxTask	32	static
-CM7/Core/Src/fdcan.c:462:6:updateDriverInputs	16	static
-CM7/Core/Src/fdcan.c:469:6:updateFuseBoxRelayControl	16	static
+CM7/Core/Src/fdcan.c:362:6:FDCAN_TxFrame	64	static
+CM7/Core/Src/fdcan.c:391:6:serialize_DriverInputs	0	static
+CM7/Core/Src/fdcan.c:422:6:serialize_FuseboxControl	0	static
+CM7/Core/Src/fdcan.c:436:6:CanTxTask	32	static
+CM7/Core/Src/fdcan.c:460:6:updateDriverInputs	16	static
+CM7/Core/Src/fdcan.c:467:6:updateFuseBoxRelayControl	16	static

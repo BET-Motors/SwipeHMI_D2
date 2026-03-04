@@ -5,41 +5,42 @@ CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:31:6:virtual void Screen1Vie
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen1View; T1 = const touchgfx::AbstractButton&]	8	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen1View; T1 = const touchgfx::AbstractButton&]	0	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen1View, const touchgfx::AbstractButton&>::~Callback()	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:128:6:virtual void Screen1View::overrRideReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:132:6:virtual void Screen1View::dcdcReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:136:6:virtual void Screen1View::toggleLowBeamCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:140:6:virtual void Screen1View::toggleHighBeamCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:144:6:virtual void Screen1View::toggleIntLightsCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:148:6:virtual void Screen1View::posLightsToggleCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:156:6:virtual void Screen1View::hvHeaterEnableCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:160:6:virtual void Screen1View::heatPumpReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:164:6:virtual void Screen1View::heatFoilReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:168:6:virtual void Screen1View::stopChargeReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:172:6:virtual void Screen1View::precondReqCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:184:6:void Screen1View::radioButtonSelectedHandler(const touchgfx::AbstractButton&)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:199:6:void Screen1View::radioButtonSelectedHandler2(const touchgfx::AbstractButton&)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:214:6:void Screen1View::radioButtonSelectedHandler3(const touchgfx::AbstractButton&)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:176:6:virtual void Screen1View::relay1StateToggleCallback()	0	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:180:6:virtual void Screen1View::relay2StateToggleCallback()	0	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:204:6:virtual void Screen1View::overrRideReqCallback()	16	static
 CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:Screen1View::~Screen1View()	8	static
 CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:virtual Screen1View::~Screen1View()	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:289:6:void Screen1View::updateBoxColor(touchgfx::Box&, uint8_t)	0	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:316:6:void Screen1View::radioButtonSelectedHandler(const touchgfx::AbstractButton&)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:331:6:void Screen1View::radioButtonSelectedHandler2(const touchgfx::AbstractButton&)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:347:6:void Screen1View::radioButtonSelectedHandler3(const touchgfx::AbstractButton&)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:423:6:void Screen1View::updateBoxColor(touchgfx::Box&, uint8_t)	0	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:3:1:Screen1View::Screen1View()	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:152:6:void Screen1View::airSusControlCallback()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:289:6:void Screen1View::updateBoxColor(touchgfx::Box&, uint8_t)	0	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:305:6:void Screen1View::showFb1(FuseBox1State_t)	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:336:6:void Screen1View::showFb2(FuseBox2State_t)	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:367:6:void Screen1View::showFbR(FuseBoxRelay_t)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:398:6:void Screen1View::showBms13_16(BMS_Values_8_t)	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:417:6:void Screen1View::showBms17_20(BMS_Values_9_t)	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:436:6:void Screen1View::showBms21_24(BMS_Values_10_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:423:6:void Screen1View::updateBoxColor(touchgfx::Box&, uint8_t)	0	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:439:6:void Screen1View::showFb1(FuseBox1State_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:470:6:void Screen1View::showFb2(FuseBox2State_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:501:6:void Screen1View::showFbR(FuseBoxRelay_t)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:532:6:void Screen1View::showBms13_16(BMS_Values_8_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:551:6:void Screen1View::showBms17_20(BMS_Values_9_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:570:6:void Screen1View::showBms21_24(BMS_Values_10_t)	8	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:11:6:virtual void Screen1View::setupScreen()	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:41:6:void Screen1View::showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:55:6:void Screen1View::showThermal1(Thermal_Management_Rx_1_t)	24	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:75:6:void Screen1View::showThermal2(Thermal_Management_Rx_2_t)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:91:6:void Screen1View::showMtc1(Motor_And_Torque_Control_1_t)	24	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:105:6:void Screen1View::showMtc2(Motor_And_Torque_Control_2_t)	40	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:113:6:void Screen1View::showEpea(ElecSys_Power_Energy_AirComp_t)	32	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:232:6:void Screen1View::showBms1_4(BMS_Values_5_t)	24	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:251:6:void Screen1View::showBms5_8(BMS_Values_6_t)	24	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:270:6:void Screen1View::showBms9_12(BMS_Values_7_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:41:6:void Screen1View::setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:117:6:void Screen1View::showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:131:6:void Screen1View::showThermal1(Thermal_Management_Rx_1_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:151:6:void Screen1View::showThermal2(Thermal_Management_Rx_2_t)	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:167:6:void Screen1View::showMtc1(Motor_And_Torque_Control_1_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:181:6:void Screen1View::showMtc2(Motor_And_Torque_Control_2_t)	40	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:189:6:void Screen1View::showEpea(ElecSys_Power_Energy_AirComp_t)	32	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:208:6:virtual void Screen1View::dcdcReqCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:217:6:virtual void Screen1View::toggleLowBeamCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:226:6:virtual void Screen1View::toggleHighBeamCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:235:6:virtual void Screen1View::toggleIntLightsCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:244:6:virtual void Screen1View::posLightsToggleCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:253:6:virtual void Screen1View::hvHeaterEnableCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:262:6:virtual void Screen1View::heatPumpReqCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:271:6:virtual void Screen1View::heatFoilReqCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:280:6:virtual void Screen1View::stopChargeReqCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:289:6:virtual void Screen1View::precondReqCallback()	16	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:298:6:virtual void Screen1View::relay1StateToggleCallback()	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:307:6:virtual void Screen1View::relay2StateToggleCallback()	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:366:6:void Screen1View::showBms1_4(BMS_Values_5_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:385:6:void Screen1View::showBms5_8(BMS_Values_6_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:404:6:void Screen1View::showBms9_12(BMS_Values_7_t)	24	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:101:6:void Screen1View::showBms3Vals(BMS_Values_3_t)	16	static

@@ -25,6 +25,7 @@ private:
     FuseBox2State_t fuseBox2;
     FuseBoxRelay_t fbr;
     Ip_Ltng_Chg_Pnematic_Tx_t lcp;
+    BMS_Values_3_t bms3;
 public:
     Model();
 
@@ -56,6 +57,7 @@ protected:
     bool parseFb2(CAN_Raw_Msg_t, FuseBox2State_t *);
     bool parseFbR(CAN_Raw_Msg_t, FuseBoxRelay_t *);
     bool parseLcp(CAN_Raw_Msg_t, Ip_Ltng_Chg_Pnematic_Tx_t *);
+    bool parseBms3(CAN_Raw_Msg_t, BMS_Values_3_t *);
 };
 
 #endif // MODEL_HPP

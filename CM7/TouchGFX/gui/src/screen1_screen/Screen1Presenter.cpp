@@ -17,7 +17,13 @@ void Screen1Presenter::deactivate()
 
 }
 
-/*  */
+void Screen1Presenter::updateBms3(BMS_Values_3_t data) {
+	view.showBms3Vals(data);
+}
+
+void Screen1Presenter::udpateLcp(Ip_Ltng_Chg_Pnematic_Tx_t data){
+	view.setDefaults(data);
+}
 
 void Screen1Presenter::updatePressHydLightPt(Press_Hydraulic_Light_PowerTrain_t data) {
 	view.showPressHydLightPt(data);

@@ -28,10 +28,10 @@ typedef struct {
 
 #define ID_ELECSYS_POWER_ENERGY_AIRCOMP 0x10000010
 typedef struct {
-    float LV_Current_Act;
-    float LV_Power_Act;
-    uint32_t Airc_speed;
-    uint32_t Airc_traction_voltage;
+    uint16_t LV_Current_Act;
+    uint16_t LV_Power_Act;
+    uint16_t Airc_speed;
+    uint16_t Airc_traction_voltage;
     float Airc_torque;
     float Airc_power;
 } ElecSys_Power_Energy_AirComp_t;
@@ -70,10 +70,10 @@ typedef struct {
 
 #define ID_MOTOR_AND_TORQUE_CONTROL_2 0x10000005
 typedef struct {
-    float Trq_Act_Wheel_RM;
-    float Trq_Req_Wheel_RM;
-    float Pwr_Disp;
-    float Trq_Act_Sys;
+    uint16_t Trq_Act_Wheel_RM;
+    uint16_t Trq_Req_Wheel_RM;
+    uint16_t Pwr_Disp;
+    uint16_t Trq_Act_Sys;
 } Motor_And_Torque_Control_2_t;
 
 // CAN ID: 0x10000016 (268435478)
@@ -252,22 +252,39 @@ typedef struct {
 
 #define ID_IP_LTNG_CHG_PNEMATIC_TX 0x10000024
 typedef struct {
-    uint32_t Drv_Program_Sw;
-    uint32_t Override_Req;
-    uint32_t Gear_Actuator_Override;
-    uint32_t Level_Control_Req;
-    uint32_t DCDC_Req;
-    uint32_t LowBeam_Req;
-    uint32_t HighBeam_Req;
-    uint32_t PosLight_Req;
-    uint32_t IntLight_Req;
-    uint32_t Chrg_STOP_Req;
-    uint32_t Chrg_PreCond_Req;
-    uint32_t AirCompressor_Req;
-    uint32_t MinPressureAir;
-    uint32_t MaxPressureAir;
+    uint8_t Drv_Program_Sw;
+    uint8_t Override_Req;
+    uint8_t Gear_Actuator_Override;
+    uint8_t Level_Control_Req;
+    uint8_t DCDC_Req;
+    uint8_t LowBeam_Req;
+    uint8_t HighBeam_Req;
+    uint8_t PosLight_Req;
+    uint8_t IntLight_Req;
+    uint8_t Chrg_STOP_Req;
+    uint8_t Chrg_PreCond_Req;
+    uint8_t AirCompressor_Req;
+    uint8_t MinPressureAir;
+    uint8_t MaxPressureAir;
     uint32_t RefSpdSens_Speed;
 } Ip_Ltng_Chg_Pnematic_Tx_t;
+
+#define ID_BMS_VALUES_3 0x10000014
+typedef struct {
+    uint32_t BMS_LV_SupplyVolt;
+    uint32_t BMS_Dsg_ContS1_FB;
+    uint32_t BMS_Dsg_ContS2_FB;
+    uint32_t BMS_HVIL_FB;
+    uint32_t BMS_PreCharge_Cont_FB;
+    uint32_t BMS_Status;
+    uint32_t BMS_FaultLevel;
+    float Charge_Time_Rem;
+    uint8_t E_Lock_Status;
+    uint32_t BMS_Chg_ContFB;
+    float Temp_CCS2Charge_Inlet;
+    float BMS_PDU_Temp;
+    float BMS_TargetTemp;
+} BMS_Values_3_t;
 
 #define ID_DRIVER_INPUTS_TX 0x1001
 typedef struct {

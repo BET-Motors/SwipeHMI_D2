@@ -33,6 +33,7 @@ public:
     virtual void updateFb2State(FuseBox2State_t data) {}
     virtual void updateFbR(FuseBoxRelay_t data) {}
     virtual void udpateLcp(Ip_Ltng_Chg_Pnematic_Tx_t data) {}
+    virtual void updateBms3(BMS_Values_3_t data) {}
 protected:
     Model* model;
 };

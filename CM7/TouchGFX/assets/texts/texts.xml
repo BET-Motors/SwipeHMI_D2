@@ -6,6 +6,12 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_Q6FQ" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">AIR COMP. REQ.</Translation>
+      </Text>
+      <Text Id="__SingleUse_TK6S" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">MIN AIR PRESS.: &lt;value&gt; bar&#10;MAX AIR PRESS.: &lt;value&gt; bar</Translation>
+      </Text>
       <Text Id="__SingleUse_CZHO" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">FUSE BOX 2 RELAY STATE TOGGLE</Translation>
       </Text>
@@ -277,7 +283,7 @@
         <Translation Language="GB">28</Translation>
       </Text>
       <Text Id="__SingleUse_KIL2" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt; W</Translation>
+        <Translation Language="GB">&lt;value&gt; kW</Translation>
       </Text>
       <Text Id="__SingleUse_JZXH" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt; Nm</Translation>
@@ -292,70 +298,70 @@
         <Translation Language="GB">M13 Max</Translation>
       </Text>
       <Text Id="__SingleUse_K197" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M12 Max</Translation>
+        <Translation Language="GB">M24 Max</Translation>
       </Text>
       <Text Id="__SingleUse_KPLT" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M12 Min</Translation>
+        <Translation Language="GB">M24 Min</Translation>
       </Text>
       <Text Id="__SingleUse_2LEY" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M8 Max</Translation>
+        <Translation Language="GB">M20 Max</Translation>
       </Text>
       <Text Id="__SingleUse_ESQM" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M8 Min</Translation>
+        <Translation Language="GB">M20 Min</Translation>
       </Text>
       <Text Id="__SingleUse_UAJR" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M11 Max</Translation>
+        <Translation Language="GB">M23 Max</Translation>
       </Text>
       <Text Id="__SingleUse_GKZI" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M11 Min</Translation>
+        <Translation Language="GB">M23 Min</Translation>
       </Text>
       <Text Id="__SingleUse_TBTT" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M7 Max</Translation>
+        <Translation Language="GB">M19 Max</Translation>
       </Text>
       <Text Id="__SingleUse_5YG8" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M7 Min</Translation>
+        <Translation Language="GB">M19 Min</Translation>
       </Text>
       <Text Id="__SingleUse_H1WV" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M10 Max</Translation>
+        <Translation Language="GB">M22 Max</Translation>
       </Text>
       <Text Id="__SingleUse_3MFQ" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M10 Min</Translation>
+        <Translation Language="GB">M22 Min</Translation>
       </Text>
       <Text Id="__SingleUse_ERLB" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M6 Max</Translation>
+        <Translation Language="GB">M18 Max</Translation>
       </Text>
       <Text Id="__SingleUse_AFO2" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M6 Min</Translation>
+        <Translation Language="GB">M18 Min</Translation>
       </Text>
       <Text Id="__SingleUse_2QXK" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M9 Max</Translation>
+        <Translation Language="GB">M21 Max</Translation>
       </Text>
       <Text Id="__SingleUse_VHTC" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M9 Min</Translation>
+        <Translation Language="GB">M21 Min</Translation>
       </Text>
       <Text Id="__SingleUse_L2D9" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M5 Max</Translation>
+        <Translation Language="GB">M17 Max</Translation>
       </Text>
       <Text Id="__SingleUse_3VJS" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M5 Min</Translation>
+        <Translation Language="GB">M17 Min</Translation>
       </Text>
       <Text Id="__SingleUse_V0E4" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M4 Max</Translation>
+        <Translation Language="GB">M16 Max</Translation>
       </Text>
       <Text Id="__SingleUse_64FO" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M4 Min</Translation>
+        <Translation Language="GB">M16 Min</Translation>
       </Text>
       <Text Id="__SingleUse_V1UN" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M3 Max</Translation>
+        <Translation Language="GB">M15 Max</Translation>
       </Text>
       <Text Id="__SingleUse_Q1ZC" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M3 Min</Translation>
+        <Translation Language="GB">M15 Min</Translation>
       </Text>
       <Text Id="__SingleUse_RB0N" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M2 Max</Translation>
+        <Translation Language="GB">M14 Max</Translation>
       </Text>
       <Text Id="__SingleUse_8YDA" Alignment="Left" TypographyId="SmallLetters">
-        <Translation Language="GB">M2 Min</Translation>
+        <Translation Language="GB">M14 Min</Translation>
       </Text>
       <Text Id="__SingleUse_N03D" Alignment="Left" TypographyId="SmallLetters">
         <Translation Language="GB">M13 Min</Translation>
@@ -556,7 +562,7 @@
         <Translation Language="GB">GEAR ACTUATOR &#10;OVERRIDE</Translation>
       </Text>
       <Text Id="__SingleUse_KNCT" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">PRECOND REQ</Translation>
+        <Translation Language="GB">PRECOND&#10;REQ</Translation>
       </Text>
       <Text Id="__SingleUse_JBWN" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">STOP CHARGE</Translation>

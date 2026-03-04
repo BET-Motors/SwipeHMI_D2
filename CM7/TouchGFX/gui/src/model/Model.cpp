@@ -76,11 +76,129 @@ void Model::tick()
 				if(parseFbR(rawMsg, &fbr))
 					modelListener->updateFbR(fbr);
 				break;
+			case ID_IP_LTNG_CHG_PNEMATIC_TX:
+				if(parseLcp(rawMsg, &lcp))
+					modelListener->udpateLcp(lcp);
+				break;
+			case ID_BMS_VALUES_3:
+				if(parseBms3(rawMsg, &bms3))
+					modelListener->updateBms3(bms3);
+				break;
 			default:
                 break;
 		}
 		processed--;
 	}
+}
+
+bool Model::parseBms3(CAN_Raw_Msg_t rawMsg, BMS_Values_3_t *_bms) {
+	uint64_t rawVal;
+    bool changed = false;
+
+	rawVal = UnpackSignal(rawMsg.data, 33, 3);
+	if(_bms->E_Lock_Status != rawVal) {
+		_bms->E_Lock_Status = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseLcp(CAN_Raw_Msg_t rawMsg, Ip_Ltng_Chg_Pnematic_Tx_t *_lcp) {
+	uint64_t rawVal;
+    bool changed = false;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 3);
+	if(_lcp->Drv_Program_Sw != rawVal) {
+		_lcp->Drv_Program_Sw = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 3, 1);
+	if(_lcp->Override_Req != rawVal) {
+		_lcp->Override_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 4, 3);
+	if(_lcp->Gear_Actuator_Override != rawVal) {
+		_lcp->Gear_Actuator_Override = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 7, 4);
+	if(_lcp->Level_Control_Req != rawVal) {
+		_lcp->Level_Control_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 11, 1);
+	if(_lcp->DCDC_Req != rawVal) {
+		_lcp->DCDC_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 12, 1);
+	if(_lcp->LowBeam_Req != rawVal) {
+		_lcp->LowBeam_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 13, 1);
+	if(_lcp->HighBeam_Req != rawVal) {
+		_lcp->HighBeam_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 14, 1);
+	if(_lcp->PosLight_Req != rawVal) {
+		_lcp->PosLight_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 15, 1);
+	if(_lcp->IntLight_Req != rawVal) {
+		_lcp->IntLight_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 1);
+	if(_lcp->Chrg_STOP_Req != rawVal) {
+		_lcp->Chrg_STOP_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 17, 1);
+	if(_lcp->Chrg_PreCond_Req != rawVal) {
+		_lcp->Chrg_PreCond_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 18, 1);
+	if(_lcp->AirCompressor_Req != rawVal) {
+		_lcp->AirCompressor_Req = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 19, 5);
+	if(_lcp->MinPressureAir != rawVal) {
+		_lcp->MinPressureAir = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 24, 8);
+	if(_lcp->MaxPressureAir != rawVal) {
+		_lcp->MaxPressureAir = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 32, 32);
+	if(_lcp->RefSpdSens_Speed != rawVal) {
+		_lcp->RefSpdSens_Speed = rawVal;
+		changed = true;
+	}
+
+	return changed;
 }
 
 bool Model::parseFbR(CAN_Raw_Msg_t rawMsg, FuseBoxRelay_t *_fbr) {
@@ -628,21 +746,21 @@ bool Model::parsePressHydLightPt(CAN_Raw_Msg_t rawMsg, Press_Hydraulic_Light_Pow
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 24, 12);
-	rawVal = rawVal -2500;
+	rawVal = rawVal - 2500;
 	if(_phlp->Pwr_Act_MotRM != rawVal) {
 		_phlp->Pwr_Act_MotRM = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 36, 12);
-	rawVal = rawVal -2500;
+	rawVal = rawVal - 2500;
 	if(_phlp->Pwr_Act_MotFL != rawVal) {
 		_phlp->Pwr_Act_MotFL = rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 12);
-	rawVal = rawVal -2500;
+	rawVal = rawVal - 2500;
 	if(_phlp->Pwr_Act_MotFR != rawVal) {
 		_phlp->Pwr_Act_MotFR = rawVal;
 		changed = true;

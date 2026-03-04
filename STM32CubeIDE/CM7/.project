@@ -832,6 +832,21 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_betHMI_S2.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_chargeGun_fault.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargeGun_fault.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargeGun_off.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargeGun_off.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_chargeGun_on.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargeGun_on.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_chargePreCondReqOff.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_chargePreCondReqOff.cpp</locationURI>

@@ -16,7 +16,7 @@
             "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
             "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
             "EndSwipeElasticWidth": 50,
-            "SelectedPage": "screen4",
+            "SelectedPage": "screen2",
             "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
             "Components": [
               {
@@ -88,8 +88,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "overrideReq",
-                    "X": 535,
-                    "Y": 35,
+                    "X": 732,
+                    "Y": 34,
                     "Width": 221,
                     "Height": 91,
                     "Pressed": "overrideReq_on.png",
@@ -98,8 +98,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "dcdcReq",
-                    "X": 589,
-                    "Y": 162,
+                    "X": 441,
+                    "Y": 51,
                     "Width": 121,
                     "Height": 61,
                     "Pressed": "DCDC_On.png",
@@ -212,8 +212,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea2",
-                    "X": 833,
-                    "Y": 391,
+                    "X": 816,
+                    "Y": 545,
                     "Width": 162,
                     "Height": 103,
                     "TextId": "__SingleUse_C3GG",
@@ -244,8 +244,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea3",
-                    "X": 498,
-                    "Y": 347,
+                    "X": 413,
+                    "Y": 182,
                     "Width": 176,
                     "Height": 40,
                     "TextId": "__SingleUse_V5KF",
@@ -260,8 +260,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea3_1",
-                    "X": 498,
-                    "Y": 520,
+                    "X": 416,
+                    "Y": 319,
                     "Width": 176,
                     "Height": 40,
                     "TextId": "__SingleUse_1IEA",
@@ -276,8 +276,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "hvHeaterEn",
-                    "X": 680,
-                    "Y": 305,
+                    "X": 595,
+                    "Y": 140,
                     "Width": 120,
                     "Height": 120,
                     "Pressed": "HVheaterOn.png",
@@ -286,8 +286,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "heatPumpReq",
-                    "X": 680,
-                    "Y": 485,
+                    "X": 598,
+                    "Y": 284,
                     "Width": 120,
                     "Height": 120,
                     "Pressed": "heatPumpOn.png",
@@ -306,8 +306,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "stopChargeReq",
-                    "X": 680,
-                    "Y": 653,
+                    "X": 598,
+                    "Y": 420,
                     "Width": 120,
                     "Height": 120,
                     "Pressed": "chargeStopOn.png",
@@ -316,8 +316,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea4",
-                    "X": 498,
-                    "Y": 685,
+                    "X": 416,
+                    "Y": 452,
                     "Width": 147,
                     "Height": 70,
                     "TextId": "__SingleUse_JBWN",
@@ -332,10 +332,10 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea4_1",
-                    "X": 886,
-                    "Y": 695,
-                    "Width": 225,
-                    "Height": 44,
+                    "X": 416,
+                    "Y": 596,
+                    "Width": 160,
+                    "Height": 77,
                     "TextId": "__SingleUse_KNCT",
                     "TextRotation": "0",
                     "Color": {
@@ -348,8 +348,8 @@
                   {
                     "Type": "ToggleButton",
                     "Name": "chargePrecondReq",
-                    "X": 1128,
-                    "Y": 657,
+                    "X": 606,
+                    "Y": 572,
                     "Width": 120,
                     "Height": 120,
                     "Pressed": "chargePreCondReqOn.png",
@@ -358,8 +358,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea5_2_1",
-                    "X": 897,
-                    "Y": 42,
+                    "X": 852,
+                    "Y": 294,
                     "Width": 269,
                     "Height": 72,
                     "TextId": "__SingleUse_GV9H",
@@ -374,8 +374,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "gearActG1",
-                    "X": 967,
-                    "Y": 126,
+                    "X": 921,
+                    "Y": 385,
                     "Width": 121,
                     "Height": 61,
                     "FileNameSelected": "gearActG1Selected.png",
@@ -387,8 +387,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "gearActG2",
-                    "X": 1104,
-                    "Y": 125,
+                    "X": 1051,
+                    "Y": 383,
                     "Width": 121,
                     "Height": 61,
                     "FileNameSelected": "gearActG2Selected.png",
@@ -400,8 +400,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "gearActNeutral",
-                    "X": 833,
-                    "Y": 126,
+                    "X": 788,
+                    "Y": 385,
                     "Width": 121,
                     "Height": 61,
                     "FileNameSelected": "gearActNeutralSelected.png",
@@ -452,8 +452,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "airSusNoReq",
-                    "X": 1009,
-                    "Y": 340,
+                    "X": 1001,
+                    "Y": 494,
                     "Width": 36,
                     "Height": 36,
                     "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.png",
@@ -466,8 +466,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "airSusL1",
-                    "X": 1009,
-                    "Y": 396,
+                    "X": 1001,
+                    "Y": 550,
                     "Width": 36,
                     "Height": 36,
                     "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.png",
@@ -480,8 +480,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "airSusL2",
-                    "X": 1009,
-                    "Y": 452,
+                    "X": 1001,
+                    "Y": 606,
                     "Width": 36,
                     "Height": 36,
                     "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.png",
@@ -494,8 +494,8 @@
                   {
                     "Type": "RadioButton",
                     "Name": "airSusL3",
-                    "X": 1009,
-                    "Y": 506,
+                    "X": 1001,
+                    "Y": 660,
                     "Width": 36,
                     "Height": 36,
                     "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.png",
@@ -508,8 +508,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea5",
-                    "X": 1059,
-                    "Y": 342,
+                    "X": 1051,
+                    "Y": 496,
                     "Width": 201,
                     "Height": 36,
                     "TextId": "__SingleUse_TLDD",
@@ -524,8 +524,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea5_2",
-                    "X": 1059,
-                    "Y": 452,
+                    "X": 1051,
+                    "Y": 606,
                     "Width": 123,
                     "Height": 36,
                     "TextId": "__SingleUse_M6DW",
@@ -540,8 +540,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "airSusL1Text",
-                    "X": 1059,
-                    "Y": 400,
+                    "X": 1051,
+                    "Y": 554,
                     "Width": 123,
                     "Height": 36,
                     "TextId": "__SingleUse_PVED",
@@ -556,8 +556,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "textArea5_1_1",
-                    "X": 1059,
-                    "Y": 506,
+                    "X": 1051,
+                    "Y": 660,
                     "Width": 123,
                     "Height": 36,
                     "TextId": "__SingleUse_4CJ8",
@@ -568,6 +568,64 @@
                       "Blue": 252
                     },
                     "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "airPress",
+                    "X": 899,
+                    "Y": 720,
+                    "Width": 308,
+                    "Height": 48,
+                    "TextId": "__SingleUse_TK6S",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    },
+                    "Wildcard2": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "chargingState",
+                    "X": 1080,
+                    "Y": 21,
+                    "Width": 120,
+                    "Height": 120,
+                    "RelativeFilename": "chargeGun_off.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea9",
+                    "X": 970,
+                    "Y": 197,
+                    "Width": 247,
+                    "Height": 36,
+                    "TextId": "__SingleUse_Q6FQ",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "airCompReq",
+                    "X": 842,
+                    "Y": 155,
+                    "Width": 120,
+                    "Height": 120,
+                    "Pressed": "airCompReqOn.png",
+                    "Released": "airCompReqOff.png"
                   }
                 ]
               },
@@ -1917,7 +1975,7 @@
                         "Name": "textArea8",
                         "X": 11,
                         "Y": 35,
-                        "Width": 202,
+                        "Width": 186,
                         "Height": 72,
                         "TextId": "__SingleUse_U1QO",
                         "TextRotation": "0",
@@ -2279,7 +2337,7 @@
                         "Name": "textArea8_2",
                         "X": 81,
                         "Y": 35,
-                        "Width": 202,
+                        "Width": 199,
                         "Height": 72,
                         "TextId": "__SingleUse_HHM7",
                         "TextRotation": "0",
@@ -2641,7 +2699,7 @@
                         "Name": "textArea8_2_1",
                         "X": 81,
                         "Y": 35,
-                        "Width": 202,
+                        "Width": 199,
                         "Height": 72,
                         "TextId": "__SingleUse_AX7X",
                         "TextRotation": "0",
@@ -3339,7 +3397,7 @@
                         "Name": "textArea8_1",
                         "X": 9,
                         "Y": 35,
-                        "Width": 202,
+                        "Width": 186,
                         "Height": 72,
                         "TextId": "__SingleUse_Q0TY",
                         "TextRotation": "0",
@@ -3424,8 +3482,8 @@
                   {
                     "Type": "Image",
                     "Name": "image3",
-                    "X": 14,
-                    "Y": 428,
+                    "X": 9,
+                    "Y": 359,
                     "Width": 646,
                     "Height": 314,
                     "RelativeFilename": "battTemp1324.png"
@@ -4275,15 +4333,15 @@
                   {
                     "Type": "Container",
                     "Name": "battTemp1324Cacheable",
-                    "X": 74,
-                    "Y": 479,
+                    "X": 69,
+                    "Y": 410,
                     "Width": 575,
                     "Height": 252,
                     "IsCacheableContainer": true,
                     "Components": [
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM5Min_1",
+                        "Name": "battTempM17Min",
                         "Y": 94,
                         "Width": 92,
                         "Height": 24,
@@ -4301,7 +4359,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM2Min_1",
+                        "Name": "battTempM14Min",
                         "X": 163,
                         "Y": -1,
                         "Width": 92,
@@ -4320,7 +4378,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM3Min_1",
+                        "Name": "battTempM15Min",
                         "X": 325,
                         "Width": 92,
                         "Height": 24,
@@ -4338,7 +4396,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM4Min_1",
+                        "Name": "battTempM16Min",
                         "X": 480,
                         "Width": 92,
                         "Height": 24,
@@ -4356,7 +4414,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM3Max_1",
+                        "Name": "battTempM15Max",
                         "X": 325,
                         "Y": 41,
                         "Width": 92,
@@ -4375,7 +4433,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM4Max_1",
+                        "Name": "battTempM16Max",
                         "X": 480,
                         "Y": 42,
                         "Width": 92,
@@ -4394,7 +4452,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM2Max_1",
+                        "Name": "battTempM14Max",
                         "X": 163,
                         "Y": 41,
                         "Width": 92,
@@ -4413,7 +4471,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM6Min_1",
+                        "Name": "battTempM18Min",
                         "X": 163,
                         "Y": 94,
                         "Width": 92,
@@ -4432,7 +4490,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM7Min_1",
+                        "Name": "battTempM19Min",
                         "X": 325,
                         "Y": 94,
                         "Width": 92,
@@ -4451,7 +4509,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM8Min_1",
+                        "Name": "battTempM20Min",
                         "X": 480,
                         "Y": 88,
                         "Width": 92,
@@ -4470,7 +4528,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM8Max_1",
+                        "Name": "battTempM20Max",
                         "X": 480,
                         "Y": 136,
                         "Width": 92,
@@ -4489,7 +4547,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM7Max_1",
+                        "Name": "battTempM19Max",
                         "X": 325,
                         "Y": 136,
                         "Width": 92,
@@ -4508,7 +4566,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM10Max_1",
+                        "Name": "battTempM22Max",
                         "X": 163,
                         "Y": 225,
                         "Width": 92,
@@ -4527,7 +4585,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM1Min_1",
+                        "Name": "battTempM13Min",
                         "Width": 92,
                         "Height": 22,
                         "TextId": "__SingleUse_7OWG",
@@ -4544,7 +4602,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM1Max_1",
+                        "Name": "battTempM13Max",
                         "Y": 41,
                         "Width": 92,
                         "Height": 24,
@@ -4562,7 +4620,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM9Min_1",
+                        "Name": "battTempM21Min",
                         "Y": 184,
                         "Width": 92,
                         "Height": 24,
@@ -4580,7 +4638,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM6Max_1",
+                        "Name": "battTempM18Max",
                         "X": 163,
                         "Y": 136,
                         "Width": 92,
@@ -4599,7 +4657,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM10Min_1",
+                        "Name": "battTempM22Min",
                         "X": 163,
                         "Y": 184,
                         "Width": 92,
@@ -4618,7 +4676,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM11Min_1",
+                        "Name": "battTempM23Min",
                         "X": 325,
                         "Y": 184,
                         "Width": 92,
@@ -4637,7 +4695,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM12Min_1",
+                        "Name": "battTempM24Min",
                         "X": 480,
                         "Y": 184,
                         "Width": 92,
@@ -4656,7 +4714,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM12Max_1",
+                        "Name": "battTempM24Max",
                         "X": 480,
                         "Y": 228,
                         "Width": 92,
@@ -4675,7 +4733,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM11Max_1",
+                        "Name": "battTempM23Max",
                         "X": 325,
                         "Y": 225,
                         "Width": 92,
@@ -4694,7 +4752,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM9Max_1",
+                        "Name": "battTempM21Max",
                         "Y": 225,
                         "Width": 92,
                         "Height": 24,
@@ -4712,7 +4770,7 @@
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "battTempM5Max_1",
+                        "Name": "battTempM17Max",
                         "Y": 138,
                         "Width": 92,
                         "Height": 24,
@@ -4749,7 +4807,7 @@
                         "Name": "textArea6_2_2",
                         "X": 112,
                         "Y": 6,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_8YDA",
                         "TextRotation": "0",
@@ -4765,7 +4823,7 @@
                         "Name": "textArea6_2_1_1",
                         "X": 112,
                         "Y": 48,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_RB0N",
                         "TextRotation": "0",
@@ -4781,7 +4839,7 @@
                         "Name": "textArea6_3_2",
                         "X": 272,
                         "Y": 5,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_Q1ZC",
                         "TextRotation": "0",
@@ -4797,7 +4855,7 @@
                         "Name": "textArea6_3_1_1",
                         "X": 272,
                         "Y": 48,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_V1UN",
                         "TextRotation": "0",
@@ -4813,7 +4871,7 @@
                         "Name": "textArea6_4_2",
                         "X": 432,
                         "Y": 6,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_64FO",
                         "TextRotation": "0",
@@ -4829,7 +4887,7 @@
                         "Name": "textArea6_4_1_1",
                         "X": 432,
                         "Y": 48,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_V0E4",
                         "TextRotation": "0",
@@ -4845,7 +4903,7 @@
                         "Name": "textArea6_5_2",
                         "X": -53,
                         "Y": 100,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_3VJS",
                         "TextRotation": "0",
@@ -4861,7 +4919,7 @@
                         "Name": "textArea6_5_1_1",
                         "X": -53,
                         "Y": 144,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_L2D9",
                         "TextRotation": "0",
@@ -4877,7 +4935,7 @@
                         "Name": "textArea6_6_2",
                         "X": -53,
                         "Y": 184,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_VHTC",
                         "TextRotation": "0",
@@ -4893,7 +4951,7 @@
                         "Name": "textArea6_6_1_1",
                         "X": -53,
                         "Y": 231,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_2QXK",
                         "TextRotation": "0",
@@ -4909,7 +4967,7 @@
                         "Name": "textArea6_7_2",
                         "X": 112,
                         "Y": 100,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_AFO2",
                         "TextRotation": "0",
@@ -4925,7 +4983,7 @@
                         "Name": "textArea6_7_1_1",
                         "X": 112,
                         "Y": 142,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_ERLB",
                         "TextRotation": "0",
@@ -4973,7 +5031,7 @@
                         "Name": "textArea6_9_2",
                         "X": 272,
                         "Y": 100,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_5YG8",
                         "TextRotation": "0",
@@ -4989,7 +5047,7 @@
                         "Name": "textArea6_9_1_1",
                         "X": 272,
                         "Y": 144,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_TBTT",
                         "TextRotation": "0",
@@ -5037,7 +5095,7 @@
                         "Name": "textArea6_11_2",
                         "X": 432,
                         "Y": 94,
-                        "Width": 35,
+                        "Width": 41,
                         "Height": 12,
                         "TextId": "__SingleUse_ESQM",
                         "TextRotation": "0",
@@ -5053,7 +5111,7 @@
                         "Name": "textArea6_11_1_1",
                         "X": 432,
                         "Y": 142,
-                        "Width": 38,
+                        "Width": 44,
                         "Height": 12,
                         "TextId": "__SingleUse_2LEY",
                         "TextRotation": "0",
@@ -5261,6 +5319,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "relay2StateToggleCallback"
+            }
+          },
+          {
+            "InteractionName": "airCompReqToggle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "airCompReq"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "airCompReqToggleCallback"
             }
           }
         ]

@@ -38,6 +38,83 @@ void Screen1View :: handleTickEvent()
 
 }
 
+void Screen1View::setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data) {
+	defaultData = data;
+	lcpt.Override_Request = data.Override_Req;
+	lcpt.Drive_Program_Sw = data.Drv_Program_Sw;
+	lcpt.Gear_Actuator_Override = data.Gear_Actuator_Override;
+	lcpt.DCDC_Request = data.DCDC_Req;
+	lcpt.Air_Sus_Level_Control_Override = data.Level_Control_Req;
+	lcpt.Low_Beam_Req = data.LowBeam_Req;
+	lcpt.High_Beam_Req = data.HighBeam_Req;
+	lcpt.Position_Light_Req = data.PosLight_Req;
+	lcpt.Interior_Light_Req = data.IntLight_Req;
+	lcpt.Chrg_STOP_Req = data.Chrg_STOP_Req;
+	lcpt.Chrg_PreCond_Req = data.Chrg_PreCond_Req;
+	lcpt.AirCompressor_Req = data.AirCompressor_Req;
+
+	dcdcReq.forceState(lcpt.DCDC_Request);
+	dcdcReq.invalidate();
+	lowBeamToggle.forceState(lcpt.Low_Beam_Req);
+	lowBeamToggle.invalidate();
+	highBeamToggle.forceState(lcpt.High_Beam_Req);
+	highBeamToggle.invalidate();
+	intLightsToggle.forceState(lcpt.Interior_Light_Req);
+	intLightsToggle.invalidate();
+	posLightsToggle.forceState(lcpt.Position_Light_Req);
+	posLightsToggle.invalidate();
+	stopChargeReq.forceState(lcpt.Chrg_STOP_Req);
+	stopChargeReq.invalidate();
+	chargePrecondReq.forceState(lcpt.Chrg_PreCond_Req);
+	chargePrecondReq.invalidate();
+
+	if (lcpt.Drive_Program_Sw == 0) {
+		driveModeEco.setSelected(true); // update the min value
+	} else if (lcpt.Drive_Program_Sw == 1) {
+		driveModeSnow.setSelected(true);  // update the max value
+	} else if(lcpt.Drive_Program_Sw == 2) {
+		driveModeSport.setSelected(true); 
+	}
+
+	if (lcpt.Gear_Actuator_Override == 0) {
+		gearActNeutral.setSelected(true); // update the min value
+	} else if (lcpt.Gear_Actuator_Override == 1) {
+		gearActG1.setSelected(true);  // update the max value
+	} else if(lcpt.Gear_Actuator_Override == 2) {
+		gearActG2.setSelected(true); 
+	}
+
+	if (lcpt.Air_Sus_Level_Control_Override == 0) {
+		airSusNoReq.setSelected(true); // update the min value
+	} else if (lcpt.Air_Sus_Level_Control_Override == 1) {
+		airSusL1.setSelected(true);  // update the max value
+	} else if(lcpt.Air_Sus_Level_Control_Override == 2) {
+		airSusL2.setSelected(true); 
+	} else if(lcpt.Air_Sus_Level_Control_Override == 3) {
+		airSusL3.setSelected(true); 
+	}
+
+	Unicode::snprintf(airPressBuffer1, AIRPRESSBUFFER1_SIZE, "%d", data.MinPressureAir);
+	Unicode::snprintf(airPressBuffer2, AIRPRESSBUFFER2_SIZE, "%d", data.MaxPressureAir);
+	airPress.invalidate();
+}
+
+void Screen1View::showBms3Vals(BMS_Values_3_t data) {
+	switch(data.E_Lock_Status) {
+		case 0:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_OFF_ID);
+			break;
+		case 1:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_ON_ID);
+			break;
+		case 3:
+		default:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_FAULT_ID);
+			break;
+	}
+	chargingState.invalidate();
+}
+
 void Screen1View::showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t phlp) {
 	Unicode::snprintf(susFBuffer, SUSF_SIZE, "%d", phlp.Pres_Susp_Front);
 	susF.invalidate();
@@ -119,114 +196,173 @@ void Screen1View::showEpea(ElecSys_Power_Energy_AirComp_t data) {
 	airCompSpeed.invalidate();
 	Unicode::snprintf(airCompTracVoltBuffer, AIRCOMPSPEED_SIZE, "%d", data.Airc_traction_voltage);
 	airCompTracVolt.invalidate();
-	Unicode::snprintf(airCompTrqBuffer, AIRCOMPSPEED_SIZE, "%d", data.Airc_torque);
+	Unicode::snprintfFloat(airCompTrqBuffer, AIRCOMPSPEED_SIZE, "%.1f", data.Airc_torque);
 	airCompTrq.invalidate();
-	Unicode::snprintf(airCompPwrBuffer, AIRCOMPSPEED_SIZE, "%d", data.Airc_power);
+	Unicode::snprintfFloat(airCompPwrBuffer, AIRCOMPSPEED_SIZE, "%.1f", data.Airc_power);
 	airCompPwr.invalidate();
 }
 
 void Screen1View::overrRideReqCallback() {
 	lcpt.Override_Request ^= 1;
 	presenter->updateDriverIn_tx(lcpt);
+	// setDefaults(defaultData);
 }
 void Screen1View::dcdcReqCallback() {
-	lcpt.DCDC_Request ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.DCDC_Request ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		dcdcReq.forceState(defaultData.DCDC_Request);
+		dcdcReq.invalidate();
+	}
 }
 void Screen1View::toggleLowBeamCallback() {
-	lcpt.Low_Beam_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.Low_Beam_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		lowBeamToggle.forceState(defaultData.Low_Beam_Req);
+		lowBeamToggle.invalidate();
+	}
 }
 void Screen1View::toggleHighBeamCallback() {
-	lcpt.High_Beam_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.High_Beam_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		highBeamToggle.forceState(defaultData.High_Beam_Req);
+		highBeamToggle.invalidate();
+	}
 }
 void Screen1View::toggleIntLightsCallback() {
-	lcpt.Interior_Light_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.Interior_Light_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		intLightsToggle.forceState(defaultData.Interior_Light_Req);
+		intLightsToggle.invalidate();
+	}
 }
 void Screen1View::posLightsToggleCallback() {
-	lcpt.Position_Light_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
-}
-void Screen1View::airSusControlCallback() {
-	lcpt.Air_Sus_Level_Control_Override ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.Position_Light_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		posLightsToggle.forceState(defaultData.Position_Light_Req);
+		posLightsToggle.invalidate();
+	}
 }
 void Screen1View::hvHeaterEnableCallback() {
-	lcpt.HVHeater_Enable ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.HVHeater_Enable ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		hvHeaterEn.forceState(defaultData.HVHeater_Enable);
+		hvHeaterEn.invalidate();
+	}
 }
 void Screen1View::heatPumpReqCallback() {
-	lcpt.HeatPump_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.HeatPump_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		heatPumpReq.forceState(defaultData.HeatPump_Req);
+		heatPumpReq.invalidate();
+	}
 }
 void Screen1View::heatFoilReqCallback() {
-	lcpt.HeatFoil_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.HeatFoil_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		heaterFoilReq.forceState(defaultData.HeatFoil_Req);
+		heaterFoilReq.invalidate();
+	}
 }
 void Screen1View::stopChargeReqCallback() {
-	lcpt.Chrg_STOP_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.Chrg_STOP_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		stopChargeReq.forceState(defaultData.Chrg_STOP_Req);
+		stopChargeReq.invalidate();
+	}
 }
 void Screen1View::precondReqCallback() {
-	lcpt.Chrg_PreCond_Req ^= 1;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		lcpt.Chrg_PreCond_Req ^= 1;
+		presenter->updateDriverIn_tx(lcpt);
+	} else {
+		chargePrecondReq.forceState(defaultData.Chrg_PreCond_Req);
+		chargePrecondReq.invalidate();
+	}
 }
 void Screen1View::relay1StateToggleCallback() {
-	fbr.box1_req ^= 1;
-	presenter->updateFuseBoxRelay(fbr);
+	if(lcpt.Override_Request) {
+		fbr.box1_req ^= 1;
+		presenter->updateFuseBoxRelay(fbr);
+	} else {
+		relay1Toggle.forceState(fbr.box1_req);
+		relay1Toggle.invalidate();
+	}
 }
 void Screen1View::relay2StateToggleCallback() {
-	fbr.box2_req ^= 1;
-	presenter->updateFuseBoxRelay(fbr);
+	if(lcpt.Override_Request) {
+		fbr.box2_req ^= 1;
+		presenter->updateFuseBoxRelay(fbr);
+	} else {
+		relay2Toggle.forceState(fbr.box2_req);
+		relay2Toggle.invalidate();
+	}
 }
-void Screen1View::radioButtonSelectedHandler(const AbstractButton& src)
-{
+void Screen1View::radioButtonSelectedHandler(const AbstractButton& src) {
 	uint8_t gearActuatorVal = 0;
 
-    if (&src == &gearActG1) {
-    	gearActuatorVal = 1; // update the min value
-    } else if (&src == &gearActG2) {
-    	gearActuatorVal = 2; // update the max value
-    } else if(&src == &gearActNeutral) {
-		gearActuatorVal = 0;
-	}
-
-	lcpt.Gear_Actuator_Override = gearActuatorVal;
-	presenter->updateDriverIn_tx(lcpt);
+	if(lcpt.Override_Request) {
+		if (&src == &gearActG1) {
+			gearActuatorVal = 1; // update the min value
+		} else if (&src == &gearActG2) {
+			gearActuatorVal = 2; // update the max value
+		} else if(&src == &gearActNeutral) {
+			gearActuatorVal = 0;
+		}
+		lcpt.Gear_Actuator_Override = gearActuatorVal;
+		presenter->updateDriverIn_tx(lcpt);
+	} 
 }
 void Screen1View::radioButtonSelectedHandler2(const AbstractButton& src)
 {
 	uint8_t driveMode = 0;
 
-    if (&src == &driveModeEco) {
-    	driveMode = 0; // update the min value
-    } else if (&src == &driveModeSnow) {
-    	driveMode = 2; // update the max value
-    } else if(&src == &driveModeSport) {
-		driveMode = 1;
+	if(lcpt.Override_Request) {
+		if (&src == &driveModeEco) {
+			driveMode = 0; // update the min value
+		} else if (&src == &driveModeSnow) {
+			driveMode = 2; // update the max value
+		} else if(&src == &driveModeSport) {
+			driveMode = 1;
+		}
+		lcpt.Drive_Program_Sw = driveMode;
+		presenter->updateDriverIn_tx(lcpt);
 	}
-
-	lcpt.Drive_Program_Sw = driveMode;
-	presenter->updateDriverIn_tx(lcpt);
 }
 void Screen1View::radioButtonSelectedHandler3(const AbstractButton& src)
 {
 	uint8_t airSusLevel = 0;
 
-    if (&src == &airSusNoReq) {
-    	airSusLevel = 0; // update the min value
-    } else if (&src == &airSusL1) {
-    	airSusLevel = 1; // update the max value
-    } else if(&src == &airSusL2) {
-		airSusLevel = 2;
-	} else if(&src == &airSusL3) {
-		airSusLevel = 3;
+	if(lcpt.Override_Request) {
+		if (&src == &airSusNoReq) {
+			airSusLevel = 0; // update the min value
+		} else if (&src == &airSusL1) {
+			airSusLevel = 1; // update the max value
+		} else if(&src == &airSusL2) {
+			airSusLevel = 2;
+		} else if(&src == &airSusL3) {
+			airSusLevel = 3;
+		}
+		lcpt.Air_Sus_Level_Control_Override = airSusLevel;
+		presenter->updateDriverIn_tx(lcpt);
 	}
-
-	lcpt.Air_Sus_Level_Control_Override = airSusLevel;
-	presenter->updateDriverIn_tx(lcpt);
 }
 
 void Screen1View::showBms1_4(BMS_Values_5_t data) {
@@ -396,7 +532,7 @@ void Screen1View::showFbR(FuseBoxRelay_t fbr) {
 }
 
 void Screen1View::showBms13_16(BMS_Values_8_t data) {
-	/* Unicode::snprintf(battTempM13MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M13_Temp_max);
+	Unicode::snprintf(battTempM13MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M13_Temp_max);
 	battTempM13Max.invalidate();
 	Unicode::snprintf(battTempM13MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M13_Temp_min);
 	battTempM13Min.invalidate();
@@ -411,11 +547,11 @@ void Screen1View::showBms13_16(BMS_Values_8_t data) {
 	Unicode::snprintf(battTempM16MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M16_Temp_max);
 	battTempM16Max.invalidate();
 	Unicode::snprintf(battTempM16MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M16_Temp_min);
-	battTempM16Min.invalidate(); */
+	battTempM16Min.invalidate();
 }
 
 void Screen1View::showBms17_20(BMS_Values_9_t data) {
-	/* Unicode::snprintf(battTempM17MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_max);
+	Unicode::snprintf(battTempM17MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_max);
 	battTempM17Max.invalidate();
 	Unicode::snprintf(battTempM17MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_min);
 	battTempM17Min.invalidate();
@@ -430,9 +566,24 @@ void Screen1View::showBms17_20(BMS_Values_9_t data) {
 	Unicode::snprintf(battTempM20MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_max);
 	battTempM120Max.invalidate();
 	Unicode::snprintf(battTempM20MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_min);
-	battTempM20Min.invalidate(); */
+	battTempM20Min.invalidate();
 }
 
 void Screen1View::showBms21_24(BMS_Values_10_t data) {
-
+	Unicode::snprintf(battTempM21MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_max);
+	battTempM21Max.invalidate();
+	Unicode::snprintf(battTempM21MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_min);
+	battTempM21Min.invalidate();
+	Unicode::snprintf(battTempM22MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M18_Temp_max);
+	battTempM22Max.invalidate();
+	Unicode::snprintf(battTempM22MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M18_Temp_min);
+	battTempM22Min.invalidate();
+	Unicode::snprintf(battTempM23MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M19_Temp_max);
+	battTempM23Max.invalidate();
+	Unicode::snprintf(battTempM23MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M19_Temp_min);
+	battTempM23Min.invalidate();
+	Unicode::snprintf(battTempM24MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_max);
+	battTempM24Max.invalidate();
+	Unicode::snprintf(battTempM24MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_min);
+	battTempM24Min.invalidate();
 }

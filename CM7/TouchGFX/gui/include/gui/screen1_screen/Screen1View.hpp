@@ -31,6 +31,7 @@ public:
 	void showFb1(FuseBox1State_t);
 	void showFb2(FuseBox2State_t);
 	void showFbR(FuseBoxRelay_t);
+	void showBms3Vals(BMS_Values_3_t);
 
 	void overrRideReqCallback();
 	void dcdcReqCallback();
@@ -38,7 +39,6 @@ public:
 	void toggleHighBeamCallback();
 	void toggleIntLightsCallback();
 	void posLightsToggleCallback();
-	void airSusControlCallback();
 	void hvHeaterEnableCallback();
 	void heatPumpReqCallback();
 	void heatFoilReqCallback();
@@ -46,9 +46,11 @@ public:
 	void precondReqCallback();
 	void relay1StateToggleCallback();
 	void relay2StateToggleCallback();
+	void setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data);
 
 protected:
 	DriverInputsTx_t lcpt;
+	Ip_Ltng_Chg_Pnematic_Tx_t defaultData;
 	FuseboxCtrlTx_t fbr;
 	void radioButtonSelectedHandler(const AbstractButton& src);
 	touchgfx::Callback<Screen1View, const AbstractButton&> radioButtonSelectedCallback;
