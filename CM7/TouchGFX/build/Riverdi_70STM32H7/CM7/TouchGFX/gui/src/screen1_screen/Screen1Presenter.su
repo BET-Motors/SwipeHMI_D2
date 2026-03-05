@@ -9,8 +9,8 @@ CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:28:6:virtual void Scree
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:32:6:virtual void Screen1Presenter::updateThermal1(Thermal_Management_Rx_1_t)	16	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:36:6:virtual void Screen1Presenter::updateThermal2(Thermal_Management_Rx_2_t)	16	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:40:6:virtual void Screen1Presenter::updateMtc1(Motor_And_Torque_Control_1_t)	8	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:44:6:virtual void Screen1Presenter::updateMtc2(Motor_And_Torque_Control_2_t)	16	static
-CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:48:6:virtual void Screen1Presenter::updateEpea(ElecSys_Power_Energy_AirComp_t)	32	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:44:6:virtual void Screen1Presenter::updateMtc2(Motor_And_Torque_Control_2_t)	8	static
+CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:48:6:virtual void Screen1Presenter::updateEpea(ElecSys_Power_Energy_AirComp_t)	16	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:58:6:virtual void Screen1Presenter::updateBms1_4(BMS_Values_5_t)	8	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:61:6:virtual void Screen1Presenter::updateBms5_8(BMS_Values_6_t)	8	static
 CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp:64:6:virtual void Screen1Presenter::updateBms9_12(BMS_Values_7_t)	8	static

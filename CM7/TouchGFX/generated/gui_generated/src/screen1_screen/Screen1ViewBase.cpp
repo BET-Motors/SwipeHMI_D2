@@ -861,7 +861,7 @@ Screen1ViewBase::Screen1ViewBase() :
 
     screen3.add(fuseBox1_FuseState);
 
-    fuseBox1_RelayState.setPosition(562, 92, 373, 248);
+    fuseBox1_RelayState.setPosition(562, 92, 690, 248);
     fbR1_2.setPosition(60, 123, 50, 50);
     fbR1_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     fuseBox1_RelayState.add(fbR1_2);
@@ -936,11 +936,11 @@ Screen1ViewBase::Screen1ViewBase() :
     fbR1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     fuseBox1_RelayState.add(fbR1_1);
 
-    textArea_2.setXY(28, 135);
-    textArea_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea_2.setLinespacing(0);
-    textArea_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_84RG));
-    fuseBox1_RelayState.add(textArea_2);
+    fb1Fuse1_1_2_2.setXY(32, 135);
+    fb1Fuse1_1_2_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    fb1Fuse1_1_2_2.setLinespacing(0);
+    fb1Fuse1_1_2_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7D37));
+    fuseBox1_RelayState.add(fb1Fuse1_1_2_2);
 
     fbR1_9.setPosition(60, 183, 50, 50);
     fbR1_9.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -1447,6 +1447,14 @@ Screen1ViewBase::Screen1ViewBase() :
     fuseBox2_FuseState.add(textArea8_1);
 
     screen3.add(fuseBox2_FuseState);
+
+    testToggle.setPosition(881, 147, 310, 36);
+    testToggle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    testToggle.setLinespacing(0);
+    testToggleBuffer[0] = 0;
+    testToggle.setWildcard(testToggleBuffer);
+    testToggle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CQ6Z));
+    screen3.add(testToggle);
 
     textArea8_2_2.setPosition(943, 227, 193, 76);
     textArea8_2_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -2164,7 +2172,7 @@ Screen1ViewBase::Screen1ViewBase() :
 
     swipeContainer1.add(screen4);
 
-    swipeContainer1.setSelectedPage(1);
+    swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
 }
 

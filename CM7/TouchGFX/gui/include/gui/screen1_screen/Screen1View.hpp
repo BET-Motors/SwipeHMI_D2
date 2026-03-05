@@ -48,6 +48,8 @@ public:
 	void relay2StateToggleCallback();
 	void setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data);
 
+	void boxClickHandler(const Box& b, const ClickEvent& e);
+
 protected:
 	DriverInputsTx_t lcpt;
 	Ip_Ltng_Chg_Pnematic_Tx_t defaultData;
@@ -59,6 +61,10 @@ protected:
 	void radioButtonSelectedHandler3(const AbstractButton& src);
 	touchgfx::Callback<Screen1View, const AbstractButton&> radioButtonSelectedCallback3;
 	void updateBoxColor(touchgfx::Box& box, uint8_t state);
+	Callback<Screen1View, const Box&, const ClickEvent&> boxClickedCallback;
+
+private:
+	uint32_t fuse1Mask;
 };
 
 #endif // SCREEN1VIEW_HPP

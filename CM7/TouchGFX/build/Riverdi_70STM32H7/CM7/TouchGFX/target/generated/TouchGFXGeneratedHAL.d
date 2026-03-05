@@ -145,6 +145,7 @@ CM7/TouchGFX/build/Riverdi_70STM32H7/CM7/TouchGFX/target/generated/TouchGFXGener
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/CacheableContainer.hpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
@@ -303,6 +304,7 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hp
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/CacheableContainer.hpp:
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:

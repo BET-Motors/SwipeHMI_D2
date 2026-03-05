@@ -17,6 +17,7 @@
 #include <touchgfx/widgets/RadioButtonGroup.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/CacheableContainer.hpp>
+#include <touchgfx/mixins/ClickListener.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -239,33 +240,33 @@ protected:
     touchgfx::TextArea textArea7_27;
     touchgfx::TextArea textArea8;
     touchgfx::Container fuseBox1_RelayState;
-    touchgfx::Box fbR1_2;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_2;
     touchgfx::TextArea fb1Fuse1_1_2;
-    touchgfx::Box fbR1_3;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_3;
     touchgfx::TextArea textArea7_2_2;
-    touchgfx::Box fbR1_4;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_4;
     touchgfx::TextArea textArea7_3_2;
-    touchgfx::Box fbR1_5;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_5;
     touchgfx::TextArea textArea7_4_2;
-    touchgfx::Box fbR1_6;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_6;
     touchgfx::TextArea textArea7_5_2;
-    touchgfx::Box fbR1_7;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_7;
     touchgfx::TextArea textArea7_6_2;
-    touchgfx::Box fbR1_8;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_8;
     touchgfx::TextArea textArea7_7_2;
-    touchgfx::Box fbR1_1;
-    touchgfx::TextArea textArea_2;
-    touchgfx::Box fbR1_9;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_1;
+    touchgfx::TextArea fb1Fuse1_1_2_2;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_9;
     touchgfx::TextArea textArea7_9_2;
-    touchgfx::Box fbR1_10;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_10;
     touchgfx::TextArea textArea7_10_2;
-    touchgfx::Box fbR1_11;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_11;
     touchgfx::TextArea textArea7_11_2;
-    touchgfx::Box fbR1_12;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_12;
     touchgfx::TextArea textArea7_12_2;
-    touchgfx::Box fbR1_13;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_13;
     touchgfx::TextArea textArea7_13_2;
-    touchgfx::Box fbR1_14;
+    touchgfx::ClickListener< touchgfx::Box > fbR1_14;
     touchgfx::TextArea textArea7_14_2;
     touchgfx::TextArea textArea8_2;
     touchgfx::Container fuseBox2_RelayState;
@@ -356,6 +357,7 @@ protected:
     touchgfx::Box fb2_27;
     touchgfx::TextArea textArea7_27_1;
     touchgfx::TextArea textArea8_1;
+    touchgfx::TextAreaWithOneWildcard testToggle;
     touchgfx::TextArea textArea8_2_2;
     touchgfx::ToggleButton relay1Toggle;
     touchgfx::TextArea textArea8_2_2_1;
@@ -539,6 +541,8 @@ protected:
     touchgfx::Unicode::UnicodeChar brkPresFBuffer[BRKPRESF_SIZE];
     static const uint16_t BRKPRESR_SIZE = 5;
     touchgfx::Unicode::UnicodeChar brkPresRBuffer[BRKPRESR_SIZE];
+    static const uint16_t TESTTOGGLE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar testToggleBuffer[TESTTOGGLE_SIZE];
     static const uint16_t BATTTEMPM5MIN_SIZE = 10;
     touchgfx::Unicode::UnicodeChar battTempM5MinBuffer[BATTTEMPM5MIN_SIZE];
     static const uint16_t BATTTEMPM2MIN_SIZE = 10;

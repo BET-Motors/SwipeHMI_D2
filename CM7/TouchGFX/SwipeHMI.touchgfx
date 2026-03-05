@@ -16,7 +16,7 @@
             "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
             "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
             "EndSwipeElasticWidth": 50,
-            "SelectedPage": "screen2",
+            "SelectedPage": "screen1",
             "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
             "Components": [
               {
@@ -1993,7 +1993,7 @@
                     "Name": "fuseBox1_RelayState",
                     "X": 562,
                     "Y": 92,
-                    "Width": 373,
+                    "Width": 690,
                     "Height": 248,
                     "Components": [
                       {
@@ -2007,7 +2007,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2031,7 +2032,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2055,7 +2057,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2079,7 +2082,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2103,7 +2107,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2127,7 +2132,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2151,7 +2157,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2175,16 +2182,17 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
-                        "Name": "textArea_2",
-                        "X": 28,
+                        "Name": "fb1Fuse1_1_2_2",
+                        "X": 32,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
-                        "TextId": "__SingleUse_84RG",
+                        "TextId": "__SingleUse_7D37",
                         "TextRotation": "0",
                         "AutoSize": true
                       },
@@ -2199,7 +2207,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2223,7 +2232,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2247,7 +2257,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2271,7 +2282,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2295,7 +2307,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2319,7 +2332,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -3409,6 +3423,25 @@
                         "AutoSize": true
                       }
                     ]
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "testToggle",
+                    "X": 881,
+                    "Y": 147,
+                    "Width": 310,
+                    "Height": 36,
+                    "TextId": "__SingleUse_CQ6Z",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
                   },
                   {
                     "Type": "TextArea",

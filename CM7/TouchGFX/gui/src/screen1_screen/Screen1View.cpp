@@ -3,9 +3,10 @@
 Screen1View::Screen1View():
 	radioButtonSelectedCallback(this, &Screen1View::radioButtonSelectedHandler),
 	radioButtonSelectedCallback2(this, &Screen1View::radioButtonSelectedHandler2),
-	radioButtonSelectedCallback3(this, &Screen1View::radioButtonSelectedHandler3)
+	radioButtonSelectedCallback3(this, &Screen1View::radioButtonSelectedHandler3),
+	boxClickedCallback(this, &Screen1View::boxClickHandler)
 {
-	
+	fuse1Mask = 0;
 }
 
 void Screen1View::setupScreen()
@@ -23,9 +24,26 @@ void Screen1View::setupScreen()
 	Unicode::snprintf(brkPresRBuffer, BRKPRESR_SIZE, "%d", 0);
 	brkPresR.invalidate();
 
+	Unicode::snprintf(testToggleBuffer, TESTTOGGLE_SIZE, "%d", 0);
+	testToggle.invalidate(); // CRITICAL: The screen won't change without this!
+
 	radioButtonGroup1.setRadioButtonSelectedHandler(radioButtonSelectedCallback);
     radioButtonGroup2.setRadioButtonSelectedHandler(radioButtonSelectedCallback2);
 	radioButtonGroup3.setRadioButtonSelectedHandler(radioButtonSelectedCallback3);
+
+	fbR1_1.setClickAction(boxClickedCallback);
+	fbR1_2.setClickAction(boxClickedCallback);
+	fbR1_3.setClickAction(boxClickedCallback);
+	fbR1_4.setClickAction(boxClickedCallback);
+	fbR1_5.setClickAction(boxClickedCallback);
+	fbR1_6.setClickAction(boxClickedCallback);
+	fbR1_7.setClickAction(boxClickedCallback);
+	fbR1_8.setClickAction(boxClickedCallback);
+	fbR1_9.setClickAction(boxClickedCallback);
+	fbR1_10.setClickAction(boxClickedCallback);
+	fbR1_11.setClickAction(boxClickedCallback);
+	fbR1_12.setClickAction(boxClickedCallback);
+	fbR1_14.setClickAction(boxClickedCallback);
 }
 
 void Screen1View::tearDownScreen()
@@ -36,6 +54,82 @@ void Screen1View::tearDownScreen()
 void Screen1View :: handleTickEvent()
 {
 
+}
+
+void Screen1View::boxClickHandler(const Box& b, const ClickEvent& evt)
+{
+    if (&b == &fbR1_1)
+    {
+		fuse1Mask |= (1 << 0);
+    }
+
+	if (&b == &fbR1_2)
+    {
+		fuse1Mask |= (1 << 1);
+    }
+
+	if (&b == &fbR1_3)
+    {
+		fuse1Mask |= (1 << 2);
+    }
+
+	if (&b == &fbR1_4)
+    {
+		fuse1Mask |= (1 << 3);
+    }
+
+	if (&b == &fbR1_5)
+    {
+		fuse1Mask |= (1 << 4);
+    }
+
+	if (&b == &fbR1_6)
+    {
+		fuse1Mask |= (1 << 5);
+    }
+
+	if (&b == &fbR1_7)
+    {
+		fuse1Mask |= (1 << 6);
+    }
+
+	if (&b == &fbR1_8)
+    {
+		fuse1Mask |= (1 << 7);
+    }
+
+	if (&b == &fbR1_9)
+    {
+		fuse1Mask |= (1 << 8);
+    }
+
+	if (&b == &fbR1_10)
+    {
+		fuse1Mask |= (1 << 9);
+    }
+
+	if (&b == &fbR1_11)
+    {
+		fuse1Mask |= (1 << 10);
+    }
+
+	if (&b == &fbR1_12)
+    {
+		fuse1Mask |= (1 << 11);
+    }
+
+	if (&b == &fbR1_13)
+    {
+		fuse1Mask |= (1 << 12);
+    }
+
+	if (&b == &fbR1_14)
+    {
+		fuse1Mask |= (1 << 13);
+    }
+
+	Unicode::snprintf(testToggleBuffer, TESTTOGGLE_SIZE, "%x", fuse1Mask);
+	testToggle.invalidate();
 }
 
 void Screen1View::setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data) {
@@ -212,7 +306,7 @@ void Screen1View::dcdcReqCallback() {
 		lcpt.DCDC_Request ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
 	} else {
-		dcdcReq.forceState(defaultData.DCDC_Request);
+		dcdcReq.forceState(defaultData.DCDC_Req);
 		dcdcReq.invalidate();
 	}
 }
@@ -221,7 +315,7 @@ void Screen1View::toggleLowBeamCallback() {
 		lcpt.Low_Beam_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
 	} else {
-		lowBeamToggle.forceState(defaultData.Low_Beam_Req);
+		lowBeamToggle.forceState(defaultData.LowBeam_Req);
 		lowBeamToggle.invalidate();
 	}
 }
@@ -230,7 +324,7 @@ void Screen1View::toggleHighBeamCallback() {
 		lcpt.High_Beam_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
 	} else {
-		highBeamToggle.forceState(defaultData.High_Beam_Req);
+		highBeamToggle.forceState(defaultData.HighBeam_Req);
 		highBeamToggle.invalidate();
 	}
 }
@@ -239,7 +333,7 @@ void Screen1View::toggleIntLightsCallback() {
 		lcpt.Interior_Light_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
 	} else {
-		intLightsToggle.forceState(defaultData.Interior_Light_Req);
+		intLightsToggle.forceState(defaultData.IntLight_Req);
 		intLightsToggle.invalidate();
 	}
 }
@@ -248,7 +342,7 @@ void Screen1View::posLightsToggleCallback() {
 		lcpt.Position_Light_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
 	} else {
-		posLightsToggle.forceState(defaultData.Position_Light_Req);
+		posLightsToggle.forceState(defaultData.PosLight_Req);
 		posLightsToggle.invalidate();
 	}
 }
@@ -256,27 +350,18 @@ void Screen1View::hvHeaterEnableCallback() {
 	if(lcpt.Override_Request) {
 		lcpt.HVHeater_Enable ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
-	} else {
-		hvHeaterEn.forceState(defaultData.HVHeater_Enable);
-		hvHeaterEn.invalidate();
 	}
 }
 void Screen1View::heatPumpReqCallback() {
 	if(lcpt.Override_Request) {
 		lcpt.HeatPump_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
-	} else {
-		heatPumpReq.forceState(defaultData.HeatPump_Req);
-		heatPumpReq.invalidate();
 	}
 }
 void Screen1View::heatFoilReqCallback() {
 	if(lcpt.Override_Request) {
 		lcpt.HeatFoil_Req ^= 1;
 		presenter->updateDriverIn_tx(lcpt);
-	} else {
-		heaterFoilReq.forceState(defaultData.HeatFoil_Req);
-		heaterFoilReq.invalidate();
 	}
 }
 void Screen1View::stopChargeReqCallback() {
@@ -299,7 +384,7 @@ void Screen1View::precondReqCallback() {
 }
 void Screen1View::relay1StateToggleCallback() {
 	if(lcpt.Override_Request) {
-		fbr.box1_req ^= 1;
+		fbr.box1_req = fuse1Mask;
 		presenter->updateFuseBoxRelay(fbr);
 	} else {
 		relay1Toggle.forceState(fbr.box1_req);
@@ -564,26 +649,26 @@ void Screen1View::showBms17_20(BMS_Values_9_t data) {
 	Unicode::snprintf(battTempM19MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M19_Temp_min);
 	battTempM19Min.invalidate();
 	Unicode::snprintf(battTempM20MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_max);
-	battTempM120Max.invalidate();
+	battTempM20Max.invalidate();
 	Unicode::snprintf(battTempM20MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_min);
 	battTempM20Min.invalidate();
 }
 
 void Screen1View::showBms21_24(BMS_Values_10_t data) {
-	Unicode::snprintf(battTempM21MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_max);
+	Unicode::snprintf(battTempM21MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M21_Temp_max);
 	battTempM21Max.invalidate();
-	Unicode::snprintf(battTempM21MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M17_Temp_min);
+	Unicode::snprintf(battTempM21MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M21_Temp_min);
 	battTempM21Min.invalidate();
-	Unicode::snprintf(battTempM22MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M18_Temp_max);
+	Unicode::snprintf(battTempM22MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M22_Temp_max);
 	battTempM22Max.invalidate();
-	Unicode::snprintf(battTempM22MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M18_Temp_min);
+	Unicode::snprintf(battTempM22MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M22_Temp_min);
 	battTempM22Min.invalidate();
-	Unicode::snprintf(battTempM23MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M19_Temp_max);
+	Unicode::snprintf(battTempM23MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M23_Temp_max);
 	battTempM23Max.invalidate();
-	Unicode::snprintf(battTempM23MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M19_Temp_min);
+	Unicode::snprintf(battTempM23MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M23_Temp_min);
 	battTempM23Min.invalidate();
-	Unicode::snprintf(battTempM24MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_max);
+	Unicode::snprintf(battTempM24MaxBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M24_Temp_max);
 	battTempM24Max.invalidate();
-	Unicode::snprintf(battTempM24MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M20_Temp_min);
+	Unicode::snprintf(battTempM24MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M24_Temp_min);
 	battTempM24Min.invalidate();
 }

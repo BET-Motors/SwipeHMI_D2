@@ -6,6 +6,12 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_7D37" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_CQ6Z" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">TEST: &lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_Q6FQ" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">AIR COMP. REQ.</Translation>
       </Text>
@@ -83,9 +89,6 @@
       </Text>
       <Text Id="__SingleUse_0G4R" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">9</Translation>
-      </Text>
-      <Text Id="__SingleUse_84RG" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">1</Translation>
       </Text>
       <Text Id="__SingleUse_0GG4" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">8</Translation>
