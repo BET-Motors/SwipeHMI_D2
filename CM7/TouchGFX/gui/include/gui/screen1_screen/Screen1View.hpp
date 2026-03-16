@@ -31,7 +31,11 @@ public:
 	void showFb1(FuseBox1State_t);
 	void showFb2(FuseBox2State_t);
 	void showFbR(FuseBoxRelay_t);
+	void showBms1Vals(BMS_Values_1_t);
+	void showBms2Vals(BMS_Values_2_t);
+	void showBms4Vals(BMS_Values_4_t);
 	void showBms3Vals(BMS_Values_3_t);
+	void showGearboxParkbrakeTemp(Gearbox_Parkbrake_Temp_t);
 
 	void overrRideReqCallback();
 	void dcdcReqCallback();
@@ -65,6 +69,9 @@ protected:
 
 private:
 	uint32_t fuse1Mask;
+	uint32_t fuse2Mask;
+	touchgfx::ClickListener<touchgfx::Box>* fuseRelay1[14];
+    touchgfx::ClickListener<touchgfx::Box>* fuseRelay2[14];
 };
 
 #endif // SCREEN1VIEW_HPP

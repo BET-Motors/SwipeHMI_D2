@@ -300,8 +300,6 @@ void HAL_FDCAN_MspDeInit(FDCAN_HandleTypeDef* fdcanHandle)
 }
 
 /* USER CODE BEGIN 1 */
-
-// Use this for your 8-byte messages
 uint64_t UnpackSignal(const uint8_t* data, uint8_t start, uint8_t len) {
     uint64_t val = 0;
     memcpy(&val, data, 8); // Safe 8-byte copy
@@ -318,7 +316,6 @@ void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t lengt
 
 void SafeQueuePut(CAN_Raw_Msg_t* msg) {
     // 1. Check if the queue is full
-    // Replace 'osMessageQueueGetCount' with your specific driver call
     if (osMessageQueueGetSpace(guiMQHandle) == 0) {
         CAN_Raw_Msg_t dummy;
         // 2. Remove the oldest message (FIFO behavior)

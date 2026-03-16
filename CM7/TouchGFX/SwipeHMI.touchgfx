@@ -16,7 +16,7 @@
             "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
             "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
             "EndSwipeElasticWidth": 50,
-            "SelectedPage": "screen1",
+            "SelectedPage": "screen2",
             "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
             "Components": [
               {
@@ -646,144 +646,11 @@
                   {
                     "Type": "Image",
                     "Name": "image4",
-                    "X": 633,
-                    "Y": 72,
+                    "X": 621,
+                    "Y": 8,
                     "Width": 325,
                     "Height": 205,
                     "RelativeFilename": "airCompStatus.png"
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqReqFl",
-                    "X": 179,
-                    "Y": 593,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_LYQ2",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "airCompTrq",
-                    "X": 686,
-                    "Y": 235,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_JZXH",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqActFl",
-                    "X": 292,
-                    "Y": 593,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_69B5",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqReqFr",
-                    "X": 179,
-                    "Y": 642,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_WPW0",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqActFr",
-                    "X": 292,
-                    "Y": 642,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_3SYZ",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqReqRm",
-                    "X": 179,
-                    "Y": 693,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_H5HM",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "drvTrnStatTrqActRm",
-                    "X": 292,
-                    "Y": 693,
-                    "Width": 98,
-                    "Height": 24,
-                    "TextId": "__SingleUse_DGOU",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 252,
-                      "Blue": 252
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
                   },
                   {
                     "Type": "TextArea",
@@ -831,25 +698,6 @@
                     "Width": 89,
                     "Height": 25,
                     "TextId": "__SingleUse_I5ER",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "airCompSpeed",
-                    "X": 698,
-                    "Y": 162,
-                    "Width": 89,
-                    "Height": 25,
-                    "TextId": "__SingleUse_RQP0",
                     "TextRotation": "0",
                     "Color": {
                       "Red": 255,
@@ -995,42 +843,480 @@
                     }
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "airCompPwr",
-                    "X": 827,
-                    "Y": 235,
-                    "Width": 98,
-                    "Height": 25,
-                    "TextId": "__SingleUse_KIL2",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
+                    "Type": "Image",
+                    "Name": "image5",
+                    "X": 962,
+                    "Y": 8,
+                    "Width": 297,
+                    "Height": 315,
+                    "RelativeFilename": "GearBoxTemp.png"
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "airCompTracVolt",
-                    "X": 827,
-                    "Y": 166,
-                    "Width": 98,
-                    "Height": 25,
-                    "TextId": "__SingleUse_MMGN",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 10
-                    }
+                    "Type": "Image",
+                    "Name": "image6",
+                    "X": 621,
+                    "Y": 219,
+                    "Width": 325,
+                    "Height": 205,
+                    "RelativeFilename": "GearBoxStatus.png"
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "gbTempContainer",
+                    "X": 963,
+                    "Y": 8,
+                    "Width": 289,
+                    "Height": 310,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbFlIn",
+                        "X": 7,
+                        "Y": 90,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_9V2B",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbFlOut",
+                        "X": 149,
+                        "Y": 91,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_093S",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbFrIn",
+                        "X": 7,
+                        "Y": 178,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_PH4L",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbFrOut",
+                        "X": 149,
+                        "Y": 178,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_92OJ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbRIn",
+                        "X": 7,
+                        "Y": 265,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_YH7H",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gbROut",
+                        "X": 149,
+                        "Y": 266,
+                        "Width": 134,
+                        "Height": 27,
+                        "TextId": "__SingleUse_YRFT",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "airCompStatusContainer",
+                    "X": 633,
+                    "Y": 9,
+                    "Width": 310,
+                    "Height": 198,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "airCompTrq",
+                        "X": 41,
+                        "Y": 162,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_JZXH",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "airCompSpeed",
+                        "X": 53,
+                        "Y": 89,
+                        "Width": 89,
+                        "Height": 25,
+                        "TextId": "__SingleUse_RQP0",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "airCompPwr",
+                        "X": 182,
+                        "Y": 162,
+                        "Width": 98,
+                        "Height": 25,
+                        "TextId": "__SingleUse_KIL2",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "airCompTracVolt",
+                        "X": 182,
+                        "Y": 93,
+                        "Width": 98,
+                        "Height": 25,
+                        "TextId": "__SingleUse_MMGN",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "drvTRainStatusContainer",
+                    "X": 96,
+                    "Y": 589,
+                    "Width": 300,
+                    "Height": 179,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqReqFl",
+                        "X": 83,
+                        "Y": 4,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_LYQ2",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqActFl",
+                        "X": 196,
+                        "Y": 4,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_69B5",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqReqFr",
+                        "X": 83,
+                        "Y": 53,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_WPW0",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqActFr",
+                        "X": 196,
+                        "Y": 53,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_3SYZ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqReqRm",
+                        "X": 83,
+                        "Y": 104,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_H5HM",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "drvTrnStatTrqActRm",
+                        "X": 196,
+                        "Y": 104,
+                        "Width": 98,
+                        "Height": 24,
+                        "TextId": "__SingleUse_DGOU",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 252,
+                          "Blue": 252
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "gearBoxStatusContainer",
+                    "X": 633,
+                    "Y": 271,
+                    "Width": 306,
+                    "Height": 145,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "parkBrakeStatus",
+                        "X": 4,
+                        "Y": 40,
+                        "Width": 72,
+                        "Height": 22,
+                        "TextId": "__SingleUse_NP04",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gearShiftStatusFR",
+                        "X": 101,
+                        "Y": 36,
+                        "Width": 98,
+                        "Height": 25,
+                        "TextId": "__SingleUse_QXA4",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "gearShiftStatusFL",
+                        "X": 101,
+                        "Y": 108,
+                        "Width": 98,
+                        "Height": 25,
+                        "TextId": "__SingleUse_KYML",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "sPumpStatusR",
+                        "X": 223,
+                        "Y": 36,
+                        "Width": 80,
+                        "Height": 23,
+                        "TextId": "__SingleUse_DMSR",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "sPumpStatusF",
+                        "X": 219,
+                        "Y": 106,
+                        "Width": 79,
+                        "Height": 23,
+                        "TextId": "__SingleUse_XZO5",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "fROilPump",
+                        "X": 5,
+                        "Y": 112,
+                        "Width": 79,
+                        "Height": 23,
+                        "TextId": "__SingleUse_HJTJ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      }
+                    ]
                   },
                   {
                     "Type": "Container",
@@ -1301,8 +1587,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_28",
-                        "X": 163,
-                        "Y": 485,
+                        "X": 166,
+                        "Y": 480,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1325,8 +1611,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_2",
-                        "X": 60,
-                        "Y": 123,
+                        "X": 62,
+                        "Y": 120,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1349,8 +1635,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_3",
-                        "X": 111,
-                        "Y": 123,
+                        "X": 114,
+                        "Y": 120,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1373,8 +1659,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_4",
-                        "X": 162,
-                        "Y": 123,
+                        "X": 166,
+                        "Y": 120,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1398,7 +1684,7 @@
                         "Type": "Box",
                         "Name": "fb1_5",
                         "X": 10,
-                        "Y": 183,
+                        "Y": 180,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1421,8 +1707,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_6",
-                        "X": 60,
-                        "Y": 183,
+                        "X": 62,
+                        "Y": 180,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1445,8 +1731,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_7",
-                        "X": 111,
-                        "Y": 183,
+                        "X": 114,
+                        "Y": 180,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1469,8 +1755,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_8",
-                        "X": 163,
-                        "Y": 183,
+                        "X": 166,
+                        "Y": 180,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1493,8 +1779,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_1",
-                        "X": 9,
-                        "Y": 123,
+                        "X": 10,
+                        "Y": 120,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1518,7 +1804,7 @@
                         "Type": "Box",
                         "Name": "fb1_9",
                         "X": 10,
-                        "Y": 244,
+                        "Y": 240,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1541,8 +1827,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_10",
-                        "X": 60,
-                        "Y": 244,
+                        "X": 62,
+                        "Y": 240,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1565,8 +1851,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_11",
-                        "X": 111,
-                        "Y": 244,
+                        "X": 114,
+                        "Y": 240,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1589,8 +1875,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_12",
-                        "X": 163,
-                        "Y": 244,
+                        "X": 166,
+                        "Y": 240,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1614,7 +1900,7 @@
                         "Type": "Box",
                         "Name": "fb1_13",
                         "X": 10,
-                        "Y": 305,
+                        "Y": 300,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1637,8 +1923,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_14",
-                        "X": 60,
-                        "Y": 305,
+                        "X": 62,
+                        "Y": 300,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1661,8 +1947,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_15",
-                        "X": 111,
-                        "Y": 305,
+                        "X": 114,
+                        "Y": 300,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1685,8 +1971,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_16",
-                        "X": 163,
-                        "Y": 305,
+                        "X": 166,
+                        "Y": 300,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1710,7 +1996,7 @@
                         "Type": "Box",
                         "Name": "fb1_17",
                         "X": 10,
-                        "Y": 365,
+                        "Y": 360,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1733,8 +2019,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_18",
-                        "X": 60,
-                        "Y": 365,
+                        "X": 62,
+                        "Y": 360,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1757,8 +2043,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_19",
-                        "X": 111,
-                        "Y": 365,
+                        "X": 114,
+                        "Y": 360,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1781,8 +2067,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_20",
-                        "X": 162,
-                        "Y": 365,
+                        "X": 166,
+                        "Y": 360,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1806,7 +2092,7 @@
                         "Type": "Box",
                         "Name": "fb1_21",
                         "X": 10,
-                        "Y": 426,
+                        "Y": 420,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1829,8 +2115,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_22",
-                        "X": 60,
-                        "Y": 426,
+                        "X": 62,
+                        "Y": 420,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1853,8 +2139,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_23",
-                        "X": 111,
-                        "Y": 426,
+                        "X": 114,
+                        "Y": 420,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1877,8 +2163,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_24",
-                        "X": 163,
-                        "Y": 426,
+                        "X": 166,
+                        "Y": 420,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1902,7 +2188,7 @@
                         "Type": "Box",
                         "Name": "fb1_25",
                         "X": 10,
-                        "Y": 485,
+                        "Y": 480,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1925,8 +2211,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_26",
-                        "X": 60,
-                        "Y": 485,
+                        "X": 62,
+                        "Y": 480,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1949,8 +2235,8 @@
                       {
                         "Type": "Box",
                         "Name": "fb1_27",
-                        "X": 111,
-                        "Y": 485,
+                        "X": 114,
+                        "Y": 480,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
@@ -1999,7 +2285,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_2",
-                        "X": 60,
+                        "X": 54,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2013,7 +2299,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "fb1Fuse1_1_2",
-                        "X": 79,
+                        "X": 73,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2024,7 +2310,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_3",
-                        "X": 111,
+                        "X": 108,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2038,7 +2324,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_2_2",
-                        "X": 130,
+                        "X": 127,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2049,7 +2335,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_4",
-                        "X": 162,
+                        "X": 161,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2063,7 +2349,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_3_2",
-                        "X": 181,
+                        "X": 180,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2074,7 +2360,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_5",
-                        "X": 213,
+                        "X": 214,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2088,7 +2374,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_4_2",
-                        "X": 232,
+                        "X": 233,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2099,7 +2385,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_6",
-                        "X": 265,
+                        "X": 268,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2113,7 +2399,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_5_2",
-                        "X": 284,
+                        "X": 286,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2124,7 +2410,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_7",
-                        "X": 315,
+                        "X": 323,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2138,7 +2424,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_6_2",
-                        "X": 334,
+                        "X": 338,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2149,7 +2435,6 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_8",
-                        "X": 9,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2163,7 +2448,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_7_2",
-                        "X": 28,
+                        "X": 19,
                         "Y": 195,
                         "Width": 13,
                         "Height": 24,
@@ -2174,7 +2459,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_1",
-                        "X": 9,
+                        "X": -1,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2188,7 +2473,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "fb1Fuse1_1_2_2",
-                        "X": 32,
+                        "X": 20,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2199,7 +2484,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_9",
-                        "X": 60,
+                        "X": 54,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2213,7 +2498,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_9_2",
-                        "X": 79,
+                        "X": 73,
                         "Y": 195,
                         "Width": 13,
                         "Height": 24,
@@ -2224,7 +2509,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_10",
-                        "X": 110,
+                        "X": 108,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2238,7 +2523,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_10_2",
-                        "X": 121,
+                        "X": 118,
                         "Y": 195,
                         "Width": 26,
                         "Height": 24,
@@ -2249,7 +2534,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_11",
-                        "X": 162,
+                        "X": 161,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2263,7 +2548,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_11_2",
-                        "X": 181,
+                        "X": 180,
                         "Y": 195,
                         "Width": 26,
                         "Height": 24,
@@ -2274,7 +2559,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_12",
-                        "X": 214,
+                        "X": 215,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2288,7 +2573,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_12_2",
-                        "X": 233,
+                        "X": 234,
                         "Y": 195,
                         "Width": 26,
                         "Height": 24,
@@ -2299,7 +2584,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_13",
-                        "X": 264,
+                        "X": 268,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2313,7 +2598,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_13_2",
-                        "X": 283,
+                        "X": 287,
                         "Y": 195,
                         "Width": 26,
                         "Height": 24,
@@ -2324,7 +2609,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR1_14",
-                        "X": 314,
+                        "X": 322,
                         "Y": 183,
                         "Width": 50,
                         "Height": 50,
@@ -2338,7 +2623,7 @@
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_14_2",
-                        "X": 333,
+                        "X": 341,
                         "Y": 195,
                         "Width": 26,
                         "Height": 24,
@@ -2375,7 +2660,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_2",
-                        "X": 60,
+                        "X": 50,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2383,12 +2668,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "fb1Fuse1_1_2_1",
-                        "X": 79,
+                        "X": 69,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2399,7 +2685,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_3",
-                        "X": 111,
+                        "X": 104,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2407,12 +2693,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_2_2_1",
-                        "X": 130,
+                        "X": 123,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2423,7 +2710,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_4",
-                        "X": 162,
+                        "X": 157,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2431,12 +2718,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_3_2_1",
-                        "X": 181,
+                        "X": 176,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2447,7 +2735,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_5",
-                        "X": 213,
+                        "X": 210,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2455,12 +2743,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_4_2_1",
-                        "X": 232,
+                        "X": 229,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2471,7 +2760,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_6",
-                        "X": 265,
+                        "X": 263,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2479,12 +2768,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_5_2_1",
-                        "X": 284,
+                        "X": 282,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2503,7 +2793,8 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
@@ -2519,21 +2810,21 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_8",
-                        "X": 9,
-                        "Y": 183,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_7_2_1",
-                        "X": 28,
-                        "Y": 195,
+                        "X": 19,
+                        "Y": 194,
                         "Width": 13,
                         "Height": 24,
                         "TextId": "__SingleUse_UXVR",
@@ -2543,7 +2834,7 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_1",
-                        "X": 9,
+                        "X": -4,
                         "Y": 123,
                         "Width": 50,
                         "Height": 50,
@@ -2551,12 +2842,13 @@
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea_2_1",
-                        "X": 28,
+                        "X": 15,
                         "Y": 135,
                         "Width": 13,
                         "Height": 24,
@@ -2567,21 +2859,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_9",
-                        "X": 60,
-                        "Y": 183,
+                        "X": 52,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_9_2_1",
-                        "X": 79,
-                        "Y": 195,
+                        "X": 71,
+                        "Y": 194,
                         "Width": 13,
                         "Height": 24,
                         "TextId": "__SingleUse_VIDR",
@@ -2591,21 +2884,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_10",
-                        "X": 110,
-                        "Y": 183,
+                        "X": 104,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_10_2_1",
-                        "X": 121,
-                        "Y": 195,
+                        "X": 115,
+                        "Y": 194,
                         "Width": 26,
                         "Height": 24,
                         "TextId": "__SingleUse_OHV1",
@@ -2615,21 +2909,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_11",
-                        "X": 162,
-                        "Y": 183,
+                        "X": 157,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_11_2_1",
-                        "X": 181,
-                        "Y": 195,
+                        "X": 176,
+                        "Y": 194,
                         "Width": 26,
                         "Height": 24,
                         "TextId": "__SingleUse_NWOF",
@@ -2639,21 +2934,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_12",
-                        "X": 214,
-                        "Y": 183,
+                        "X": 210,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_12_2_1",
-                        "X": 233,
-                        "Y": 195,
+                        "X": 229,
+                        "Y": 194,
                         "Width": 26,
                         "Height": 24,
                         "TextId": "__SingleUse_0AD6",
@@ -2663,21 +2959,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_13",
-                        "X": 264,
-                        "Y": 183,
+                        "X": 263,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_13_2_1",
-                        "X": 283,
-                        "Y": 195,
+                        "X": 282,
+                        "Y": 194,
                         "Width": 26,
                         "Height": 24,
                         "TextId": "__SingleUse_XSZQ",
@@ -2687,21 +2984,22 @@
                       {
                         "Type": "Box",
                         "Name": "fbR2_14",
-                        "X": 314,
-                        "Y": 183,
+                        "X": 315,
+                        "Y": 182,
                         "Width": 50,
                         "Height": 50,
                         "Color": {
                           "Red": 255,
                           "Green": 255,
                           "Blue": 255
-                        }
+                        },
+                        "Clickable": true
                       },
                       {
                         "Type": "TextArea",
                         "Name": "textArea7_14_2_1",
-                        "X": 333,
-                        "Y": 195,
+                        "X": 334,
+                        "Y": 194,
                         "Width": 26,
                         "Height": 24,
                         "TextId": "__SingleUse_3GPU",
@@ -3426,12 +3724,31 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "testToggle",
+                    "Name": "testToggle_FB1",
                     "X": 881,
                     "Y": 147,
                     "Width": 310,
                     "Height": 36,
                     "TextId": "__SingleUse_CQ6Z",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "testToggle_FB2",
+                    "X": 880,
+                    "Y": 434,
+                    "Width": 310,
+                    "Height": 36,
+                    "TextId": "__SingleUse_M6TM",
                     "TextRotation": "0",
                     "Color": {
                       "Red": 255,
@@ -3520,6 +3837,481 @@
                     "Width": 646,
                     "Height": 314,
                     "RelativeFilename": "battTemp1324.png"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "image7",
+                    "X": 677,
+                    "Y": 26,
+                    "Width": 592,
+                    "Height": 546,
+                    "RelativeFilename": "bmsValues.png"
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "bmsValuesContainer",
+                    "X": 684,
+                    "Y": 87,
+                    "Width": 576,
+                    "Height": 475,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsdischrgcur_val",
+                        "X": 148,
+                        "Y": -2,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_88R1",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsdischrgcurpeak_val",
+                        "X": 148,
+                        "Y": 39,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_DED7",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmschrgcur_val",
+                        "X": 148,
+                        "Y": 80,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_E2DR",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmschrgcurpeak_val",
+                        "X": 148,
+                        "Y": 119,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_U0OT",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsinsulation_val",
+                        "X": 148,
+                        "Y": 159,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_G50C",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "totaldischarge_val",
+                        "X": 148,
+                        "Y": 197,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_BGJI",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "totalcharge_val",
+                        "X": 148,
+                        "Y": 237,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_BLVS",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "currentlimit_val",
+                        "X": 148,
+                        "Y": 274,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_28AJ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "voltagelimit_val",
+                        "X": 148,
+                        "Y": 315,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_R5ZH",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "chrgpowerlimit_val",
+                        "X": 148,
+                        "Y": 356,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_PUYI",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "chargerstatus_val",
+                        "X": 148,
+                        "Y": 396,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_QMUQ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsthermalstatus_val",
+                        "X": 148,
+                        "Y": 435,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_1VYA",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmstargettemp_val",
+                        "X": 452,
+                        "Y": 436,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_4F2Y",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmspdutemp_val",
+                        "X": 452,
+                        "Y": 396,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_JIEE",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "CCS2Chargetemp_val",
+                        "X": 452,
+                        "Y": 358,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_EWUY",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "fbchargestatus_val",
+                        "X": 452,
+                        "Y": 317,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_UFV0",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsfaultlvl_val",
+                        "X": 452,
+                        "Y": 277,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_PBI2",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "etc_val",
+                        "X": 452,
+                        "Y": 234,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_GMW7",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "bmsstatus_val",
+                        "X": 452,
+                        "Y": 196,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_LX8P",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "prechrgcontfb_val",
+                        "X": 452,
+                        "Y": 158,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_N20U",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "hvilfb_val",
+                        "X": 452,
+                        "Y": 115,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_86G7",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "dsgconts2fb_val",
+                        "X": 452,
+                        "Y": 75,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_XIHF",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "dsgconsts1fb_val",
+                        "X": 452,
+                        "Y": 39,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_V656",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "lvsupplyvolt_val",
+                        "X": 452,
+                        "Y": 1,
+                        "Width": 121,
+                        "Height": 26,
+                        "TextId": "__SingleUse_BI36",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 10
+                        }
+                      }
+                    ]
                   },
                   {
                     "Type": "Container",

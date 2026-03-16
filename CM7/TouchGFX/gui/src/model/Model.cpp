@@ -84,6 +84,22 @@ void Model::tick()
 				if(parseBms3(rawMsg, &bms3))
 					modelListener->updateBms3(bms3);
 				break;
+			case ID_GEARBOX_PARKBRAKE_TEMP:
+				if(parseGearboxParkbrakeTemp(rawMsg, &gpbt))
+					modelListener->updateGearboxParkbrakeTemp(gpbt);
+		    	break;
+			case ID_BMS_VALUES_1:
+				if(parseBms1(rawMsg, &bms1))
+					modelListener->updateBms1(bms1);
+				break;
+			case ID_BMS_VALUES_2:
+				if(parseBms2(rawMsg, &bms2))
+					modelListener->updateBms2(bms2);
+				break;
+			case ID_BMS_VALUES_4:
+				if(parseBms4(rawMsg, &bms4))
+					modelListener->updateBms4(bms4);
+				break;
 			default:
                 break;
 		}
@@ -91,13 +107,86 @@ void Model::tick()
 	}
 }
 
-bool Model::parseBms3(CAN_Raw_Msg_t rawMsg, BMS_Values_3_t *_bms) {
+bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Temp_t *_gpbt)
+{
 	uint64_t rawVal;
-    bool changed = false;
+	bool changed = false;
 
-	rawVal = UnpackSignal(rawMsg.data, 33, 3);
-	if(_bms->E_Lock_Status != rawVal) {
-		_bms->E_Lock_Status = rawVal;
+	rawVal = UnpackSignal(rawMsg.data, 0, 1);
+	if(_gpbt->ParkBrake_Status != rawVal) {
+		_gpbt->ParkBrake_Status = rawVal;
+			changed = true;
+		}
+
+	rawVal = UnpackSignal(rawMsg.data, 1, 1);
+	if(_gpbt->SuctionPump_Rear_Status != rawVal) {
+		_gpbt->SuctionPump_Rear_Status = rawVal;
+			changed = true;
+		}
+
+	rawVal = UnpackSignal(rawMsg.data, 2, 1);
+	if(_gpbt->SuctionPump_Front_Status != rawVal) {
+		_gpbt->SuctionPump_Front_Status = rawVal;
+			changed = true;
+		}
+
+	rawVal = UnpackSignal(rawMsg.data ,3, 3);
+	if(_gpbt->GearShift_FL_Act_Pos != rawVal) {
+		_gpbt->GearShift_FL_Act_Pos = rawVal;
+			changed = true;
+		}
+
+	rawVal = UnpackSignal(rawMsg.data, 6, 3);
+	if(_gpbt->GearShift_FR_Act_Pos != rawVal) {
+		_gpbt->GearShift_FR_Act_Pos = rawVal;
+			changed = true;
+		}
+
+	rawVal = UnpackSignal(rawMsg.data, 9, 7);
+	if(_gpbt->GearBoxFrontOilPumps_Status != rawVal) {
+	   _gpbt->GearBoxFrontOilPumps_Status = rawVal;
+			changed = true;
+	  }
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_FL_IN != rawVal) {
+		_gpbt->Temp_Gearbox_FL_IN = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 24, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_FL_OUT != rawVal) {
+		_gpbt->Temp_Gearbox_FL_OUT = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 32, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_FR_IN != rawVal) {
+		_gpbt->Temp_Gearbox_FR_IN = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 40, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_FR_OUT != rawVal) {
+		_gpbt->Temp_Gearbox_FR_OUT = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 48, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_R_IN != rawVal) {
+		_gpbt->Temp_Gearbox_R_IN = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 56, 8);
+	rawVal = rawVal - 50;
+	if(_gpbt->Temp_Gearbox_R_OUT != rawVal) {
+		_gpbt->Temp_Gearbox_R_OUT = rawVal;
 		changed = true;
 	}
 
@@ -1339,6 +1428,205 @@ bool Model::parseBms21_24(CAN_Raw_Msg_t rawMsg, BMS_Values_10_t *_bms) {
 	rawVal = rawVal - 50;
 	if(_bms->BMS_M24_Temp_min != rawVal) {
 		_bms->BMS_M24_Temp_min = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseBms1(CAN_Raw_Msg_t rawMsg, BMS_Values_1_t *_bmsval1)
+{
+	uint64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval1->BMS_Max_DischargeCurrentCont != rawFloat) {
+		_bmsval1->BMS_Max_DischargeCurrentCont = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval1->BMS_Max_DischargeCurrentPeak != rawFloat) {
+		_bmsval1->BMS_Max_DischargeCurrentPeak = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 32, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval1->BMS_Max_ChargeCurrentCont != rawFloat) {
+		_bmsval1->BMS_Max_ChargeCurrentCont = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 48, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval1->BMS_Max_ChargeCurrentPeak != rawFloat) {
+		_bmsval1->BMS_Max_ChargeCurrentPeak = rawFloat;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseBms2(CAN_Raw_Msg_t rawMsg, BMS_Values_2_t *_bmsval2)
+{
+	uint64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 16);
+	if(_bmsval2->BMS_InsulationValue != rawVal) {
+		_bmsval2->BMS_InsulationValue = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 24);
+	rawFloat = (rawVal * 0.01);
+	if(_bmsval2->BMS_Total_Dsg_Ah != rawFloat) {
+		_bmsval2->BMS_Total_Dsg_Ah = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 40, 24);
+	rawFloat = (rawVal * 0.01);
+	if(_bmsval2->BMS_Total_Chg_Ah != rawFloat) {
+		_bmsval2->BMS_Total_Chg_Ah = rawFloat;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseBms3(CAN_Raw_Msg_t rawMsg, BMS_Values_3_t *_bms) {
+	uint64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 5);
+	if(_bms->BMS_LV_SupplyVolt != rawVal) {
+		_bms->BMS_LV_SupplyVolt = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 5, 1);
+	if(_bms->BMS_Dsg_ContS1_FB != rawVal) {
+		_bms->BMS_Dsg_ContS1_FB = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 6, 1);
+	if(_bms->BMS_Dsg_ContS2_FB != rawVal) {
+		_bms->BMS_Dsg_ContS2_FB = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 7, 1);
+	if(_bms->BMS_HVIL_FB != rawVal) {
+		_bms->BMS_HVIL_FB = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 8, 1);
+	if(_bms->BMS_PreCharge_Cont_FB != rawVal) {
+		_bms->BMS_PreCharge_Cont_FB = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 9, 4);
+	if(_bms->BMS_Status != rawVal) {
+		_bms->BMS_Status = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 13, 4);
+	if(_bms->BMS_FaultLevel != rawVal) {
+		_bms->BMS_FaultLevel = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 17, 16);
+	rawFloat = (rawVal * 0.01);
+	if(_bms->Charge_Time_Rem != rawFloat) {
+		_bms->Charge_Time_Rem = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 33, 3);
+	if(_bms->E_Lock_Status != rawVal) {
+		_bms->E_Lock_Status = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 36, 1);
+	if(_bms->BMS_Chg_ContFB != rawVal) {
+		_bms->BMS_Chg_ContFB = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 40, 8);
+	rawVal = rawVal -50;
+	if(_bms->Temp_CCS2Charge_Inlet != rawVal) {
+		_bms->Temp_CCS2Charge_Inlet = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 48, 8);
+	rawVal = rawVal -50;
+	if(_bms->BMS_PDU_Temp != rawVal) {
+		_bms->BMS_PDU_Temp = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 56, 8);
+	rawVal = rawVal -50;
+	if(_bms->BMS_TargetTemp != rawVal) {
+		_bms->BMS_TargetTemp = rawVal;
+		changed = true;
+	}
+
+	return changed;
+}
+
+bool Model::parseBms4(CAN_Raw_Msg_t rawMsg, BMS_Values_4_t *_bmsval4)
+{
+	uint64_t rawVal;
+    bool changed = false;
+    float rawFloat;
+
+	rawVal = UnpackSignal(rawMsg.data, 0, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval4->BMS_Max_Chg_CurrentLimit != rawFloat) {
+		_bmsval4->BMS_Max_Chg_CurrentLimit = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 16, 16);
+	rawFloat = ((rawVal * 0.1) - 3500);
+	if(_bmsval4->BMS_Max_Chg_VoltageLimit != rawFloat) {
+		_bmsval4->BMS_Max_Chg_VoltageLimit = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 32, 16);
+	rawFloat = (rawVal * 0.1);
+	if(_bmsval4->Charge_Pwr_Lim != rawFloat) {
+		_bmsval4->Charge_Pwr_Lim = rawFloat;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 48, 8);
+	if(_bmsval4->BMS_External_ChargeInfo != rawVal) {
+		_bmsval4->BMS_External_ChargeInfo = rawVal;
+		changed = true;
+	}
+
+	rawVal = UnpackSignal(rawMsg.data, 56, 8);
+	rawVal = rawVal - 50;
+	if(_bmsval4->BMS_ThermalStatus != rawVal) {
+		_bmsval4->BMS_ThermalStatus = rawVal;
 		changed = true;
 	}
 

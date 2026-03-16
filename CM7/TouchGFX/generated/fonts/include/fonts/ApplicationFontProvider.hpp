@@ -16,13 +16,15 @@ struct Typography
     static const touchgfx::FontId LARGE = 0;
     static const touchgfx::FontId SMALL = 1;
     static const touchgfx::FontId SMALLLETTERS = 2;
+    static const touchgfx::FontId MEDIUMLETTERS = 3;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId LARGE = 0;        // verdana_30_4bpp
-    static const touchgfx::FontId SMALL = 1;        // verdana_20_4bpp
-    static const touchgfx::FontId SMALLLETTERS = 2; // verdana_10_4bpp
+    static const touchgfx::FontId LARGE = 0;         // verdana_30_4bpp
+    static const touchgfx::FontId SMALL = 1;         // verdana_20_4bpp
+    static const touchgfx::FontId SMALLLETTERS = 2;  // verdana_10_4bpp
+    static const touchgfx::FontId MEDIUMLETTERS = 1; // verdana_20_4bpp
     static const uint16_t NUMBER_OF_FONTS = 3;
 };
 

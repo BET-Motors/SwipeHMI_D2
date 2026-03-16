@@ -44,8 +44,8 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildc
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:125:7:touchgfx::TextAreaWithTwoWildcards::~TextAreaWithTwoWildcards()	0	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::Box>::~ClickListener()	0	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
-CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2184:6:virtual void Screen1ViewBase::setupScreen()	0	static
-CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2189:6:void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2507:6:virtual void Screen1ViewBase::setupScreen()	0	static
+CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2512:6:void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<touchgfx::RadioButtonGroup<3>, const touchgfx::AbstractButton&, void, void>::~Callback()	0	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp:53:13:touchgfx::RadioButtonGroup<CAPACITY>::~RadioButtonGroup() [with short unsigned int CAPACITY = 3]	0	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<touchgfx::RadioButtonGroup<4>, const touchgfx::AbstractButton&, void, void>::~Callback()	0	static
@@ -105,6 +105,6 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp:41:5:touchgfx::RadioButton::RadioButton()	8	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	8	static
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:37:5:touchgfx::ClickListener<T>::ClickListener() [with T = touchgfx::Box]	8	static
-CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	1552	static
-CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2179:1:Screen1ViewBase::~Screen1ViewBase()	8	static
-CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2179:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	1728	static
+CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2502:1:Screen1ViewBase::~Screen1ViewBase()	8	static
+CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:2502:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static

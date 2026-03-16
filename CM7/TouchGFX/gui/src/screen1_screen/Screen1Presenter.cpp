@@ -58,6 +58,9 @@ void Screen1Presenter::updateFuseBoxRelay(FuseboxCtrlTx_t data) {
 void Screen1Presenter::updateBms1_4(BMS_Values_5_t data) {
 	view.showBms1_4(data);
 }
+void Screen1Presenter::updateGearboxParkbrakeTemp(Gearbox_Parkbrake_Temp_t data) {
+	view.showGearboxParkbrakeTemp(data);
+}
 void Screen1Presenter::updateBms5_8(BMS_Values_6_t data) {
 	view.showBms5_8(data);
 }
@@ -76,5 +79,23 @@ void Screen1Presenter::updateFb2State(FuseBox2State_t data) {
 void Screen1Presenter::updateFbR(FuseBoxRelay_t data) {
 	view.showFbR(data);
 }
-void Screen1Presenter::updateBms17_20(BMS_Values_9_t data) {}
-void Screen1Presenter::updateBms21_24(BMS_Values_10_t data) {}
+void Screen1Presenter::updateBms17_20(BMS_Values_9_t data) {
+	view.showBms17_20(data);
+}
+void Screen1Presenter::updateBms21_24(BMS_Values_10_t data) {
+	view.showBms21_24(data);
+}
+
+void Screen1Presenter::updateBms1(BMS_Values_1_t data)
+{
+	view.showBms1Vals(data);
+}
+
+void Screen1Presenter::updateBms2(BMS_Values_2_t data)
+{
+	view.showBms2Vals(data);
+}
+void Screen1Presenter::updateBms4(BMS_Values_4_t data)
+{
+	view.showBms4Vals(data);
+}

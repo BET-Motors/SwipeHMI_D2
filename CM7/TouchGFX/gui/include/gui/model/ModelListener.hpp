@@ -34,6 +34,10 @@ public:
     virtual void updateFbR(FuseBoxRelay_t data) {}
     virtual void udpateLcp(Ip_Ltng_Chg_Pnematic_Tx_t data) {}
     virtual void updateBms3(BMS_Values_3_t data) {}
+    virtual void updateGearboxParkbrakeTemp(Gearbox_Parkbrake_Temp_t data) {}
+    virtual void updateBms1(BMS_Values_1_t data){}
+    virtual void updateBms2(BMS_Values_2_t data){}
+    virtual void updateBms4(BMS_Values_4_t data){}
 protected:
     Model* model;
 };

@@ -792,6 +792,16 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_DCDC_On.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_GearBoxStatus.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_GearBoxStatus.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_GearBoxTemp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_GearBoxTemp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_HVheaterOff.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_HVheaterOff.cpp</locationURI>
@@ -830,6 +840,11 @@
 			<name>Application/User/generated/image_betHMI_S2.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_betHMI_S2.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_bmsValues.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_bmsValues.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_chargeGun_fault.cpp</name>

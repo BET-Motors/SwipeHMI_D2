@@ -26,6 +26,10 @@ private:
     FuseBoxRelay_t fbr;
     Ip_Ltng_Chg_Pnematic_Tx_t lcp;
     BMS_Values_3_t bms3;
+    BMS_Values_1_t bms1;
+    BMS_Values_2_t bms2;
+    BMS_Values_4_t bms4;
+    Gearbox_Parkbrake_Temp_t gpbt;
 public:
     Model();
 
@@ -58,6 +62,10 @@ protected:
     bool parseFbR(CAN_Raw_Msg_t, FuseBoxRelay_t *);
     bool parseLcp(CAN_Raw_Msg_t, Ip_Ltng_Chg_Pnematic_Tx_t *);
     bool parseBms3(CAN_Raw_Msg_t, BMS_Values_3_t *);
+    bool parseGearboxParkbrakeTemp(CAN_Raw_Msg_t,Gearbox_Parkbrake_Temp_t *);
+    bool parseBms1(CAN_Raw_Msg_t, BMS_Values_1_t *);
+    bool parseBms2(CAN_Raw_Msg_t, BMS_Values_2_t *);
+    bool parseBms4(CAN_Raw_Msg_t, BMS_Values_4_t *);
 };
 
 #endif // MODEL_HPP

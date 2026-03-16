@@ -24,26 +24,51 @@ void Screen1View::setupScreen()
 	Unicode::snprintf(brkPresRBuffer, BRKPRESR_SIZE, "%d", 0);
 	brkPresR.invalidate();
 
-	Unicode::snprintf(testToggleBuffer, TESTTOGGLE_SIZE, "%d", 0);
-	testToggle.invalidate(); // CRITICAL: The screen won't change without this!
+	Unicode::snprintf(testToggle_FB1Buffer, TESTTOGGLE_FB1_SIZE, "%x", fuse1Mask);
+	testToggle_FB1.invalidate();
+
+	Unicode::snprintf(testToggle_FB2Buffer, TESTTOGGLE_FB1_SIZE, "%x", fuse2Mask);
+	testToggle_FB2.invalidate();
 
 	radioButtonGroup1.setRadioButtonSelectedHandler(radioButtonSelectedCallback);
     radioButtonGroup2.setRadioButtonSelectedHandler(radioButtonSelectedCallback2);
 	radioButtonGroup3.setRadioButtonSelectedHandler(radioButtonSelectedCallback3);
 
-	fbR1_1.setClickAction(boxClickedCallback);
-	fbR1_2.setClickAction(boxClickedCallback);
-	fbR1_3.setClickAction(boxClickedCallback);
-	fbR1_4.setClickAction(boxClickedCallback);
-	fbR1_5.setClickAction(boxClickedCallback);
-	fbR1_6.setClickAction(boxClickedCallback);
-	fbR1_7.setClickAction(boxClickedCallback);
-	fbR1_8.setClickAction(boxClickedCallback);
-	fbR1_9.setClickAction(boxClickedCallback);
-	fbR1_10.setClickAction(boxClickedCallback);
-	fbR1_11.setClickAction(boxClickedCallback);
-	fbR1_12.setClickAction(boxClickedCallback);
-	fbR1_14.setClickAction(boxClickedCallback);
+	fuseRelay1[0] = &fbR1_1;
+	fuseRelay1[1] = &fbR1_2;
+	fuseRelay1[2] = &fbR1_3;
+	fuseRelay1[3] = &fbR1_4;
+	fuseRelay1[4] = &fbR1_5;
+	fuseRelay1[5] = &fbR1_6;
+	fuseRelay1[6] = &fbR1_7;
+	fuseRelay1[7] = &fbR1_8;
+	fuseRelay1[8] = &fbR1_9;
+	fuseRelay1[9] = &fbR1_10;
+	fuseRelay1[10] = &fbR1_11;
+	fuseRelay1[11] = &fbR1_12;
+	fuseRelay1[12] = &fbR1_13;
+	fuseRelay1[13] = &fbR1_14;
+
+	// FuseBox2
+	fuseRelay2[0] = &fbR2_1;
+	fuseRelay2[1] = &fbR2_2;
+	fuseRelay2[2] = &fbR2_3;
+	fuseRelay2[3] = &fbR2_4;
+	fuseRelay2[4] = &fbR2_5;
+	fuseRelay2[5] = &fbR2_6;
+	fuseRelay2[6] = &fbR2_7;
+	fuseRelay2[7] = &fbR2_8;
+	fuseRelay2[8] = &fbR2_9;
+	fuseRelay2[9] = &fbR2_10;
+	fuseRelay2[10] = &fbR2_11;
+	fuseRelay2[11] = &fbR2_12;
+	fuseRelay2[12] = &fbR2_13;
+	fuseRelay2[13] = &fbR2_14;
+
+	for(int i = 0; i < 14; i++) {
+	   fuseRelay1[i]->setClickAction(boxClickedCallback);
+	   fuseRelay2[i]->setClickAction(boxClickedCallback);
+   	}
 }
 
 void Screen1View::tearDownScreen()
@@ -58,78 +83,46 @@ void Screen1View :: handleTickEvent()
 
 void Screen1View::boxClickHandler(const Box& b, const ClickEvent& evt)
 {
-    if (&b == &fbR1_1)
-    {
-		fuse1Mask |= (1 << 0);
+	// Only trigger on 'Pressed' event to avoid double-firing on release
+    if (evt.getType() != ClickEvent::PRESSED) {
+        return;
     }
 
-	if (&b == &fbR1_2)
-    {
-		fuse1Mask |= (1 << 1);
+	bool isAlreadyOn;
+
+    for(int i = 0; i < 14; i++) {
+        if(&b == fuseRelay1[i]) {
+			isAlreadyOn = (fuse1Mask & (1UL << i)) != 0;
+            if(isAlreadyOn) {
+                fuse1Mask &= ~(1UL << i); // Turn OFF
+            } else {
+                fuse1Mask |= (1UL << i);  // Turn ON
+            }
+        }
     }
 
-	if (&b == &fbR1_3)
-    {
-		fuse1Mask |= (1 << 2);
+    for(int i = 0; i < 14; i++) {
+        if(&b == fuseRelay2[i]) {
+			isAlreadyOn = (fuse2Mask & (1UL << i)) != 0;
+            if(isAlreadyOn) {
+                fuse2Mask &= ~(1UL << i); // Turn OFF
+            } else {
+                fuse2Mask |= (1UL << i);  // Turn ON
+            }
+        }
     }
 
-	if (&b == &fbR1_4)
-    {
-		fuse1Mask |= (1 << 3);
-    }
+	Unicode::snprintf(testToggle_FB1Buffer, TESTTOGGLE_FB1_SIZE, "%x", fuse1Mask);
+	testToggle_FB1.invalidate();
 
-	if (&b == &fbR1_5)
-    {
-		fuse1Mask |= (1 << 4);
-    }
+	Unicode::snprintf(testToggle_FB2Buffer, TESTTOGGLE_FB1_SIZE, "%x", fuse2Mask);
+	testToggle_FB2.invalidate();
 
-	if (&b == &fbR1_6)
-    {
-		fuse1Mask |= (1 << 5);
-    }
-
-	if (&b == &fbR1_7)
-    {
-		fuse1Mask |= (1 << 6);
-    }
-
-	if (&b == &fbR1_8)
-    {
-		fuse1Mask |= (1 << 7);
-    }
-
-	if (&b == &fbR1_9)
-    {
-		fuse1Mask |= (1 << 8);
-    }
-
-	if (&b == &fbR1_10)
-    {
-		fuse1Mask |= (1 << 9);
-    }
-
-	if (&b == &fbR1_11)
-    {
-		fuse1Mask |= (1 << 10);
-    }
-
-	if (&b == &fbR1_12)
-    {
-		fuse1Mask |= (1 << 11);
-    }
-
-	if (&b == &fbR1_13)
-    {
-		fuse1Mask |= (1 << 12);
-    }
-
-	if (&b == &fbR1_14)
-    {
-		fuse1Mask |= (1 << 13);
-    }
-
-	Unicode::snprintf(testToggleBuffer, TESTTOGGLE_SIZE, "%x", fuse1Mask);
-	testToggle.invalidate();
+	if(lcpt.Override_Request) {
+		fbr.box1_req = fuse1Mask;
+		fbr.box2_req = fuse2Mask;
+		presenter->updateFuseBoxRelay(fbr);
+	}
 }
 
 void Screen1View::setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data) {
@@ -193,20 +186,94 @@ void Screen1View::setDefaults(Ip_Ltng_Chg_Pnematic_Tx_t data) {
 	airPress.invalidate();
 }
 
-void Screen1View::showBms3Vals(BMS_Values_3_t data) {
-	switch(data.E_Lock_Status) {
-		case 0:
-			chargingState.setBitmap(BITMAP_CHARGEGUN_OFF_ID);
+void Screen1View::showGearboxParkbrakeTemp(Gearbox_Parkbrake_Temp_t gbpbt)
+{
+	Unicode::snprintf(gbFlInBuffer, GBFLIN_SIZE, "%d",gbpbt.Temp_Gearbox_FL_IN);
+	gbFlIn.invalidate();
+
+	Unicode::snprintf(gbFlOutBuffer, GBFLOUT_SIZE, "%d",gbpbt.Temp_Gearbox_FL_OUT);
+	gbFlOut.invalidate();
+
+	Unicode::snprintf(gbFrInBuffer, GBFRIN_SIZE, "%d",gbpbt.Temp_Gearbox_FR_IN);
+	gbFrIn.invalidate();
+
+	Unicode::snprintf(gbFrOutBuffer, GBFROUT_SIZE, "%d",gbpbt.Temp_Gearbox_FR_OUT);
+	gbFrOut.invalidate();
+
+	Unicode::snprintf(gbRInBuffer, GBRIN_SIZE, "%d",gbpbt.Temp_Gearbox_R_IN);
+	gbRIn.invalidate();
+
+	Unicode::snprintf(gbROutBuffer, GBROUT_SIZE, "%d",gbpbt.Temp_Gearbox_R_OUT);
+	gbROut.invalidate();
+
+	Unicode::snprintf(fROilPumpBuffer, FROILPUMP_SIZE, "%d",gbpbt.GearBoxFrontOilPumps_Status);
+	fROilPump.invalidate();
+
+	if(gbpbt.ParkBrake_Status) {
+    	Unicode::snprintf(parkBrakeStatusBuffer, PARKBRAKESTATUS_SIZE,"%s",(const Unicode::UnicodeChar*)L"ENGAGED");
+    	parkBrakeStatus.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
+	} else {
+    	Unicode::snprintf(parkBrakeStatusBuffer, PARKBRAKESTATUS_SIZE,"%s",(const Unicode::UnicodeChar*)L"OPEN");
+    	parkBrakeStatus.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+	}
+	parkBrakeStatus.invalidate();
+
+	if(gbpbt.SuctionPump_Front_Status) {
+    	Unicode::snprintf(sPumpStatusFBuffer, SPUMPSTATUSF_SIZE,"%s",(const Unicode::UnicodeChar*)L"ON");
+    	sPumpStatusF.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
+	} else {
+    	Unicode::snprintf(sPumpStatusFBuffer, SPUMPSTATUSF_SIZE,"%s",(const Unicode::UnicodeChar*)L"OFF");
+    	sPumpStatusF.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+	}
+	sPumpStatusF.invalidate();
+
+	if(gbpbt.SuctionPump_Rear_Status)
+	{
+    	Unicode::snprintf(sPumpStatusRBuffer, SPUMPSTATUSR_SIZE,"%s",(const Unicode::UnicodeChar*)L"ON");
+    	sPumpStatusR.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
+	}
+	else
+	{
+    	Unicode::snprintf(sPumpStatusRBuffer, SPUMPSTATUSR_SIZE,"%s",(const Unicode::UnicodeChar*)L"OFF");
+    	sPumpStatusR.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+	}
+	sPumpStatusR.invalidate();
+
+	switch(gbpbt.GearShift_FR_Act_Pos)
+	{
+		case 2:
+			Unicode::snprintf(gearShiftStatusFRBuffer, GEARSHIFTSTATUSFR_SIZE,"%s",(const Unicode::UnicodeChar*)L"G2");
+			gearShiftStatusFR.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
 			break;
 		case 1:
-			chargingState.setBitmap(BITMAP_CHARGEGUN_ON_ID);
+			Unicode::snprintf(gearShiftStatusFRBuffer, GEARSHIFTSTATUSFL_SIZE,"%s",(const Unicode::UnicodeChar*)L"G1");
+			gearShiftStatusFR.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
 			break;
-		case 3:
+		case 0:
 		default:
-			chargingState.setBitmap(BITMAP_CHARGEGUN_FAULT_ID);
+			Unicode::snprintf(gearShiftStatusFRBuffer, GEARSHIFTSTATUSFL_SIZE,"%s",(const Unicode::UnicodeChar*)L"N");
+			gearShiftStatusFR.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 			break;
 	}
-	chargingState.invalidate();
+	gearShiftStatusFR.invalidate();
+
+	switch(gbpbt.GearShift_FL_Act_Pos)
+	{
+		case 2:
+			Unicode::snprintf(gearShiftStatusFLBuffer, GEARSHIFTSTATUSFL_SIZE,"%s",(const Unicode::UnicodeChar*)L"G2");
+			gearShiftStatusFL.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
+			break;
+		case 1:
+			Unicode::snprintf(gearShiftStatusFLBuffer, GEARSHIFTSTATUSFL_SIZE,"%s",(const Unicode::UnicodeChar*)L"G1");
+			gearShiftStatusFL.setColor(touchgfx::Color::getColorFromRGB(0, 230, 118));
+			break;
+		case 0:
+		default:
+			Unicode::snprintf(gearShiftStatusFLBuffer, GEARSHIFTSTATUSFL_SIZE,"%s",(const Unicode::UnicodeChar*)L"N");
+			gearShiftStatusFL.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+			break;
+	}
+	gearShiftStatusFL.invalidate();
 }
 
 void Screen1View::showPressHydLightPt(Press_Hydraulic_Light_PowerTrain_t phlp) {
@@ -393,7 +460,7 @@ void Screen1View::relay1StateToggleCallback() {
 }
 void Screen1View::relay2StateToggleCallback() {
 	if(lcpt.Override_Request) {
-		fbr.box2_req ^= 1;
+		fbr.box2_req = fuse2Mask;
 		presenter->updateFuseBoxRelay(fbr);
 	} else {
 		relay2Toggle.forceState(fbr.box2_req);
@@ -671,4 +738,246 @@ void Screen1View::showBms21_24(BMS_Values_10_t data) {
 	battTempM24Max.invalidate();
 	Unicode::snprintf(battTempM24MinBuffer, BATTTEMPM1MAX_SIZE, "%d", data.BMS_M24_Temp_min);
 	battTempM24Min.invalidate();
+}
+
+void Screen1View::showBms1Vals(BMS_Values_1_t bmsval1)
+{
+	Unicode::snprintf(bmsdischrgcur_valBuffer,BMSDISCHRGCUR_VAL_SIZE,"%.1f",bmsval1.BMS_Max_DischargeCurrentCont);
+	Unicode::snprintf(bmsdischrgcurpeak_valBuffer,BMSDISCHRGCURPEAK_VAL_SIZE,"%.1f",bmsval1.BMS_Max_DischargeCurrentPeak);
+	Unicode::snprintf(bmschrgcur_valBuffer,BMSCHRGCUR_VAL_SIZE,"%.1f",bmsval1.BMS_Max_ChargeCurrentCont);
+	Unicode::snprintf(bmschrgcurpeak_valBuffer,BMSCHRGCURPEAK_VAL_SIZE,"%.1f",bmsval1.BMS_Max_ChargeCurrentPeak);
+
+	bmsdischrgcur_val.invalidate();
+	bmsdischrgcurpeak_val.invalidate();
+	bmschrgcur_val.invalidate();
+	bmschrgcurpeak_val.invalidate();
+}
+
+void Screen1View::showBms2Vals(BMS_Values_2_t bmsval2)
+{
+	Unicode::snprintf(bmsinsulation_valBuffer,BMSINSULATION_VAL_SIZE,"%d",(uint32_t)bmsval2.BMS_InsulationValue);
+	Unicode::snprintf( totaldischarge_valBuffer,TOTALDISCHARGE_VAL_SIZE, "%.1f",bmsval2.BMS_Total_Dsg_Ah);
+	Unicode::snprintf(totalcharge_valBuffer,TOTALCHARGE_VAL_SIZE,"%.1f",bmsval2.BMS_Total_Chg_Ah);
+
+	bmsinsulation_val.invalidate();
+	totaldischarge_val.invalidate();
+	totalcharge_val.invalidate();
+}
+
+void Screen1View::showBms3Vals(BMS_Values_3_t bmsval3) {
+	switch(bmsval3.E_Lock_Status) {
+		case 0:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_OFF_ID);
+			break;
+		case 1:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_ON_ID);
+			break;
+		case 3:
+		default:
+			chargingState.setBitmap(BITMAP_CHARGEGUN_FAULT_ID);
+			break;
+	}
+	chargingState.invalidate();
+
+	Unicode::snprintf(lvsupplyvolt_valBuffer,LVSUPPLYVOLT_VAL_SIZE,"%d",(uint32_t)bmsval3.BMS_LV_SupplyVolt);
+	lvsupplyvolt_val.invalidate();
+
+	switch(bmsval3.BMS_Dsg_ContS1_FB)
+		{
+		  case 0:
+			{
+				Unicode::snprintf(dsgconsts1fb_valBuffer, DSGCONSTS1FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"OPEN");
+				dsgconsts1fb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+			}
+			break;
+			case 1:
+			{
+				Unicode::snprintf(dsgconsts1fb_valBuffer, DSGCONSTS1FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+				dsgconsts1fb_val.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+			}
+			break;
+			default:
+			{
+				 Unicode::snprintf(dsgconsts1fb_valBuffer, DSGCONSTS1FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+				 dsgconsts1fb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+			}
+			break;
+		}
+	dsgconsts1fb_val.invalidate();
+
+	switch(bmsval3.BMS_Dsg_ContS2_FB)
+	{
+	  case 0:
+		{
+			Unicode::snprintf(dsgconts2fb_valBuffer, DSGCONTS2FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"OPEN");
+			dsgconts2fb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+		case 1:
+		{
+			Unicode::snprintf(dsgconts2fb_valBuffer, DSGCONTS2FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			dsgconts2fb_val.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+		}
+		break;
+		default:
+		{
+			 Unicode::snprintf(dsgconts2fb_valBuffer, DSGCONTS2FB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			 dsgconts2fb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+	}
+	dsgconts2fb_val.invalidate();
+
+	switch(bmsval3.BMS_HVIL_FB)
+	{
+	  case 0:
+		{
+			Unicode::snprintf(hvilfb_valBuffer, HVILFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"OPEN");
+			hvilfb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+		case 1:
+		{
+			Unicode::snprintf(hvilfb_valBuffer, HVILFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			hvilfb_val.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+		}
+		break;
+		default:
+		{
+			 Unicode::snprintf(hvilfb_valBuffer, HVILFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			 hvilfb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+	}
+	hvilfb_val.invalidate();
+
+	switch(bmsval3.BMS_PreCharge_Cont_FB)
+	{
+	  case 0:
+		{
+			Unicode::snprintf(prechrgcontfb_valBuffer, PRECHRGCONTFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"OPEN");
+			prechrgcontfb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+		case 1:
+		{
+			Unicode::snprintf(prechrgcontfb_valBuffer, PRECHRGCONTFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			prechrgcontfb_val.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+		}
+		break;
+		default:
+		{
+			 Unicode::snprintf(prechrgcontfb_valBuffer, PRECHRGCONTFB_VAL_SIZE, "%s", (const Unicode::UnicodeChar*)L"CLOSE");
+			 prechrgcontfb_val.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		}
+		break;
+	}
+	prechrgcontfb_val.invalidate();
+
+   switch(bmsval3.BMS_Status)
+   {
+		case 0:
+		{
+			Unicode::snprintf(bmsstatus_valBuffer, BMSSTATUS_VAL_SIZE, "%s",(const Unicode::UnicodeChar*)L"IDLE");
+			bmsstatus_val.setColor(touchgfx::Color::getColorFromRGB(255,255,255));
+		}
+		break;
+		case 1:
+		{
+			Unicode::snprintf(bmsstatus_valBuffer, BMSSTATUS_VAL_SIZE, "%s",(const Unicode::UnicodeChar*)L"PRECHARGE");
+			bmsstatus_val.setColor(touchgfx::Color::getColorFromRGB(255,165,0));
+		}
+		break;
+		case 2:
+		{
+			Unicode::snprintf(bmsstatus_valBuffer, BMSSTATUS_VAL_SIZE, "%s",(const Unicode::UnicodeChar*)L"READY");
+			bmsstatus_val.setColor(touchgfx::Color::getColorFromRGB(0,255,0));
+		}
+		break;
+		case 3:
+		{
+			Unicode::snprintf(bmsstatus_valBuffer, BMSSTATUS_VAL_SIZE, "%s",(const Unicode::UnicodeChar*)L"FAULT");
+			bmsstatus_val.setColor(touchgfx::Color::getColorFromRGB(255,0,0));
+		}
+		break;
+		default:
+		{
+			Unicode::snprintf(bmsstatus_valBuffer, BMSSTATUS_VAL_SIZE, "%s",(const Unicode::UnicodeChar*)L"UNKNOWN");
+		}
+		break;
+   }
+	bmsstatus_val.invalidate();
+
+	switch(bmsval3.BMS_FaultLevel)
+	{
+		case 0:
+		{
+			Unicode::snprintf(bmsfaultlvl_valBuffer, BMSFAULTLVL_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"NO FAULT");
+			bmsfaultlvl_val.setColor(touchgfx::Color::getColorFromRGB(0,255,0));
+		}
+		break;
+		default:
+			if(bmsval3.BMS_FaultLevel <=5)
+			{
+				Unicode::snprintf(bmsfaultlvl_valBuffer, BMSFAULTLVL_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"WARNING");
+				bmsfaultlvl_val.setColor(touchgfx::Color::getColorFromRGB(255,165,0));
+			}
+			else if(bmsval3.BMS_FaultLevel <=10)
+			{
+				Unicode::snprintf(bmsfaultlvl_valBuffer, BMSFAULTLVL_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"ERROR");
+				bmsfaultlvl_val.setColor(touchgfx::Color::getColorFromRGB(255,0,0));
+			}
+			else
+			{
+				Unicode::snprintf(bmsfaultlvl_valBuffer, BMSFAULTLVL_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"CRITICAL");
+				bmsfaultlvl_val.setColor(touchgfx::Color::getColorFromRGB(128,0,0));
+			}
+		break;
+	}
+	bmsfaultlvl_val.invalidate();
+
+	Unicode::snprintf(etc_valBuffer,ETC_VAL_SIZE,"%.2f",bmsval3.Charge_Time_Rem);
+	etc_val.invalidate();
+
+	switch(bmsval3.BMS_Chg_ContFB)
+	{
+		case 0:
+		{
+			Unicode::snprintf(fbchargestatus_valBuffer,FBCHARGESTATUS_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"OPEN");
+			fbchargestatus_val.setColor(touchgfx::Color::getColorFromRGB(255,0,0));
+		}
+		break;
+		case 1:
+		{
+			Unicode::snprintf(fbchargestatus_valBuffer,FBCHARGESTATUS_VAL_SIZE,"%s",(const Unicode::UnicodeChar*)L"CLOSED");
+			fbchargestatus_val.setColor(touchgfx::Color::getColorFromRGB(0,255,0));
+		}
+		break;
+	}
+	fbchargestatus_val.invalidate();
+
+	Unicode::snprintf(CCS2Chargetemp_valBuffer,CCS2CHARGETEMP_VAL_SIZE,"%.1f",bmsval3.Temp_CCS2Charge_Inlet);
+	CCS2Chargetemp_val.invalidate();
+
+	Unicode::snprintf(bmspdutemp_valBuffer, BMSPDUTEMP_VAL_SIZE,"%.1f",bmsval3.BMS_PDU_Temp);
+	bmspdutemp_val.invalidate();
+
+	Unicode::snprintf(bmstargettemp_valBuffer, BMSTARGETTEMP_VAL_SIZE,"%.1f",bmsval3.BMS_TargetTemp);
+	bmstargettemp_val.invalidate();
+}
+
+void Screen1View::showBms4Vals(BMS_Values_4_t bmsval4)
+{
+	Unicode::snprintf(currentlimit_valBuffer,CURRENTLIMIT_VAL_SIZE,"%.1f",bmsval4.BMS_Max_Chg_CurrentLimit);
+	Unicode::snprintf(voltagelimit_valBuffer,VOLTAGELIMIT_VAL_SIZE,"%.1f",bmsval4.BMS_Max_Chg_VoltageLimit);
+	Unicode::snprintf(chrgpowerlimit_valBuffer,CHRGPOWERLIMIT_VAL_SIZE,"%.1f",bmsval4.Charge_Pwr_Lim);
+	Unicode::snprintf(chargerstatus_valBuffer,CHARGERSTATUS_VAL_SIZE,"%d",bmsval4.BMS_External_ChargeInfo);
+	Unicode::snprintf(bmsthermalstatus_valBuffer, BMSTHERMALSTATUS_VAL_SIZE,"%.1f",bmsval4.BMS_ThermalStatus);
+
+	chargerstatus_val.invalidate();
+	chrgpowerlimit_val.invalidate();
+	voltagelimit_val.invalidate();
+	currentlimit_val.invalidate();
+	bmsthermalstatus_val.invalidate();
+
 }

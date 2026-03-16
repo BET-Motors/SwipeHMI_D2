@@ -1,21 +1,25 @@
 CM7/TouchGFX/gui/src/model/Model.cpp:5:1:Model::Model()	0	static
-CM7/TouchGFX/gui/src/model/Model.cpp:94:6:bool Model::parseBms3(CAN_Raw_Msg_t, BMS_Values_3_t*)	24	static
-CM7/TouchGFX/gui/src/model/Model.cpp:107:6:bool Model::parseLcp(CAN_Raw_Msg_t, Ip_Ltng_Chg_Pnematic_Tx_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:204:6:bool Model::parseFbR(CAN_Raw_Msg_t, FuseBoxRelay_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:352:6:bool Model::parseFb1(CAN_Raw_Msg_t, FuseBox1State_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:500:6:bool Model::parseFb2(CAN_Raw_Msg_t, FuseBox2State_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:648:6:bool Model::parseEpea(CAN_Raw_Msg_t, ElecSys_Power_Energy_AirComp_t*)	40	static
-CM7/TouchGFX/gui/src/model/Model.cpp:695:6:bool Model::parsePressHydLightPt(CAN_Raw_Msg_t, Press_Hydraulic_Light_PowerTrain_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:772:6:bool Model::parseThermal1(CAN_Raw_Msg_t, Thermal_Management_Rx_1_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:836:6:bool Model::parseThermal2(CAN_Raw_Msg_t, Thermal_Management_Rx_2_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:892:6:bool Model::parsemtc1(CAN_Raw_Msg_t, Motor_And_Torque_Control_1_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:928:6:bool Model::parsemtc2(CAN_Raw_Msg_t, Motor_And_Torque_Control_2_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:964:6:bool Model::parseBms1_4(CAN_Raw_Msg_t, BMS_Values_5_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1028:6:bool Model::parseBms5_8(CAN_Raw_Msg_t, BMS_Values_6_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1092:6:bool Model::parseBms9_12(CAN_Raw_Msg_t, BMS_Values_7_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1156:6:bool Model::parseBms13_16(CAN_Raw_Msg_t, BMS_Values_8_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1220:6:bool Model::parseBms17_20(CAN_Raw_Msg_t, BMS_Values_9_t*)	32	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1284:6:bool Model::parseBms21_24(CAN_Raw_Msg_t, BMS_Values_10_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:110:6:bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t, Gearbox_Parkbrake_Temp_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:196:6:bool Model::parseLcp(CAN_Raw_Msg_t, Ip_Ltng_Chg_Pnematic_Tx_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:293:6:bool Model::parseFbR(CAN_Raw_Msg_t, FuseBoxRelay_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:441:6:bool Model::parseFb1(CAN_Raw_Msg_t, FuseBox1State_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:589:6:bool Model::parseFb2(CAN_Raw_Msg_t, FuseBox2State_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:737:6:bool Model::parseEpea(CAN_Raw_Msg_t, ElecSys_Power_Energy_AirComp_t*)	40	static
+CM7/TouchGFX/gui/src/model/Model.cpp:784:6:bool Model::parsePressHydLightPt(CAN_Raw_Msg_t, Press_Hydraulic_Light_PowerTrain_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:861:6:bool Model::parseThermal1(CAN_Raw_Msg_t, Thermal_Management_Rx_1_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:925:6:bool Model::parseThermal2(CAN_Raw_Msg_t, Thermal_Management_Rx_2_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:981:6:bool Model::parsemtc1(CAN_Raw_Msg_t, Motor_And_Torque_Control_1_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1017:6:bool Model::parsemtc2(CAN_Raw_Msg_t, Motor_And_Torque_Control_2_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1053:6:bool Model::parseBms1_4(CAN_Raw_Msg_t, BMS_Values_5_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1117:6:bool Model::parseBms5_8(CAN_Raw_Msg_t, BMS_Values_6_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1181:6:bool Model::parseBms9_12(CAN_Raw_Msg_t, BMS_Values_7_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1245:6:bool Model::parseBms13_16(CAN_Raw_Msg_t, BMS_Values_8_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1309:6:bool Model::parseBms17_20(CAN_Raw_Msg_t, BMS_Values_9_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1373:6:bool Model::parseBms21_24(CAN_Raw_Msg_t, BMS_Values_10_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1437:6:bool Model::parseBms1(CAN_Raw_Msg_t, BMS_Values_1_t*)	48	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1474:6:bool Model::parseBms2(CAN_Raw_Msg_t, BMS_Values_2_t*)	40	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1503:6:bool Model::parseBms3(CAN_Raw_Msg_t, BMS_Values_3_t*)	32	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1593:6:bool Model::parseBms4(CAN_Raw_Msg_t, BMS_Values_4_t*)	48	static
 CM7/TouchGFX/gui/src/model/Model.cpp:10:6:void Model::tick()	96	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1348:6:void Model::updateDriverIn(DriverInputsTx_t)	16	static
-CM7/TouchGFX/gui/src/model/Model.cpp:1352:6:void Model::updateFuseBoxControl(FuseboxCtrlTx_t)	8	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1636:6:void Model::updateDriverIn(DriverInputsTx_t)	16	static
+CM7/TouchGFX/gui/src/model/Model.cpp:1640:6:void Model::updateFuseBoxControl(FuseboxCtrlTx_t)	8	static

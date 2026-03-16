@@ -60,7 +60,7 @@ typedef struct {
     int16_t Temp_ClntPump;
 } Thermal_Management_Rx_2_t;
 
-#define ID_MOTOR_AND_TORQUE_CONTROL_1 0x10000004
+#define ID_MOTOR_AND_TORQUE_CONTROL_1 0x10000004 // miscalculations
 typedef struct {
     uint16_t Trq_Act_Wheel_FL;
     uint16_t Trq_Req_Wheel_FL;
@@ -168,7 +168,7 @@ typedef struct {
     uint8_t fbr1_10;
     uint8_t fbr1_11;
     uint8_t fbr1_12;
-    uint8_t fbr1_13;
+    uint8_t fbr1_13; // problem
     uint8_t fbr1_14;
     uint8_t fbr2_1;
     uint8_t fbr2_2;
@@ -184,7 +184,7 @@ typedef struct {
     uint8_t fbr2_12;
     uint8_t fbr2_13;
     uint8_t fbr2_14;
-} FuseBoxRelay_t;
+} FuseBoxRelay_t; // tx not correct
 
 #define ID_FUSEBOX1 0x10000044
 typedef struct {
@@ -263,10 +263,11 @@ typedef struct {
     uint8_t IntLight_Req;
     uint8_t Chrg_STOP_Req;
     uint8_t Chrg_PreCond_Req;
-    uint8_t AirCompressor_Req;
+    uint8_t AirCompressor_Req; // not coming
     uint8_t MinPressureAir;
     uint8_t MaxPressureAir;
     uint32_t RefSpdSens_Speed;
+    // add remaining requests LV Valve1, 2, 3
 } Ip_Ltng_Chg_Pnematic_Tx_t;
 
 #define ID_BMS_VALUES_3 0x10000014
@@ -313,6 +314,46 @@ typedef struct {
     uint32_t box1_req;
     uint32_t box2_req;
 } FuseboxCtrlTx_t;
+
+#define ID_GEARBOX_PARKBRAKE_TEMP 0x10000022 // wrong values
+typedef struct {
+    uint32_t ParkBrake_Status;
+    uint32_t SuctionPump_Rear_Status;
+    uint32_t SuctionPump_Front_Status;
+    uint32_t GearShift_FL_Act_Pos;
+    uint32_t GearShift_FR_Act_Pos;
+    uint32_t GearBoxFrontOilPumps_Status;
+    float Temp_Gearbox_FL_IN;
+    float Temp_Gearbox_FL_OUT;
+    float Temp_Gearbox_FR_IN;
+    float Temp_Gearbox_FR_OUT;
+    float Temp_Gearbox_R_IN;
+    float Temp_Gearbox_R_OUT;
+} Gearbox_Parkbrake_Temp_t;
+
+#define ID_BMS_VALUES_1 0x10000012
+typedef struct {
+    float BMS_Max_DischargeCurrentCont;
+    float BMS_Max_DischargeCurrentPeak;
+    float BMS_Max_ChargeCurrentCont;
+    float BMS_Max_ChargeCurrentPeak;
+} BMS_Values_1_t;
+
+#define ID_BMS_VALUES_2 0x10000013
+typedef struct {
+    uint32_t BMS_InsulationValue;
+    float BMS_Total_Dsg_Ah;
+    float BMS_Total_Chg_Ah;
+} BMS_Values_2_t;
+
+#define ID_BMS_VALUES_4 0x10000015
+typedef struct {
+    float BMS_Max_Chg_CurrentLimit;
+    float BMS_Max_Chg_VoltageLimit;
+    float Charge_Pwr_Lim;
+    uint32_t BMS_External_ChargeInfo;
+    float BMS_ThermalStatus;
+} BMS_Values_4_t;
 
 #ifdef __cplusplus
 }
