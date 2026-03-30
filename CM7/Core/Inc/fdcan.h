@@ -56,7 +56,9 @@ extern osMessageQueueId_t guiMQHandle;
 
 void CanRecvTask(void *argument);
 uint64_t UnpackSignal(const uint8_t* data, uint8_t startBit, uint8_t length);
+uint64_t UnpackSignalMotorola(const uint8_t* data, uint8_t startbit, uint8_t len);
 void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t length);
+void PackSignalMotorola(uint8_t* data, uint32_t value, uint8_t startBit, uint8_t length);
 void updateDriverInputs(DriverInputsTx_t data);
 void updateFuseBoxRelayControl(FuseboxCtrlTx_t data);
 void CanTxTask(void *arg);

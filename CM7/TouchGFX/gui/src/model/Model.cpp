@@ -11,7 +11,7 @@ void Model::tick()
 {
 	CAN_Raw_Msg_t rawMsg;
 
-    uint32_t processed = 10; // to avoid a storm of messages, process in frames
+    uint32_t processed = 15; // to avoid a storm of messages, process in frames
 
     while(processed > 0 &&
         osMessageQueueGet(guiMQHandle, &rawMsg, 0, 0) == osOK) {
@@ -150,6 +150,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_FL_IN != rawVal) {
 		_gpbt->Temp_Gearbox_FL_IN = rawVal;
 		changed = true;
@@ -157,6 +158,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 24, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_FL_OUT != rawVal) {
 		_gpbt->Temp_Gearbox_FL_OUT = rawVal;
 		changed = true;
@@ -164,6 +166,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 32, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_FR_IN != rawVal) {
 		_gpbt->Temp_Gearbox_FR_IN = rawVal;
 		changed = true;
@@ -171,6 +174,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 40, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_FR_OUT != rawVal) {
 		_gpbt->Temp_Gearbox_FR_OUT = rawVal;
 		changed = true;
@@ -178,6 +182,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_R_IN != rawVal) {
 		_gpbt->Temp_Gearbox_R_IN = rawVal;
 		changed = true;
@@ -185,6 +190,7 @@ bool Model::parseGearboxParkbrakeTemp(CAN_Raw_Msg_t rawMsg, Gearbox_Parkbrake_Te
 
 	rawVal = UnpackSignal(rawMsg.data, 56, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_gpbt->Temp_Gearbox_R_OUT != rawVal) {
 		_gpbt->Temp_Gearbox_R_OUT = rawVal;
 		changed = true;
@@ -741,32 +747,35 @@ bool Model::parseEpea(CAN_Raw_Msg_t rawMsg, ElecSys_Power_Energy_AirComp_t *_epe
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 9);
 	rawVal = rawVal - 200;
-	if(_epea->LV_Current_Act != rawVal) {
-		_epea->LV_Current_Act = rawVal;
+	if(rawVal < 0) rawVal = 0;
+	if(_epea->LV_Current_Act != (uint16_t)rawVal) {
+		_epea->LV_Current_Act = (uint16_t)rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 9, 9);
 	rawVal = rawVal - 200;
-	if(_epea->LV_Power_Act != rawVal) {
-		_epea->LV_Power_Act = rawVal;
+	if(rawVal < 0) rawVal = 0;
+	if(_epea->LV_Power_Act != (uint16_t)rawVal) {
+		_epea->LV_Power_Act = (uint16_t)rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 18, 16);
-	if(_epea->Airc_speed != rawVal) {
-		_epea->Airc_speed = rawVal;
+	if(_epea->Airc_speed != (uint16_t)rawVal) {
+		_epea->Airc_speed = (uint16_t)rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 34, 10);
-	if(_epea->Airc_traction_voltage != rawVal) {
-		_epea->Airc_traction_voltage = rawVal;
+	if(_epea->Airc_traction_voltage != (uint16_t)rawVal) {
+		_epea->Airc_traction_voltage = (uint16_t)rawVal;
 		changed = true;
 	}
 
 	rawVal = UnpackSignal(rawMsg.data, 44, 10);
     rawFloat = ((float)rawVal * 0.1f);
+	if(rawFloat < 0.0f) rawFloat = 0.0f;
     if(fabs(_epea->Airc_torque - rawFloat) > 0.1f) {
         _epea->Airc_torque = rawFloat;
         changed = true;
@@ -774,6 +783,7 @@ bool Model::parseEpea(CAN_Raw_Msg_t rawMsg, ElecSys_Power_Energy_AirComp_t *_epe
 
 	rawVal = UnpackSignal(rawMsg.data, 54, 8);
     rawFloat = ((float)rawVal * 0.1f);
+	if(rawFloat < 0.0f) rawFloat = 0.0f;
     if(fabs(_epea->Airc_power - rawFloat) > 0.1f) {
         _epea->Airc_power = rawFloat;
         changed = true;
@@ -865,6 +875,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->BMS_Pack_Temp_max != rawVal) {
 		_thermal1->BMS_Pack_Temp_max = rawVal;
 		changed = true;
@@ -872,6 +883,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 8, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->BMS_Pack_Temp_max != rawVal) {
 		_thermal1->BMS_Pack_Temp_max = rawVal;
 		changed = true;
@@ -879,6 +891,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_Inv_FL != rawVal) {
 		_thermal1->Temp_Inv_FL = rawVal;
 		changed = true;
@@ -886,6 +899,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 24, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_Inv_FR != rawVal) {
 		_thermal1->Temp_Inv_FR = rawVal;
 		changed = true;
@@ -893,6 +907,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 32, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_Inv_RM != rawVal) {
 		_thermal1->Temp_Inv_RM = rawVal;
 		changed = true;
@@ -900,6 +915,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 40, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_EM_FL != rawVal) {
 		_thermal1->Temp_EM_FL = rawVal;
 		changed = true;
@@ -907,6 +923,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_EM_FR != rawVal) {
 		_thermal1->Temp_EM_FR = rawVal;
 		changed = true;
@@ -914,6 +931,7 @@ bool Model::parseThermal1(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_1_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 56, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal1->Temp_EM_RM != rawVal) {
 		_thermal1->Temp_EM_RM = rawVal;
 		changed = true;
@@ -929,6 +947,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_Battery != rawVal) {
 		_thermal2->Temp_Battery = rawVal;
 		changed = true;
@@ -936,6 +955,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 8, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_Auxilaries != rawVal) {
 		_thermal2->Temp_Auxilaries = rawVal;
 		changed = true;
@@ -943,6 +963,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_AIR != rawVal) {
 		_thermal2->Temp_AIR = rawVal;
 		changed = true;
@@ -950,6 +971,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 24, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_Powertrain != rawVal) {
 		_thermal2->Temp_Powertrain = rawVal;
 		changed = true;
@@ -963,6 +985,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_DCDC != rawVal) {
 		_thermal2->Temp_DCDC = rawVal;
 		changed = true;
@@ -970,6 +993,7 @@ bool Model::parseThermal2(CAN_Raw_Msg_t rawMsg, Thermal_Management_Rx_2_t *_ther
 
 	rawVal = UnpackSignal(rawMsg.data, 46, 8);
 	rawVal = rawVal - 50;
+	if(rawVal < 0) rawVal = 0;
 	if(_thermal2->Temp_ClntPump != rawVal) {
 		_thermal2->Temp_ClntPump = rawVal;
 		changed = true;
@@ -985,6 +1009,7 @@ bool Model::parsemtc1(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_1_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Act_Wheel_FL != rawVal) {
 		_mtc->Trq_Req_Wheel_FL = rawVal;
 		changed = true;
@@ -992,6 +1017,7 @@ bool Model::parsemtc1(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_1_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Req_Wheel_FL != rawVal) {
 		_mtc->Trq_Req_Wheel_FL = rawVal;
 		changed = true;
@@ -999,6 +1025,7 @@ bool Model::parsemtc1(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_1_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 32, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Act_Wheel_FR != rawVal) {
 		_mtc->Trq_Act_Wheel_FR = rawVal;
 		changed = true;
@@ -1006,6 +1033,7 @@ bool Model::parsemtc1(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_1_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Req_Wheel_FR != rawVal) {
 		_mtc->Trq_Req_Wheel_FR = rawVal;
 		changed = true;
@@ -1021,6 +1049,7 @@ bool Model::parsemtc2(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_2_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 0, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Act_Wheel_RM != rawVal) {
 		_mtc->Trq_Act_Wheel_RM = rawVal;
 		changed = true;
@@ -1028,6 +1057,7 @@ bool Model::parsemtc2(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_2_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 16, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Req_Wheel_RM != rawVal) {
 		_mtc->Trq_Req_Wheel_RM = rawVal;
 		changed = true;
@@ -1035,6 +1065,7 @@ bool Model::parsemtc2(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_2_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 32, 16);
 	rawVal = rawVal - 2500;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Pwr_Disp != rawVal) {
 		_mtc->Pwr_Disp = rawVal;
 		changed = true;
@@ -1042,6 +1073,7 @@ bool Model::parsemtc2(CAN_Raw_Msg_t rawMsg, Motor_And_Torque_Control_2_t *_mtc) 
 
 	rawVal = UnpackSignal(rawMsg.data, 48, 16);
 	rawVal = rawVal - 5000;
+	if(rawVal < 0) rawVal = 0;
 	if(_mtc->Trq_Act_Sys != rawVal) {
 		_mtc->Trq_Act_Sys = rawVal;
 		changed = true;

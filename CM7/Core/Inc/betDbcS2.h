@@ -38,26 +38,26 @@ typedef struct {
 
 #define ID_THERMAL_MANAGEMENT_RX_1 0x10000007
 typedef struct {
-    int16_t BMS_Pack_Temp_max;
-    int16_t BMS_Pack_Temp_min;
-    int16_t Temp_Inv_FL;
-    int16_t Temp_Inv_FR;
-    int16_t Temp_Inv_RM;
-    int16_t Temp_EM_FL;
-    int16_t Temp_EM_FR;
-    int16_t Temp_EM_RM;
+    uint8_t BMS_Pack_Temp_max;
+    uint8_t BMS_Pack_Temp_min;
+    uint8_t Temp_Inv_FL;
+    uint8_t Temp_Inv_FR;
+    uint8_t Temp_Inv_RM;
+    uint8_t Temp_EM_FL;
+    uint8_t Temp_EM_FR;
+    uint8_t Temp_EM_RM;
 } Thermal_Management_Rx_1_t;
 
 // CAN ID: 0x10000008 (268435464)
 #define ID_THERMAL_MANAGEMENT_RX_2 0x10000008
 typedef struct {
-    int16_t Temp_Battery;
-    int16_t Temp_Auxilaries;
-    int16_t Temp_AIR;
-    int16_t Temp_Powertrain;
+    uint8_t Temp_Battery;
+    uint8_t Temp_Auxilaries;
+    uint8_t Temp_AIR;
+    uint8_t Temp_Powertrain;
     uint16_t Rad_Fan_Speed;
-    int16_t Temp_DCDC;
-    int16_t Temp_ClntPump;
+    uint8_t Temp_DCDC;
+    uint8_t Temp_ClntPump;
 } Thermal_Management_Rx_2_t;
 
 #define ID_MOTOR_AND_TORQUE_CONTROL_1 0x10000004 // miscalculations

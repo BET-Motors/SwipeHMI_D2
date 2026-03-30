@@ -308,6 +308,26 @@ uint64_t UnpackSignal(const uint8_t* data, uint8_t start, uint8_t len) {
     return val & mask;
 }
 
+uint64_t UnpackSignalMotorola(const uint8_t* data, uint8_t startbit, uint8_t len) {
+    uint64_t raw = 0;
+    
+    // 1. Convert the 8-byte array to a Big-Endian 64-bit integer
+    for (int i = 0; i < 8; i++) {
+        raw |= ((uint64_t)data[i] << (8 * (7 - i)));
+    }
+
+    // 2. In Motorola/CAN, startbit is usually the MSB. 
+    // Shift right to align the signal to the LSB position.
+    // Logic: Shift = (Total Bits - 1) - startbit
+    // Note: This assumes the standard DBC "Forward" notation.
+    raw >>= (63 - startbit);
+
+    // 3. Mask out the unwanted bits
+    uint64_t mask = (len >= 64) ? 0xFFFFFFFFFFFFFFFFULL : (1ULL << len) - 1;
+    
+    return raw & mask;
+}
+
 void PackSignal(uint64_t* frame, uint32_t value, uint8_t startBit, uint8_t length) {
     uint64_t mask = (1ULL << length) - 1;
     value &= mask; // Ensure value doesn't exceed its bit-length
